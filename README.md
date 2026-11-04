@@ -1,84 +1,84 @@
-# AWS Cloud Operations & Incident Response
+# AWS Cloud Operations & Enterprise Infrastructure
 
-**AWS operational engineering: networking, identity, observability, automation, incident response and recovery.**
-
-A structured, evidence-driven AWS CloudOps practice repository, drawing on AWS-authored training, official workshops, service documentation and AWS Samples projects.
-
-> **Status: PLANNED.** No production-grade capabilities, live AWS experiments, assessments or incident-response results are claimed to have been completed. This repository is an educational sandbox and is not an AWS product or an official AWS course.
+> **Repository:** `miku-wwl/aws-cloudops`  
+> **Status:** `PLANNED / NOT LIVE VERIFIED` (documentation and learning plan only)  
+> **Focus:** AWS Landing Zones · Organizations & Control Tower · IAM & Governance · Terraform · Enterprise Networking · Observability · Incident Response · Disaster Recovery
 
 ## Mission
 
-Develop verifiable hands-on skills for Cloud Engineer / CloudOps / SRE roles, **without duplicating** the separate [KPCP](https://github.com/miku-wwl/kube-platform-control-plane) Kubernetes/Terraform control-plane project.
+This repository is an **evidence-driven AWS enterprise infrastructure and CloudOps learning plan**, not a new cloud platform product. It translates the competencies expected of an **AWS Senior Cloud Infrastructure Engineer / Architect** into small, auditable experiments and architecture decisions.
 
-This repository focuses on **operating and troubleshooting existing AWS services**, not on creating another infrastructure platform. Prefer a minimal disposable workload and short-lived isolated AWS resources to expansive IaC environments.
+The reference job is [SG Consulting Limited — AWS Senior Cloud Infrastructure Engineer (Auckland)](https://nz.linkedin.com/jobs/view/aws-senior-cloud-infrastructure-engineer-at-sg-consulting-limited-4461019538). Its 10+ years of experience and enterprise production-ownership requirements are **career benchmarks, not experience this repository claims to provide**. A job listing is not a certification syllabus; this learning plan is independently curated.
 
-## Learning tracks
+**Core workflow:** design & trade-offs → authorization/cost check → baseline → controlled change or failure → diagnosis → rollback/recovery → evidence & RCA → teardown.
 
-| Track | Main skills | Official starting points |
-|---|---|---|
-| A01 — Architecture | AWS Well-Architected, reliability, operational excellence | [Reliability Pillar](https://docs.aws.amazon.com/wellarchitected/latest/reliability-pillar/) |
-| A02 — Networking | VPC, route tables, SG/NACL, endpoints, Reachability Analyzer | [AWS Networking Workshop](https://catalog.workshops.aws/networking/en-US) |
-| A03 — Identity | IAM roles, STS, least privilege, IAM Access Analyzer | [IAM Access Analyzer Workshop](https://catalog.workshops.aws/accessanalyzercicd) |
-| A04 — Observability | CloudWatch, alarms, Logs Insights QL, CloudTrail | [CloudWatch Logs Insights tutorials](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/CWL_AnalyzeLogData_Tutorials.html) |
-| A05 — Operations Automation | Systems Manager inventory, State Manager, Run Command, Automation | [AWS Cloud and Hybrid Operations Workshop](https://github.com/aws-samples/aws-cloud-and-hybrid-operations-workshop) |
-| A06 — Governance | AWS Config, CloudTrail, inventory, cost controls | [AWS Cloud and Hybrid Operations Workshop](https://github.com/aws-samples/aws-cloud-and-hybrid-operations-workshop) |
-| A07 — Recovery | AWS Backup, EBS/EC2 recovery, RTO/RPO | [AWS Backup getting started](https://docs.aws.amazon.com/aws-backup/latest/devguide/getting-started.html) |
-| A08 — Incident Response | Diagnostics, containment, recovery, RCA, runbooks | [AWS Incident Response Playbook Samples](https://github.com/aws-samples/aws-incident-response-playbooks) |
+## Positioning and boundaries
 
-For the **Chinese study roadmap**, source classifications, cost guardrails and acceptance criteria, see [`docs/AWS_SPECIALTY_ROADMAP.md`](docs/AWS_SPECIALTY_ROADMAP.md).
+| Project | Primary ownership |
+|---|---|
+| [KPCP](https://github.com/miku-wwl/kube-platform-control-plane) | Kubernetes control-plane engineering, reconciliation, infrastructure lifecycle and platform automation |
+| **AWS CloudOps (this repository)** | AWS multi-account governance, identity/network troubleshooting, infrastructure delivery standards, audit, incident response and recovery |
+| [Azure CloudOps](https://github.com/miku-wwl/azure-cloudops) | Azure-specific Landing Zones, networking, governance, Monitor/KQL and incident recovery |
 
-## Candidate technical exercises
+**Non-goals:** another Terraform control plane; Kubernetes management UI; multi-tenant self-service portal; a continuously running enterprise landing zone; and claims of real production on-call or enterprise implementation not backed by work experience. EKS remains an optional integration topic, not the centre of this lab.
 
-1. Trace and resolve a VPC connectivity problem with route tables, security groups and Reachability Analyzer.
-2. Reproduce an IAM `AccessDenied` event, diagnose it using CloudTrail and validate a least-privilege policy.
-3. Produce and query structured application error logs using CloudWatch Logs Insights, and verify one actionable alarm.
-4. Write a **read-only by default** Python or shell inventory/diagnostic script and test it against mock fixtures.
-5. Examine AWS Config drift/compliance evidence without developing a replacement IaC control plane.
-6. Back up an isolated test resource, restore it, and validate data integrity and measured recovery time.
-7. Record at least two synthetic-incident RCAs, including root cause, evidence, remediation and prevention.
+## JD-to-learning mapping
 
-All live modifications must be explicitly scoped to an isolated account or sandbox and performed manually with verified permissions. No AWS API mutations occur merely by cloning this repository.
+| Priority | Enterprise capability | AWS topics | Evidence to produce |
+|---|---|---|---|
+| **P0** | Multi-account Landing Zone | Organizations, OUs, Control Tower, Account Factory, security/logging accounts, account lifecycle | Architecture diagram, account/OU matrix, two ADRs, lifecycle runbook (design-first) |
+| **P0** | Preventive/detective governance | SCP, RCP concepts, Config, Control Tower controls, least privilege, centralized CloudTrail | Policy allow/deny reasoning and test evidence; logging/governance design |
+| **P0** | Controlled infrastructure delivery | Terraform module design, pinned versions, remote state, OIDC, CI checks, plan review, drift response | Minimal IaC lab and documented review/rollback/teardown evidence |
+| **P0** | Networking and diagnostics | VPC, DNS, routing, SG/NACL, endpoints, PrivateLink, Reachability Analyzer | One independently diagnosed and recovered network fault |
+| **P1** | Enterprise connectivity | Transit Gateway, Route 53 Resolver, VPN, Direct Connect, centralized egress/inspection | HLD/ADR and diagnostic decision tree; **live deployment optional** |
+| **P1** | Operations, audit and incident response | CloudWatch, Logs Insights QL, CloudTrail, Systems Manager, EventBridge, runbooks | Five queries, actionable alarm, incident timelines and two RCAs |
+| **P1** | Resilience and DR | Multi-AZ/Region decisions, AWS Backup, restore, RTO/RPO | Real small-scope restore with integrity check and measured time |
+| **P1** | FinOps and operational ownership | tagging, cost allocation, Budgets, cost anomaly analysis, teardown inventory | Cost model and post-exercise resource/cost review |
+| **P2** | Advanced enterprise tooling | AFT, Landing Zone Accelerator (LZA), CfCT, Security Hub, GuardDuty, Inspector, WAF/Shield, EKS | Compare/document rather than deploy every service |
 
-## Recommended official practical assessments
+See the full [AWS Specialty Roadmap](AWS_SPECIALTY_ROADMAP.md) for modules A00–A10, four sprints, learning resources, cost constraints and acceptance gates.
 
-- [AWS Application Networking Demonstrated](https://aws.amazon.com/blogs/training-and-certification/march-2026-new-offerings/)
-- [AWS Incident Response Demonstrated](https://aws.amazon.com/blogs/training-and-certification/march-2026-new-offerings/)
+## Enterprise architecture: design, don't over-deploy
 
-AWS microcredentials are hands-on assessments. They are distinct from AWS certifications and may have changing access or regional conditions; confirm current details in AWS Skill Builder before registering.
+The **reference design** separates a management account, Security OU (e.g. log archive and security tooling), Infrastructure OU (shared networking), Workloads OU (prod/non-prod), and Sandbox OU. These are **architecture examples**, not accounts that have been created in this repository.
 
-## Repository structure
+- **Organizations** structures accounts and OUs. **IAM Identity Center / IAM** provide identity and access. **SCPs** set permission ceilings for member-account principals; they do **not** grant IAM permissions and do not constrain management-account principals.
+- **AWS Control Tower** helps establish/govern a landing zone. Its preventive, detective and proactive controls have different enforcement paths (SCP/RCP, Config, CloudFormation hooks, depending on the control).
+- **Account Factory** provisions standardized accounts; **Account Factory for Terraform (AFT)** automates account requests/customizations through Terraform workflows. These are not interchangeable with a simple workload Terraform module.
+- **Landing Zone Accelerator (LZA)** extends complex, often regulated landing-zone requirements; it is **not mandatory** for an individual learning lab. AWS's published sample deployment estimate is roughly US$430/month in its specified example environment; actual costs vary.
+- An **architecture simulation, single-account lab, Organizations experiment, and full Control Tower deployment are different evidence levels**. Do not claim a multi-account live rollout from a diagram or a single-account `terraform plan`.
 
-```text
-aws-cloudops/
-├── README.md
-├── docs/
-│   ├── AWS_SPECIALTY_ROADMAP.md
-│   ├── JD_SKILL_MAPPING.md
-│   ├── STATUS.md
-│   ├── templates/
-│   │   ├── EXPERIMENT.md
-│   │   └── INCIDENT_RCA.md
-│   └── incidents/
-├── automation/                  # Read-only scripts and tested diagnostics
-├── monitoring/logs-insights/    # Saved Logs Insights QL queries
-├── security/iam/                # Least-privilege policy analysis, sanitized
-├── evidence/                    # Sanitized experiment evidence only
-└── tests/                       # Offline/unit checks
-```
+## Minimum portfolio outcomes (targets, not achievements)
 
-## Safeguards and claims
+1. **Enterprise foundation:** a multi-account/OU reference architecture, account lifecycle diagram, permission/guardrail matrix and two architecture decision records.
+2. **IaC delivery:** a minimal, disposable Terraform-managed AWS network or workload lab with reviewed `fmt`, `validate`, `plan`; record whether `apply`/`destroy` were actually executed. Describe state security and approval boundaries.
+3. **Governance:** explain an SCP-versus-IAM deny and validate the available test path without placing restrictive policies on root or shared organizational OUs.
+4. **Networking:** reproduce, diagnose and reverse one isolated SG/route/DNS/endpoints connectivity incident; include exact before/after probes.
+5. **Observability and audit:** five executable CloudWatch Logs Insights QL queries; one alarm trigger; a CloudTrail management-event audit timeline with source limitations documented.
+6. **Automation:** one read-only-by-default AWS CLI/Python inventory tool with offline tests and a sanitized AWS run when authorized.
+7. **Recovery and incident practice:** two distinct synthetic incident RCAs, plus one actual backup **and restore** verification (checksum or equivalent), with RTO/RPO stated correctly.
+8. **Economics/security:** up-front cost estimate, scoped permissions, credential-safe evidence and post-cleanup resource/billing review.
 
-- Use an isolated AWS sandbox, least-privilege permissions, and fixed resources/time windows.
-- Check actual regional prices before each lab, including NAT Gateway, Network Firewall, Config, CloudWatch Logs, AWS Backup, and Reachability Analyzer.
-- **AWS Budgets notifications are not spending hard stops.** Monitor and remove all resources afterward.
-- Do not commit AWS keys, session tokens, account IDs, ARNs with sensitive information, private IP inventories, or raw CloudTrail/customer logs.
-- Keep `Planned`, `Local Verified`, `AWS Verified`, `Blocked`, and `Not Run` separate in status and resume claims.
-- [AWS Systems Manager Incident Manager](https://docs.aws.amazon.com/incident-manager/latest/userguide/incident-manager-availability-change.html) and [Change Manager](https://docs.aws.amazon.com/systems-manager/latest/userguide/change-manager-availability-change.html) stopped onboarding new customers in November 2025. Do **not** follow legacy workshop steps that require enabling either service in a new account.
+## Repository status and evidence rules
 
-## Attribution
+**The repository currently contains documentation only** (`README.md`, `AWS_SPECIALTY_ROADMAP.md`, and `LICENSE`). Folders, scripts, automation, deployment files, tests, Terraform state and live evidence described in future tasks **do not yet exist**.
 
-This independent study repository links to content published by AWS Training, AWS documentation, and AWS Samples. The **learning sequence, experiments, gates and project structure are independently curated**, not an official AWS curriculum. External source code is not copied into this starter.
+Use evidence states consistently: `PLANNED`, `DESIGNED`, `OFFLINE_PASS`, `STATIC_CHECK_PASS`, `AWS_DEPLOYED`, `AWS_VERIFIED`, `RECOVERED`, `CLEANED_UP`, `BLOCKED`, `NOT_RUN`. Do not equate one state with another. A `terraform validate` pass does not prove successful AWS deployment, and LocalStack or another emulator cannot substitute for verified AWS behavior.
 
-## Status
+**Safety:** run fault injection only in expressly authorized isolated accounts; avoid permanent access keys; prefer temporary credentials and least privilege; redact account IDs, principals, resource ARNs, private DNS/IPs and raw customer logs. Budget alerts are not hard spending caps. Review leftover EBS snapshots, AWS Backup recovery points, S3 data, log retention, Config recorders, NAT gateways and cross-account resources.
 
-**Planning / repository initialization — no completed live experiments.**
+**Legacy AWS caveat:** Systems Manager Incident Manager and Change Manager stopped onboarding new customers in November 2025. Do not treat older workshop steps for those services as a required lab dependency. Use supported CloudWatch/EventBridge/SSM Automation and a documented human approval/response process where appropriate.
+
+## Learning references
+
+- **Detailed plan:** [AWS_SPECIALTY_ROADMAP.md](AWS_SPECIALTY_ROADMAP.md)
+- **Job benchmark:** [SG Consulting AWS Senior Cloud Infrastructure Engineer](https://nz.linkedin.com/jobs/view/aws-senior-cloud-infrastructure-engineer-at-sg-consulting-limited-4461019538)
+- **Multi-account guidance:** [AWS — Organizing Your AWS Environment](https://docs.aws.amazon.com/whitepapers/latest/organizing-your-aws-environment/organizing-your-aws-environment.html)
+- **AWS Control Tower:** [User Guide](https://docs.aws.amazon.com/controltower/latest/userguide/) · [Control types](https://docs.aws.amazon.com/controltower/latest/userguide/how-controls-work.html)
+- **AFT:** [Account Factory for Terraform](https://docs.aws.amazon.com/controltower/latest/userguide/aft-overview.html)
+- **SCPs:** [AWS Organizations SCP guidance](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_scps.html)
+- **AWS Networking Workshop:** [Workshop Studio](https://catalog.workshops.aws/networking/en-US)
+- **AWS Operations:** [Cloud and Hybrid Operations workshop](https://github.com/aws-samples/aws-cloud-and-hybrid-operations-workshop)
+- **Incident response:** [AWS incident-response playbook samples](https://github.com/aws-samples/aws-incident-response-playbooks)
+
+This independent learning repository references AWS-authored documentation and samples; it is not an AWS official course or a claim of professional enterprise operations experience.
