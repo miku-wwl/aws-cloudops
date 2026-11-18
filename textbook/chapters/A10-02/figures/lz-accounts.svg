@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 270" width="760" height="270" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif">
+
+<rect x="14" y="14" width="732" height="244" rx="6" ry="6" fill="#fbfcfd" stroke="#1d3b53" stroke-width="1.4"/>
+<path d="M14 20 a6 6 0 0 1 6 -6 h143.54000000000002 v20 h-149.54000000000002 z" fill="#1d3b53"/>
+<text x="22" y="28.5" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="11" font-weight="700" fill="#ffffff" text-anchor="start">AWS Organizations（根）</text>
+<rect x="30" y="46" width="200" height="62" rx="8" ry="8" fill="#1d3b53" stroke="#1d3b53" stroke-width="1.4"/>
+<text x="130.0" y="67.465" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="11" font-weight="700" fill="#ffffff" text-anchor="middle">管理账户</text>
+<text x="130.0" y="84.095" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9" font-weight="400" fill="#dbe6ee" text-anchor="middle">Organizations 与 Control Tower</text>
+<text x="130.0" y="96.875" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9" font-weight="400" fill="#dbe6ee" text-anchor="middle">不能更换，不放工作负载</text>
+<rect x="250" y="46" width="230" height="120" rx="6" ry="6" fill="#f7f9fb" stroke="#1d3b53" stroke-width="1.4" stroke-dasharray="6 4"/>
+<text x="259" y="62" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="10" font-weight="700" fill="#1d3b53" text-anchor="start">Security OU（基础）</text>
+<rect x="262" y="78" width="100" height="70" rx="8" ry="8" fill="#e6f3f3" stroke="#1a8a8f" stroke-width="1.4"/>
+<text x="312.0" y="103.60149999999999" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="10.5" font-weight="700" fill="#12676b" text-anchor="middle">Log Archive</text>
+<text x="312.0" y="119.77249999999998" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="8.8" font-weight="400" fill="#22313d" text-anchor="middle">集中日志</text>
+<text x="312.0" y="132.2685" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="8.8" font-weight="400" fill="#22313d" text-anchor="middle">长期留存</text>
+<rect x="370" y="78" width="100" height="70" rx="8" ry="8" fill="#e6f3f3" stroke="#1a8a8f" stroke-width="1.4"/>
+<text x="420.0" y="103.60149999999999" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="10.5" font-weight="700" fill="#12676b" text-anchor="middle">Audit</text>
+<text x="420.0" y="119.77249999999998" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="8.8" font-weight="400" fill="#22313d" text-anchor="middle">安全审计</text>
+<text x="420.0" y="132.2685" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="8.8" font-weight="400" fill="#22313d" text-anchor="middle">只读汇总</text>
+<rect x="500" y="46" width="230" height="120" rx="6" ry="6" fill="#f7f9fb" stroke="#1d3b53" stroke-width="1.4" stroke-dasharray="6 4"/>
+<text x="509" y="62" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="10" font-weight="700" fill="#1d3b53" text-anchor="start">Sandbox / Workloads OU</text>
+<rect x="512" y="78" width="100" height="70" rx="8" ry="8" fill="#ffffff" stroke="#b8c7d2" stroke-width="1.4"/>
+<text x="562.0" y="109.84949999999999" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="10.5" font-weight="700" fill="#17384f" text-anchor="middle">账户 A</text>
+<text x="562.0" y="126.0205" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="8.8" font-weight="400" fill="#22313d" text-anchor="middle">已纳管</text>
+<rect x="620" y="78" width="100" height="70" rx="8" ry="8" fill="#ffffff" stroke="#b8c7d2" stroke-width="1.4" stroke-dasharray="5 3"/>
+<text x="670.0" y="109.84949999999999" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="10.5" font-weight="700" fill="#17384f" text-anchor="middle">账户 B</text>
+<text x="670.0" y="126.0205" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="8.8" font-weight="400" fill="#22313d" text-anchor="middle">待验证</text>
+<rect x="30" y="124" width="200" height="52" rx="8" ry="8" fill="#fdf1e3" stroke="#e0954a" stroke-width="1.4"/>
+<text x="130.0" y="146.7075" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="10.5" font-weight="700" fill="#9a5a1c" text-anchor="middle">AFT 管理账户</text>
+<text x="130.0" y="163.16250000000002" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9" font-weight="400" fill="#22313d" text-anchor="middle">独立 OU；承载 AFT 流水线</text>
+<rect x="30" y="190" width="700" height="56" rx="5" ry="5" fill="#fdf1e3" stroke="#e0954a" stroke-width="1" stroke-dasharray="4 3"/>
+<text x="38" y="205.4" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="400" fill="#22313d" text-anchor="start">4.0 起，Config、组织级 CloudTrail、Log Archive / Audit 账户等集成都可以单独选择；</text>
+<text x="38" y="219.03" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="400" fill="#22313d" text-anchor="start">在独立账户上启用 Control Tower 会新建组织，当前账户即成为管理账户（本书只看到向导，未创建）。</text>
+</svg>

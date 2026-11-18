@@ -1,0 +1,143 @@
+{
+  "vpc_cidr": "10.20.0.0/16",
+  "subnets": {
+    "public": {
+      "cidr": "10.20.1.0/24",
+      "route_table": "rt-public",
+      "nacl": "acl-default"
+    },
+    "private": {
+      "cidr": "10.20.2.0/24",
+      "route_table": "rt-private",
+      "nacl": "acl-private"
+    }
+  },
+  "route_tables": {
+    "rt-public": [
+      [
+        "10.20.0.0/16",
+        "local"
+      ],
+      [
+        "0.0.0.0/0",
+        "igw"
+      ]
+    ],
+    "rt-private": [
+      [
+        "10.20.0.0/16",
+        "local"
+      ]
+    ]
+  },
+  "nacls": {
+    "acl-default": {
+      "inbound": [
+        [
+          100,
+          "all",
+          "0.0.0.0/0",
+          0,
+          65535,
+          "allow"
+        ]
+      ],
+      "outbound": [
+        [
+          100,
+          "all",
+          "0.0.0.0/0",
+          0,
+          65535,
+          "allow"
+        ]
+      ]
+    },
+    "acl-private": {
+      "inbound": [
+        [
+          90,
+          "tcp",
+          "10.20.1.0/24",
+          8080,
+          8080,
+          "deny"
+        ],
+        [
+          100,
+          "all",
+          "0.0.0.0/0",
+          0,
+          65535,
+          "allow"
+        ]
+      ],
+      "outbound": [
+        [
+          100,
+          "all",
+          "0.0.0.0/0",
+          0,
+          65535,
+          "allow"
+        ]
+      ]
+    }
+  },
+  "security_groups": {
+    "sg-client": {
+      "ingress": [],
+      "egress": [
+        [
+          "all",
+          "0.0.0.0/0",
+          0,
+          65535
+        ]
+      ]
+    },
+    "sg-server": {
+      "ingress": [
+        [
+          "tcp",
+          "10.20.1.0/24",
+          8080,
+          8080
+        ]
+      ],
+      "egress": [
+        [
+          "all",
+          "0.0.0.0/0",
+          0,
+          65535
+        ]
+      ]
+    }
+  },
+  "hosts": {
+    "client": {
+      "ip": "10.20.1.15",
+      "subnet": "public",
+      "sg": [
+        "sg-client"
+      ],
+      "public_ip": false
+    },
+    "server": {
+      "ip": "10.20.2.20",
+      "subnet": "private",
+      "sg": [
+        "sg-server"
+      ],
+      "listening": true
+    }
+  },
+  "flow": {
+    "src": "client",
+    "dst": "server",
+    "protocol": "tcp",
+    "port": 8080,
+    "src_port": 49152
+  }
+}

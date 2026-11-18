@@ -1,0 +1,20 @@
+# 复制为 terraform.tfvars 后修改。账户 ID 必须是已经存在、且位于同一个根级 Security OU 的账户。
+home_region      = "us-east-1"
+governed_regions = ["us-east-1", "us-west-2"]
+
+integrations = {
+  config              = true
+  centralized_logging = true
+  security_roles      = true
+  access_management   = true
+  backup              = false
+}
+
+integration_accounts = {
+  logging        = "222222222222" # Log Archive
+  security_roles = "333333333333" # Audit / SecurityRoles
+  config         = "444444444444" # LZ 4.0 可单独指定 Config 账户（也可与 Audit 相同）
+}
+
+log_retention_days        = 365
+access_log_retention_days = 3650

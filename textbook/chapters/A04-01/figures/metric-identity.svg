@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 220" width="760" height="220" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif">
+
+<rect x="20" y="30" width="150" height="58" rx="8" ry="8" fill="#f2f5f7" stroke="#9fb3c1" stroke-width="1.4"/>
+<text x="95.0" y="55.144999999999996" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="11" font-weight="700" fill="#41525f" text-anchor="middle">区域</text>
+<text x="95.0" y="73.195" font-family="'Cascadia Mono',Consolas,monospace" font-size="9.4" font-weight="400" fill="#5d6d7a" text-anchor="middle">us-east-1</text>
+<text x="179" y="64" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="18" font-weight="700" fill="#5d6d7a" text-anchor="middle">+</text>
+<rect x="188" y="30" width="150" height="58" rx="8" ry="8" fill="#e9eff5" stroke="#1d3b53" stroke-width="1.4"/>
+<text x="263.0" y="55.144999999999996" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="11" font-weight="700" fill="#17384f" text-anchor="middle">命名空间</text>
+<text x="263.0" y="73.195" font-family="'Cascadia Mono',Consolas,monospace" font-size="9.4" font-weight="400" fill="#22313d" text-anchor="middle">Lab/CloudOps</text>
+<text x="347" y="64" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="18" font-weight="700" fill="#5d6d7a" text-anchor="middle">+</text>
+<rect x="356" y="30" width="150" height="58" rx="8" ry="8" fill="#e6f3f3" stroke="#1a8a8f" stroke-width="1.4"/>
+<text x="431.0" y="55.144999999999996" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="11" font-weight="700" fill="#12676b" text-anchor="middle">指标名</text>
+<text x="431.0" y="73.195" font-family="'Cascadia Mono',Consolas,monospace" font-size="9.4" font-weight="400" fill="#22313d" text-anchor="middle">Errors</text>
+<text x="515" y="64" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="18" font-weight="700" fill="#5d6d7a" text-anchor="middle">+</text>
+<rect x="524" y="30" width="190" height="58" rx="8" ry="8" fill="#fdf1e3" stroke="#e0954a" stroke-width="1.4"/>
+<text x="619.0" y="55.144999999999996" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="11" font-weight="700" fill="#9a5a1c" text-anchor="middle">维度集合（全部）</text>
+<text x="619.0" y="73.195" font-family="'Cascadia Mono',Consolas,monospace" font-size="9.4" font-weight="400" fill="#22313d" text-anchor="middle">Service=checkout</text>
+<text x="380" y="116" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="10.4" font-weight="600" fill="#1d3b53" text-anchor="middle">四者完全相同，才是同一条时间序列；单位与统计方式在读取时选择</text>
+<rect x="20" y="136" width="350" height="70" rx="8" ry="8" fill="#ffffff" stroke="#b8c7d2" stroke-width="1.4"/>
+<text x="30" y="159.142" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.8" font-weight="400" fill="#22313d" text-anchor="start">Errors · Service=checkout</text>
+<text x="30" y="173.058" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.8" font-weight="400" fill="#22313d" text-anchor="start">Errors · Service=billing</text>
+<text x="30" y="186.974" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.8" font-weight="400" fill="#22313d" text-anchor="start">Errors · Service=checkout, AZ=us-east-1a</text>
+<rect x="400" y="136" width="340" height="70" rx="8" ry="8" fill="#fbeceb" stroke="#c0504d" stroke-width="1.4"/>
+<text x="410" y="159.384" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.6" font-weight="400" fill="#22313d" text-anchor="start">→ 三条不同的时间序列，CloudWatch 不会替你合并；</text>
+<text x="410" y="173.016" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.6" font-weight="400" fill="#22313d" text-anchor="start">  告警写错一个维度值，就会盯着一条“没有数据”的序列</text>
+<text x="410" y="186.648" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.6" font-weight="400" fill="#22313d" text-anchor="start">  （再配上 notBreaching，就永远是 OK）</text>
+</svg>

@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 330" width="760" height="330" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif">
+<defs><marker id="marrow5d6d7a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0.8 L9.2 5 L0 9.2 z" fill="#5d6d7a"/></marker><marker id="marrow1d3b53" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0.8 L9.2 5 L0 9.2 z" fill="#1d3b53"/></marker></defs>
+<rect x="14" y="14" width="176" height="50" rx="8" ry="8" fill="#f2f5f7" stroke="#9fb3c1" stroke-width="1.4"/>
+<text x="102.0" y="29.601499999999998" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="10.5" font-weight="700" fill="#41525f" text-anchor="middle">行为</text>
+<text x="102.0" y="45.772499999999994" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="8.8" font-weight="400" fill="#5d6d7a" text-anchor="middle">CloudTrail 管理事件</text>
+<text x="102.0" y="58.268499999999996" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="8.8" font-weight="400" fill="#5d6d7a" text-anchor="middle">VPC 流日志 · DNS 查询</text>
+<path d="M190 39 L230 39" fill="none" stroke="#5d6d7a" stroke-width="1.2" marker-end="url(#marrow5d6d7a)" stroke-linejoin="round"/>
+<rect x="230" y="14" width="186" height="50" rx="8" ry="8" fill="#fdf1e3" stroke="#e0954a" stroke-width="1.4"/>
+<text x="323.0" y="29.601499999999998" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="10.5" font-weight="700" fill="#9a5a1c" text-anchor="middle">GuardDuty</text>
+<text x="323.0" y="45.772499999999994" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="8.8" font-weight="400" fill="#22313d" text-anchor="middle">威胁检测 Finding</text>
+<text x="323.0" y="58.268499999999996" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="8.8" font-weight="400" fill="#22313d" text-anchor="middle">（基础检测）</text>
+<path d="M416 39 L470 160" fill="none" stroke="#5d6d7a" stroke-width="1.1" marker-end="url(#marrow5d6d7a)" stroke-linejoin="round"/>
+<rect x="14" y="74" width="176" height="50" rx="8" ry="8" fill="#f2f5f7" stroke="#9fb3c1" stroke-width="1.4"/>
+<text x="102.0" y="89.60149999999999" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="10.5" font-weight="700" fill="#41525f" text-anchor="middle">对象级访问</text>
+<text x="102.0" y="105.77249999999998" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="8.8" font-weight="400" fill="#5d6d7a" text-anchor="middle">S3 数据事件</text>
+<text x="102.0" y="118.26849999999997" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="8.8" font-weight="400" fill="#5d6d7a" text-anchor="middle">（GuardDuty 自己的数据流）</text>
+<path d="M190 99 L230 99" fill="none" stroke="#5d6d7a" stroke-width="1.2" marker-end="url(#marrow5d6d7a)" stroke-linejoin="round"/>
+<rect x="230" y="74" width="186" height="50" rx="8" ry="8" fill="#fdf1e3" stroke="#e0954a" stroke-width="1.4"/>
+<text x="323.0" y="89.60149999999999" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="10.5" font-weight="700" fill="#9a5a1c" text-anchor="middle">GuardDuty S3 保护</text>
+<text x="323.0" y="105.77249999999998" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="8.8" font-weight="400" fill="#22313d" text-anchor="middle">可疑的对象读写</text>
+<text x="323.0" y="118.26849999999997" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="8.8" font-weight="400" fill="#22313d" text-anchor="middle">（可选计划）</text>
+<path d="M416 99 L470 160" fill="none" stroke="#5d6d7a" stroke-width="1.1" marker-end="url(#marrow5d6d7a)" stroke-linejoin="round"/>
+<rect x="14" y="134" width="176" height="50" rx="8" ry="8" fill="#f2f5f7" stroke="#9fb3c1" stroke-width="1.4"/>
+<text x="102.0" y="155.8495" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="10.5" font-weight="700" fill="#41525f" text-anchor="middle">工作负载</text>
+<text x="102.0" y="172.0205" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="8.8" font-weight="400" fill="#5d6d7a" text-anchor="middle">EC2 · ECR 镜像 · Lambda</text>
+<path d="M190 159 L230 159" fill="none" stroke="#5d6d7a" stroke-width="1.2" marker-end="url(#marrow5d6d7a)" stroke-linejoin="round"/>
+<rect x="230" y="134" width="186" height="50" rx="8" ry="8" fill="#e6f3f3" stroke="#1a8a8f" stroke-width="1.4"/>
+<text x="323.0" y="155.8495" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="10.5" font-weight="700" fill="#12676b" text-anchor="middle">Inspector</text>
+<text x="323.0" y="172.0205" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="8.8" font-weight="400" fill="#22313d" text-anchor="middle">漏洞与网络暴露</text>
+<path d="M416 159 L470 160" fill="none" stroke="#5d6d7a" stroke-width="1.1" marker-end="url(#marrow5d6d7a)" stroke-linejoin="round"/>
+<rect x="14" y="194" width="176" height="50" rx="8" ry="8" fill="#f2f5f7" stroke="#9fb3c1" stroke-width="1.4"/>
+<text x="102.0" y="215.8495" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="10.5" font-weight="700" fill="#41525f" text-anchor="middle">资源配置</text>
+<text x="102.0" y="232.0205" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="8.8" font-weight="400" fill="#5d6d7a" text-anchor="middle">AWS Config 配置项</text>
+<path d="M190 219 L230 219" fill="none" stroke="#5d6d7a" stroke-width="1.2" marker-end="url(#marrow5d6d7a)" stroke-linejoin="round"/>
+<rect x="230" y="194" width="186" height="50" rx="8" ry="8" fill="#e9eff5" stroke="#1d3b53" stroke-width="1.4"/>
+<text x="323.0" y="215.8495" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="10.5" font-weight="700" fill="#17384f" text-anchor="middle">Security Hub CSPM</text>
+<text x="323.0" y="232.0205" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="8.8" font-weight="400" fill="#22313d" text-anchor="middle">安全标准与控制</text>
+<path d="M416 219 L470 160" fill="none" stroke="#5d6d7a" stroke-width="1.1" marker-end="url(#marrow5d6d7a)" stroke-linejoin="round"/>
+<rect x="14" y="254" width="176" height="50" rx="8" ry="8" fill="#f2f5f7" stroke="#9fb3c1" stroke-width="1.4"/>
+<text x="102.0" y="275.84950000000003" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="10.5" font-weight="700" fill="#41525f" text-anchor="middle">数据内容</text>
+<text x="102.0" y="292.0205" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="8.8" font-weight="400" fill="#5d6d7a" text-anchor="middle">S3 中的对象</text>
+<path d="M190 279 L230 279" fill="none" stroke="#5d6d7a" stroke-width="1.2" marker-end="url(#marrow5d6d7a)" stroke-linejoin="round"/>
+<rect x="230" y="254" width="186" height="50" rx="8" ry="8" fill="#f1edf8" stroke="#6f55a8" stroke-width="1.4"/>
+<text x="323.0" y="275.84950000000003" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="10.5" font-weight="700" fill="#4f3a86" text-anchor="middle">Macie</text>
+<text x="323.0" y="292.0205" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="8.8" font-weight="400" fill="#22313d" text-anchor="middle">敏感数据发现</text>
+<path d="M416 279 L470 160" fill="none" stroke="#5d6d7a" stroke-width="1.1" marker-end="url(#marrow5d6d7a)" stroke-linejoin="round"/>
+<rect x="470" y="110" width="150" height="100" rx="8" ry="8" fill="#1d3b53" stroke="#1d3b53" stroke-width="1.4"/>
+<text x="545.0" y="143.944" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="12" font-weight="700" fill="#ffffff" text-anchor="middle">Security Hub</text>
+<text x="545.0" y="161.20799999999997" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.2" font-weight="400" fill="#dbe6ee" text-anchor="middle">统一 Finding</text>
+<text x="545.0" y="174.27199999999996" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.2" font-weight="400" fill="#dbe6ee" text-anchor="middle">关联成暴露 Finding</text>
+<text x="545.0" y="187.33599999999996" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.2" font-weight="400" fill="#dbe6ee" text-anchor="middle">排优先级 · 响应</text>
+<rect x="640" y="110" width="108" height="100" rx="8" ry="8" fill="#ffffff" stroke="#b8c7d2" stroke-width="1.4"/>
+<text x="694.0" y="150.465" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="11" font-weight="700" fill="#17384f" text-anchor="middle">响应</text>
+<text x="694.0" y="167.095" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9" font-weight="400" fill="#22313d" text-anchor="middle">EventBridge</text>
+<text x="694.0" y="179.875" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9" font-weight="400" fill="#22313d" text-anchor="middle">工单 / 自动化</text>
+<path d="M620 160 L640 160" fill="none" stroke="#1d3b53" stroke-width="1.6" marker-end="url(#marrow1d3b53)" stroke-linejoin="round"/>
+<rect x="470" y="232" width="278" height="82" rx="5" ry="5" fill="#fbeceb" stroke="#c0504d" stroke-width="1" stroke-dasharray="4 3"/>
+<text x="478" y="247.2" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.2" font-weight="700" fill="#8e2f2c" text-anchor="start">检测 ≠ 防护</text>
+<text x="478" y="260.53999999999996" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.2" font-weight="400" fill="#22313d" text-anchor="start">这些服务只“发现”，不“阻止”：</text>
+<text x="478" y="273.87999999999994" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.2" font-weight="400" fill="#22313d" text-anchor="start">数据能不能被读，由 IAM、桶策略、BPA、</text>
+<text x="478" y="287.2199999999999" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.2" font-weight="400" fill="#22313d" text-anchor="start">KMS 密钥策略决定（本讲第三、四节）</text>
+</svg>

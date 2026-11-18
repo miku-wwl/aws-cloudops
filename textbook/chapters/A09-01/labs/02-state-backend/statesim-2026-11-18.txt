@@ -1,0 +1,8 @@
+s3:GetObject       arn:aws:s3:::a15-lab01-state/platform/dev/terraform.tfstate allowed
+s3:PutObject       arn:aws:s3:::a15-lab01-state/platform/dev/terraform.tfstate allowed
+s3:DeleteObject    arn:aws:s3:::a15-lab01-state/platform/dev/terraform.tfstate implicitDeny
+s3:PutObject       arn:aws:s3:::a15-lab01-state/platform/dev/terraform.tfstate.tflock allowed
+s3:DeleteObject    arn:aws:s3:::a15-lab01-state/platform/dev/terraform.tfstate.tflock allowed
+s3:GetObject       arn:aws:s3:::a15-lab01-state/platform/prod/terraform.tfstate implicitDeny
+s3:ListBucket      arn:aws:s3:::a15-lab01-state                         allowed
+s3:ListBucket      arn:aws:s3:::a15-lab01-state                         implicitDeny

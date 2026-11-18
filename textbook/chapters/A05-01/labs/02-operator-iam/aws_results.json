@@ -1,0 +1,16 @@
+{
+  "recorded": "2026-11-18",
+  "api": "iam:SimulateCustomPolicy",
+  "results": {
+    "P1": "allowed  (matched 1)",
+    "P2": "allowed  (matched 1)",
+    "P3": "explicitDeny  (matched 1)",
+    "P4": "implicitDeny",
+    "P5": "allowed  (matched 1)",
+    "P6": "implicitDeny",
+    "P7": "allowed  (matched 1)",
+    "P8": "implicitDeny",
+    "P9": "allowed  (matched 1)",
+    "P10": "implicitDeny"
+  }
+}

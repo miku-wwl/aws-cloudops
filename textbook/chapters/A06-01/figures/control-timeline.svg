@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 220" width="760" height="220" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif">
+<defs><marker id="marrow5d6d7a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0.8 L9.2 5 L0 9.2 z" fill="#5d6d7a"/></marker></defs>
+<line x1="30" y1="110" x2="740" y2="110" stroke="#1d3b53" stroke-width="2"/>
+<circle cx="85" cy="110" r="6" fill="#1d3b53" stroke="none" stroke-width="1.2"/>
+<text x="85" y="134" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.8" font-weight="700" fill="#1d3b53" text-anchor="middle">提交模板</text>
+<circle cx="245" cy="110" r="6" fill="#1d3b53" stroke="none" stroke-width="1.2"/>
+<text x="245" y="134" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.8" font-weight="700" fill="#1d3b53" text-anchor="middle">授权</text>
+<circle cx="395" cy="110" r="6" fill="#1d3b53" stroke="none" stroke-width="1.2"/>
+<text x="395" y="134" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.8" font-weight="700" fill="#1d3b53" text-anchor="middle">资源变化</text>
+<circle cx="535" cy="110" r="6" fill="#1d3b53" stroke="none" stroke-width="1.2"/>
+<text x="535" y="134" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.8" font-weight="700" fill="#1d3b53" text-anchor="middle">记录与评估</text>
+<circle cx="680" cy="110" r="6" fill="#1d3b53" stroke="none" stroke-width="1.2"/>
+<text x="680" y="134" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.8" font-weight="700" fill="#1d3b53" text-anchor="middle">修复</text>
+<rect x="17" y="14" width="136" height="70" rx="8" ry="8" fill="#e6f3f3" stroke="#1a8a8f" stroke-width="1.4"/>
+<text x="85.0" y="39.454" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="10" font-weight="700" fill="#12676b" text-anchor="middle">主动式（Proactive）</text>
+<text x="85.0" y="55.45" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="8.8" font-weight="400" fill="#22313d" text-anchor="middle">CloudFormation Hooks</text>
+<text x="85.0" y="67.946" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="8.8" font-weight="400" fill="#22313d" text-anchor="middle">只管走 CFN 的变更</text>
+<path d="M85 84 L85 104" fill="none" stroke="#5d6d7a" stroke-width="1.2" marker-end="url(#marrow5d6d7a)" stroke-linejoin="round"/>
+<rect x="177" y="14" width="136" height="70" rx="8" ry="8" fill="#e9eff5" stroke="#1d3b53" stroke-width="1.4"/>
+<text x="245.0" y="39.454" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="10" font-weight="700" fill="#17384f" text-anchor="middle">预防式（Preventive）</text>
+<text x="245.0" y="55.45" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="8.8" font-weight="400" fill="#22313d" text-anchor="middle">SCP / RCP / IAM 拒绝</text>
+<text x="245.0" y="67.946" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="8.8" font-weight="400" fill="#22313d" text-anchor="middle">API 直接失败</text>
+<path d="M245 84 L245 104" fill="none" stroke="#5d6d7a" stroke-width="1.2" marker-end="url(#marrow5d6d7a)" stroke-linejoin="round"/>
+<rect x="467" y="14" width="136" height="70" rx="8" ry="8" fill="#f1edf8" stroke="#6f55a8" stroke-width="1.4"/>
+<text x="535.0" y="39.454" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="10" font-weight="700" fill="#4f3a86" text-anchor="middle">检测式（Detective）</text>
+<text x="535.0" y="55.45" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="8.8" font-weight="400" fill="#22313d" text-anchor="middle">AWS Config 规则</text>
+<text x="535.0" y="67.946" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="8.8" font-weight="400" fill="#22313d" text-anchor="middle">只报告，不阻止</text>
+<path d="M535 84 L535 104" fill="none" stroke="#5d6d7a" stroke-width="1.2" marker-end="url(#marrow5d6d7a)" stroke-linejoin="round"/>
+<rect x="612" y="14" width="136" height="70" rx="8" ry="8" fill="#fdf1e3" stroke="#e0954a" stroke-width="1.4"/>
+<text x="680.0" y="39.454" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="10" font-weight="700" fill="#9a5a1c" text-anchor="middle">纠正式（Corrective）</text>
+<text x="680.0" y="55.45" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="8.8" font-weight="400" fill="#22313d" text-anchor="middle">Terraform / 自动修复</text>
+<text x="680.0" y="67.946" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="8.8" font-weight="400" fill="#22313d" text-anchor="middle">回到代码里的基线</text>
+<path d="M680 84 L680 104" fill="none" stroke="#5d6d7a" stroke-width="1.2" marker-end="url(#marrow5d6d7a)" stroke-linejoin="round"/>
+<rect x="315" y="150" width="160" height="52" rx="8" ry="8" fill="#f2f5f7" stroke="#9fb3c1" stroke-width="1.4"/>
+<text x="395.0" y="172.7075" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="10.5" font-weight="700" fill="#41525f" text-anchor="middle">CloudTrail</text>
+<text x="395.0" y="189.16250000000002" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9" font-weight="400" fill="#5d6d7a" text-anchor="middle">记录每一步的调用</text>
+<path d="M395 150 L395 116" fill="none" stroke="#5d6d7a" stroke-width="1.2" stroke-dasharray="5 4" marker-end="url(#marrow5d6d7a)" stroke-linejoin="round"/>
+<text x="560" y="176" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.2" font-weight="600" fill="#c0504d" text-anchor="start">不在组织中的独立账户没有 SCP/RCP：</text>
+<text x="560" y="192" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.2" font-weight="600" fill="#c0504d" text-anchor="start">护栏只能写在 IAM 策略或权限边界里</text>
+</svg>

@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 300" width="760" height="300" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif">
+<defs><marker id="marrow1d3b53" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0.8 L9.2 5 L0 9.2 z" fill="#1d3b53"/></marker><marker id="marrowe0954a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0.8 L9.2 5 L0 9.2 z" fill="#e0954a"/></marker></defs>
+<text x="24" y="22" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="11" font-weight="700" fill="#1d3b53" text-anchor="start">写入（PutSecretValue）</text>
+<rect x="24" y="36" width="150" height="56" rx="8" ry="8" fill="#e6f3f3" stroke="#1a8a8f" stroke-width="1.4"/>
+<text x="99.0" y="60.571" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="11" font-weight="700" fill="#12676b" text-anchor="middle">Secrets Manager</text>
+<text x="99.0" y="77.769" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="400" fill="#22313d" text-anchor="middle">要保存秘密 v1</text>
+<rect x="300" y="36" width="150" height="56" rx="8" ry="8" fill="#fdf1e3" stroke="#e0954a" stroke-width="1.4"/>
+<text x="375.0" y="54.181" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="11" font-weight="700" fill="#9a5a1c" text-anchor="middle">AWS KMS</text>
+<text x="375.0" y="71.095" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.2" font-weight="400" fill="#22313d" text-anchor="middle">GenerateDataKey</text>
+<text x="375.0" y="84.15899999999999" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.2" font-weight="400" fill="#22313d" text-anchor="middle">（KMS 密钥不出 KMS）</text>
+<path d="M174 56 L300 56" fill="none" stroke="#1d3b53" stroke-width="1.6" marker-end="url(#marrow1d3b53)" stroke-linejoin="round"/>
+<rect x="185.344" y="41.260000000000005" width="103.312" height="11.959999999999999" rx="3" ry="3" fill="#ffffff" stroke="none" stroke-width="1.2" opacity="0.92"/>
+<text x="237.0" y="50.0" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.2" font-weight="500" fill="#1d3b53" text-anchor="middle">密钥 ID + 加密上下文</text>
+<path d="M300 78 L174 78" fill="none" stroke="#e0954a" stroke-width="1.6" marker-end="url(#marrowe0954a)" stroke-linejoin="round"/>
+<rect x="165.88600000000002" y="85.26" width="142.22799999999998" height="11.959999999999999" rx="3" ry="3" fill="#ffffff" stroke="none" stroke-width="1.2" opacity="0.92"/>
+<text x="237.0" y="94.0" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.2" font-weight="500" fill="#e0954a" text-anchor="middle">明文数据密钥 + 加密的数据密钥</text>
+<rect x="520" y="30" width="216" height="70" rx="8" ry="8" fill="#f2f5f7" stroke="#9fb3c1" stroke-width="1.4"/>
+<text x="530" y="48.531000000000006" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="10.6" font-weight="700" fill="#41525f" text-anchor="start">保存的只有：</text>
+<text x="530" y="65.305" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.2" font-weight="400" fill="#5d6d7a" text-anchor="start">AES-256 加密后的秘密值</text>
+<text x="530" y="78.369" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.2" font-weight="400" fill="#5d6d7a" text-anchor="start">+ 加密后的数据密钥</text>
+<text x="530" y="91.43299999999999" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.2" font-weight="400" fill="#5d6d7a" text-anchor="start">明文数据密钥用完即丢</text>
+<text x="24" y="150" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="11" font-weight="700" fill="#1d3b53" text-anchor="start">读取（GetSecretValue）</text>
+<rect x="24" y="164" width="150" height="56" rx="8" ry="8" fill="#e6f3f3" stroke="#1a8a8f" stroke-width="1.4"/>
+<text x="99.0" y="188.571" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="11" font-weight="700" fill="#12676b" text-anchor="middle">Secrets Manager</text>
+<text x="99.0" y="205.769" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="400" fill="#22313d" text-anchor="middle">代调用者解密</text>
+<rect x="300" y="164" width="150" height="56" rx="8" ry="8" fill="#fdf1e3" stroke="#e0954a" stroke-width="1.4"/>
+<text x="375.0" y="182.181" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="11" font-weight="700" fill="#9a5a1c" text-anchor="middle">AWS KMS</text>
+<text x="375.0" y="199.095" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.2" font-weight="400" fill="#22313d" text-anchor="middle">Decrypt</text>
+<text x="375.0" y="212.159" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.2" font-weight="400" fill="#22313d" text-anchor="middle">检查调用者权限</text>
+<path d="M174 184 L300 184" fill="none" stroke="#1d3b53" stroke-width="1.6" marker-end="url(#marrow1d3b53)" stroke-linejoin="round"/>
+<rect x="179.686" y="169.26" width="114.62799999999999" height="11.959999999999999" rx="3" ry="3" fill="#ffffff" stroke="none" stroke-width="1.2" opacity="0.92"/>
+<text x="237.0" y="178.0" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.2" font-weight="500" fill="#1d3b53" text-anchor="middle">加密的数据密钥 + 上下文</text>
+<path d="M300 206 L174 206" fill="none" stroke="#e0954a" stroke-width="1.6" marker-end="url(#marrowe0954a)" stroke-linejoin="round"/>
+<rect x="154.8" y="213.26" width="164.39999999999998" height="11.959999999999999" rx="3" ry="3" fill="#ffffff" stroke="none" stroke-width="1.2" opacity="0.92"/>
+<text x="237.0" y="222.0" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.2" font-weight="500" fill="#e0954a" text-anchor="middle">明文数据密钥（权限、上下文都对时）</text>
+<rect x="520" y="158" width="216" height="70" rx="8" ry="8" fill="#f1edf8" stroke="#6f55a8" stroke-width="1.4"/>
+<text x="530" y="176.531" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="10.6" font-weight="700" fill="#4f3a86" text-anchor="start">加密上下文</text>
+<text x="530" y="193.305" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.2" font-weight="400" fill="#22313d" text-anchor="start">SecretARN = 秘密 ARN</text>
+<text x="530" y="206.369" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.2" font-weight="400" fill="#22313d" text-anchor="start">SecretVersionId = 版本 ID</text>
+<text x="530" y="219.433" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.2" font-weight="400" fill="#22313d" text-anchor="start">与密文绑定，不一致就解不开</text>
+<text x="380" y="262" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="10" font-weight="600" fill="#1d3b53" text-anchor="middle">所以读秘密需要两种权限：secretsmanager:GetSecretValue（调用 API）+ kms:Decrypt（解开数据密钥）</text>
+<text x="380" y="282" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.6" font-weight="400" fill="#5d6d7a" text-anchor="middle">使用 AWS 托管密钥 aws/secretsmanager 时，后者由它的密钥策略自动给予本账户（经 Secrets Manager 调用时）</text>
+</svg>

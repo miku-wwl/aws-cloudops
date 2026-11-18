@@ -1,0 +1,30 @@
+# terraform plan -var vpc_id=<默认 VPC>（只读 plan，2026-11-18，Terraform 1.15.5 + AWS provider 6.x；账户号已替换为 111122223333）
+
+Terraform will perform the following actions:
+  # aws_vpc.default will be updated in-place
+  # (imported from "vpc-0a891659a4b172ecd")
+  ~ resource "aws_vpc" "default" {
+        arn                                  = "arn:aws:ec2:us-east-1:111122223333:vpc/vpc-0a891659a4b172ecd"
+        assign_generated_ipv6_cidr_block     = false
+        cidr_block                           = "172.31.0.0/16"
+        default_network_acl_id               = "acl-0a6ad3dfff164f944"
+        default_route_table_id               = "rtb-07cdae98c2171a114"
+        default_security_group_id            = "sg-01a520207b99e1c36"
+        dhcp_options_id                      = "dopt-0e527b030d814d1ae"
+      ~ enable_dns_hostnames                 = true -> false
+        enable_dns_support                   = true
+        enable_network_address_usage_metrics = false
+        id                                   = "vpc-0a891659a4b172ecd"
+        instance_tenancy                     = "default"
+        ipv6_association_id                  = null
+        ipv6_cidr_block                      = null
+        ipv6_cidr_block_network_border_group = null
+        ipv6_ipam_pool_id                    = null
+        ipv6_netmask_length                  = 0
+        main_route_table_id                  = "rtb-07cdae98c2171a114"
+        owner_id                             = "111122223333"
+        region                               = "us-east-1"
+        tags                                 = {}
+        tags_all                             = {}
+    }
+Plan: 1 to import, 0 to add, 1 to change, 0 to destroy.

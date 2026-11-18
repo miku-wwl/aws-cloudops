@@ -1,0 +1,16 @@
+{"ts":"2026-11-17T09:00:00.000Z","runId":"lab01","requestId":"req-00","phase":"baseline","release":"v1","route":"/checkout","status":200,"latencyMs":120}
+{"ts":"2026-11-17T09:00:15.000Z","runId":"lab01","requestId":"req-01","phase":"baseline","release":"v1","route":"/checkout","status":200,"latencyMs":135}
+{"ts":"2026-11-17T09:00:30.000Z","runId":"lab01","requestId":"req-02","phase":"baseline","release":"v1","route":"/cart","status":200,"latencyMs":128}
+{"ts":"2026-11-17T09:00:45.000Z","runId":"lab01","requestId":"req-03","phase":"baseline","release":"v1","route":"/checkout","status":200,"latencyMs":140}
+{"ts":"2026-11-17T09:01:00.000Z","runId":"lab01","requestId":"req-04","phase":"canary","release":"v2","route":"/checkout","status":500,"latencyMs":850}
+{"ts":"2026-11-17T09:01:15.000Z","runId":"lab01","requestId":"req-05","phase":"canary","release":"v2","route":"/cart","status":200,"latencyMs":160}
+{"ts":"2026-11-17T09:01:30.000Z","runId":"lab01","requestId":"req-06","phase":"canary","release":"v2","route":"/checkout","status":500,"latencyMs":910}
+{"ts":"2026-11-17T09:01:45.000Z","runId":"lab01","requestId":"req-07","phase":"canary","release":"v2","route":"/checkout","status":500,"latencyMs":880}
+{"ts":"2026-11-17T09:02:00.000Z","runId":"lab01","requestId":"req-08","phase":"canary","release":"v2","route":"/checkout","status":500,"latencyMs":930}
+{"ts":"2026-11-17T09:02:15.000Z","runId":"lab01","requestId":"req-09","phase":"canary","release":"v2","route":"/cart","status":200,"latencyMs":170}
+{"ts":"2026-11-17T09:02:30.000Z","runId":"lab01","requestId":"req-10","phase":"canary","release":"v2","route":"/checkout","status":500,"latencyMs":860}
+{"ts":"2026-11-17T09:02:45.000Z","runId":"lab01","requestId":"req-11","phase":"canary","release":"v2","route":"/checkout","status":500,"latencyMs":905}
+{"ts":"2026-11-17T09:03:00.000Z","runId":"lab01","requestId":"req-12","phase":"rollback","release":"v1","route":"/checkout","status":200,"latencyMs":125}
+{"ts":"2026-11-17T09:03:15.000Z","runId":"lab01","requestId":"req-13","phase":"rollback","release":"v1","route":"/cart","status":200,"latencyMs":130}
+{"ts":"2026-11-17T09:03:30.000Z","runId":"lab01","requestId":"req-14","phase":"rollback","release":"v1","route":"/checkout","status":200,"latencyMs":138}
+{"ts":"2026-11-17T09:03:45.000Z","runId":"lab01","requestId":"req-15","phase":"rollback","release":"v1","route":"/checkout","status":200,"latencyMs":122}

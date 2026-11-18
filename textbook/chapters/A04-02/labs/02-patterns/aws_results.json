@@ -1,0 +1,27 @@
+{
+  "recorded": "2026-11-17",
+  "api": "events:TestEventPattern",
+  "region": "us-east-1",
+  "results": {
+    "C01": true,
+    "C02": false,
+    "C03": false,
+    "C04": true,
+    "C05": false,
+    "C06": true,
+    "C07": false,
+    "C08": true,
+    "C09": true,
+    "C10": true,
+    "C11": false,
+    "C12": true,
+    "C13": false,
+    "C14": true,
+    "C15": true,
+    "C16": true,
+    "C17": false,
+    "C18": true,
+    "C19": true,
+    "C20": false
+  }
+}

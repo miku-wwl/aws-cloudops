@@ -1,0 +1,37 @@
+{
+  "source": "AWS Price List API",
+  "region": "us-east-1",
+  "date": "2026-11-18",
+  "prices": {
+    "ec2_t4g_nano_hour": {
+      "usd": 0.0042,
+      "unit": "Hrs",
+      "usage_type": "BoxUsage:t4g.nano"
+    },
+    "ebs_gp3_gb_month": {
+      "usd": 0.08,
+      "unit": "GB-Mo",
+      "usage_type": "EBS:VolumeUsage.gp3"
+    },
+    "ebs_snapshot_gb_month": {
+      "usd": 0.05,
+      "unit": "GB-Mo",
+      "usage_type": "EBS:SnapshotUsage"
+    },
+    "public_ipv4_hour": {
+      "usd": 0.005,
+      "unit": "Hrs",
+      "usage_type": "USE1-PublicIPv4:InUseAddress"
+    },
+    "logs_ingest_gb": {
+      "usd": 0.5,
+      "unit": "GB",
+      "usage_type": "USE1-DataProcessing-Bytes"
+    },
+    "logs_storage_gb_month": {
+      "usd": 0.03,
+      "unit": "GB-Mo",
+      "usage_type": "USE1-TimedStorage-ByteHrs"
+    }
+  }
+}

@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 250" width="760" height="250" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif">
+<defs><marker id="marrow1d3b53" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0.8 L9.2 5 L0 9.2 z" fill="#1d3b53"/></marker></defs>
+<rect x="14" y="20" width="168" height="96" rx="8" ry="8" fill="#f1edf8" stroke="#6f55a8" stroke-width="1.4"/>
+<text x="98.0" y="51.944" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="12" font-weight="700" fill="#4f3a86" text-anchor="middle">① 审批</text>
+<text x="98.0" y="69.208" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.2" font-weight="400" fill="#22313d" text-anchor="middle">GitHub 受保护环境</text>
+<text x="98.0" y="82.27199999999999" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.2" font-weight="400" fill="#22313d" text-anchor="middle">Required reviewers</text>
+<text x="98.0" y="95.33599999999998" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.2" font-weight="400" fill="#22313d" text-anchor="middle">只允许 main 部署</text>
+<path d="M182 68 L200 68" fill="none" stroke="#1d3b53" stroke-width="1.6" marker-end="url(#marrow1d3b53)" stroke-linejoin="round"/>
+<rect x="14" y="130" width="168" height="30" rx="6" ry="6" fill="#fbeceb" stroke="none" stroke-width="1.2"/>
+<text x="98" y="149" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9" font-weight="600" fill="#c0504d" text-anchor="middle">作业等待审批</text>
+<rect x="200" y="20" width="168" height="96" rx="8" ry="8" fill="#e9eff5" stroke="#1d3b53" stroke-width="1.4"/>
+<text x="284.0" y="51.944" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="12" font-weight="700" fill="#17384f" text-anchor="middle">② 身份</text>
+<text x="284.0" y="69.208" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.2" font-weight="400" fill="#22313d" text-anchor="middle">OIDC 令牌 → STS</text>
+<text x="284.0" y="82.27199999999999" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.2" font-weight="400" fill="#22313d" text-anchor="middle">信任策略比对</text>
+<text x="284.0" y="95.33599999999998" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.2" font-weight="400" fill="#22313d" text-anchor="middle">aud · sub · ref</text>
+<path d="M368 68 L386 68" fill="none" stroke="#1d3b53" stroke-width="1.6" marker-end="url(#marrow1d3b53)" stroke-linejoin="round"/>
+<rect x="200" y="130" width="168" height="30" rx="6" ry="6" fill="#fbeceb" stroke="none" stroke-width="1.2"/>
+<text x="284" y="149" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9" font-weight="600" fill="#c0504d" text-anchor="middle">AssumeRoleWithWebIdentity 被拒</text>
+<rect x="386" y="20" width="168" height="96" rx="8" ry="8" fill="#e6f3f3" stroke="#1a8a8f" stroke-width="1.4"/>
+<text x="470.0" y="51.944" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="12" font-weight="700" fill="#12676b" text-anchor="middle">③ 权限</text>
+<text x="470.0" y="69.208" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.2" font-weight="400" fill="#22313d" text-anchor="middle">角色自己的策略</text>
+<text x="470.0" y="82.27199999999999" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.2" font-weight="400" fill="#22313d" text-anchor="middle">状态桶 · .tflock</text>
+<text x="470.0" y="95.33599999999998" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.2" font-weight="400" fill="#22313d" text-anchor="middle">业务资源</text>
+<path d="M554 68 L572 68" fill="none" stroke="#1d3b53" stroke-width="1.6" marker-end="url(#marrow1d3b53)" stroke-linejoin="round"/>
+<rect x="386" y="130" width="168" height="30" rx="6" ry="6" fill="#fbeceb" stroke="none" stroke-width="1.2"/>
+<text x="470" y="149" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9" font-weight="600" fill="#c0504d" text-anchor="middle">API AccessDenied</text>
+<rect x="572" y="20" width="168" height="96" rx="8" ry="8" fill="#fdf1e3" stroke="#e0954a" stroke-width="1.4"/>
+<text x="656.0" y="51.944" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="12" font-weight="700" fill="#9a5a1c" text-anchor="middle">④ 锁</text>
+<text x="656.0" y="69.208" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.2" font-weight="400" fill="#22313d" text-anchor="middle">S3 原生锁</text>
+<text x="656.0" y="82.27199999999999" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.2" font-weight="400" fill="#22313d" text-anchor="middle">&lt;key&gt;.tflock</text>
+<text x="656.0" y="95.33599999999998" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.2" font-weight="400" fill="#22313d" text-anchor="middle">同一状态单写入者</text>
+<rect x="572" y="130" width="168" height="30" rx="6" ry="6" fill="#fbeceb" stroke="none" stroke-width="1.2"/>
+<text x="656" y="149" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9" font-weight="600" fill="#c0504d" text-anchor="middle">Error acquiring the state lock</text>
+<text x="380" y="186" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="10.4" font-weight="700" fill="#1d3b53" text-anchor="middle">每一道只回答自己的问题：</text>
+<text x="380" y="206" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="10" font-weight="400" fill="#22313d" text-anchor="middle">批准了 ≠ 信任匹配；能扮演角色 ≠ 有权限；有权限 ≠ 拿得到锁；拿到锁 ≠ 变更正确</text>
+<text x="380" y="228" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.6" font-weight="400" fill="#5d6d7a" text-anchor="middle">id-token: write 只允许“请求令牌”，本身不带任何 AWS 权限</text>
+</svg>

@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 352" width="760" height="352" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif">
+<defs><marker id="marrow1d3b53" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0.8 L9.2 5 L0 9.2 z" fill="#1d3b53"/></marker><marker id="marrow5d6d7a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0.8 L9.2 5 L0 9.2 z" fill="#5d6d7a"/></marker><marker id="marrowc0504d" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0.8 L9.2 5 L0 9.2 z" fill="#c0504d"/></marker><marker id="marrow1a8a8f" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0.8 L9.2 5 L0 9.2 z" fill="#1a8a8f"/></marker><marker id="marrow2e7d55" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0.8 L9.2 5 L0 9.2 z" fill="#2e7d55"/></marker></defs>
+<rect x="24" y="14" width="280" height="40" rx="8" ry="8" fill="#f2f5f7" stroke="#9fb3c1" stroke-width="1.4"/>
+<text x="164.0" y="30.429000000000002" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="11" font-weight="700" fill="#41525f" text-anchor="middle">① 识别身份</text>
+<text x="164.0" y="47.911" font-family="'Cascadia Mono',Consolas,monospace" font-size="9.0" font-weight="400" fill="#5d6d7a" text-anchor="middle">aws sts get-caller-identity</text>
+<rect x="24" y="86" width="280" height="50" rx="8" ry="8" fill="#fdf1e3" stroke="#e0954a" stroke-width="1.4"/>
+<text x="164.0" y="107.5765" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="11.5" font-weight="700" fill="#9a5a1c" text-anchor="middle">② 组织存在吗？</text>
+<text x="164.0" y="125.23349999999999" font-family="'Cascadia Mono',Consolas,monospace" font-size="9.0" font-weight="400" fill="#22313d" text-anchor="middle">aws organizations describe-organization</text>
+<rect x="24" y="176" width="280" height="50" rx="8" ry="8" fill="#fdf1e3" stroke="#e0954a" stroke-width="1.4"/>
+<text x="164.0" y="197.5765" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="11.5" font-weight="700" fill="#9a5a1c" text-anchor="middle">③ 我是管理账户吗？</text>
+<text x="164.0" y="215.23350000000002" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.6" font-weight="400" fill="#22313d" text-anchor="middle">MasterAccountId == 当前 Account ?</text>
+<rect x="24" y="266" width="280" height="50" rx="8" ry="8" fill="#fdf1e3" stroke="#e0954a" stroke-width="1.4"/>
+<text x="164.0" y="287.5765" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="11.5" font-weight="700" fill="#9a5a1c" text-anchor="middle">④ 已有 Landing Zone 吗？</text>
+<text x="164.0" y="305.2335" font-family="'Cascadia Mono',Consolas,monospace" font-size="9.0" font-weight="400" fill="#22313d" text-anchor="middle">aws controltower list-landing-zones</text>
+<path d="M164 54 L164 86" fill="none" stroke="#1d3b53" stroke-width="1.6" marker-end="url(#marrow1d3b53)" stroke-linejoin="round"/>
+<path d="M164 136 L164 176" fill="none" stroke="#1d3b53" stroke-width="1.6" marker-end="url(#marrow1d3b53)" stroke-linejoin="round"/>
+<rect x="170.4" y="152.88" width="27.2" height="12.48" rx="3" ry="3" fill="#ffffff" stroke="none" stroke-width="1.2" opacity="0.92"/>
+<text x="184.0" y="162.0" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.6" font-weight="500" fill="#1d3b53" text-anchor="middle">存在</text>
+<path d="M164 226 L164 266" fill="none" stroke="#1d3b53" stroke-width="1.6" marker-end="url(#marrow1d3b53)" stroke-linejoin="round"/>
+<rect x="169.2" y="242.88" width="17.6" height="12.48" rx="3" ry="3" fill="#ffffff" stroke="none" stroke-width="1.2" opacity="0.92"/>
+<text x="178.0" y="252.0" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.6" font-weight="500" fill="#1d3b53" text-anchor="middle">是</text>
+<rect x="370" y="70" width="368" height="38" rx="8" ry="8" fill="#ffffff" stroke="#b8c7d2" stroke-width="1.4"/>
+<text x="380" y="84.19999999999999" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.6" font-weight="400" fill="#22313d" text-anchor="start">NotInUse → 独立账户：向导第 2 步会新建组织，</text>
+<text x="380" y="97.832" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.6" font-weight="400" fill="#22313d" text-anchor="start">本账户成为管理账户（之后不能更换）</text>
+<rect x="370" y="114" width="368" height="30" rx="8" ry="8" fill="#fbeceb" stroke="#c0504d" stroke-width="1.4"/>
+<text x="380" y="131.016" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.6" font-weight="400" fill="#22313d" text-anchor="start">AccessDenied → 权限不足，不能据此下结论</text>
+<rect x="370" y="182" width="368" height="38" rx="8" ry="8" fill="#fbeceb" stroke="#c0504d" stroke-width="1.4"/>
+<text x="380" y="196.2" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.6" font-weight="400" fill="#22313d" text-anchor="start">否 → 停止：Control Tower 只能在</text>
+<text x="380" y="209.832" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.6" font-weight="400" fill="#22313d" text-anchor="start">组织的管理账户中设置</text>
+<rect x="370" y="254" width="368" height="38" rx="8" ry="8" fill="#e6f3f3" stroke="#1a8a8f" stroke-width="1.4"/>
+<text x="380" y="268.2" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.6" font-weight="400" fill="#22313d" text-anchor="start">有 ARN → get-landing-zone 看版本 / 状态 / 漂移，</text>
+<text x="380" y="281.832" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.6" font-weight="400" fill="#22313d" text-anchor="start">走 Update 流程，绝不重复创建</text>
+<rect x="370" y="298" width="368" height="38" rx="8" ry="8" fill="#eaf5ee" stroke="#2e7d55" stroke-width="1.4"/>
+<text x="380" y="312.2" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.6" font-weight="400" fill="#22313d" text-anchor="start">无 → 新建：完整 Landing Zone 向导，</text>
+<text x="380" y="325.832" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.6" font-weight="400" fill="#22313d" text-anchor="start">或在现有组织中“仅启用控制”</text>
+<path d="M304 104 L370 89" fill="none" stroke="#5d6d7a" stroke-width="1.3" marker-end="url(#marrow5d6d7a)" stroke-linejoin="round"/>
+<path d="M304 116 L370 129" fill="none" stroke="#c0504d" stroke-width="1.3" marker-end="url(#marrowc0504d)" stroke-linejoin="round"/>
+<path d="M304 201 L370 201" fill="none" stroke="#c0504d" stroke-width="1.3" marker-end="url(#marrowc0504d)" stroke-linejoin="round"/>
+<rect x="328.2" y="186.88" width="17.6" height="12.48" rx="3" ry="3" fill="#ffffff" stroke="none" stroke-width="1.2" opacity="0.92"/>
+<text x="337.0" y="196.0" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.6" font-weight="500" fill="#c0504d" text-anchor="middle">否</text>
+<path d="M304 284 L370 273" fill="none" stroke="#1a8a8f" stroke-width="1.3" marker-end="url(#marrow1a8a8f)" stroke-linejoin="round"/>
+<path d="M304 298 L370 317" fill="none" stroke="#2e7d55" stroke-width="1.3" marker-end="url(#marrow2e7d55)" stroke-linejoin="round"/>
+</svg>

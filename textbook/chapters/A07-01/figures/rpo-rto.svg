@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 220" width="760" height="220" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif">
+
+<line x1="40" y1="110" x2="720" y2="110" stroke="#1d3b53" stroke-width="2"/>
+<circle cx="80" cy="110" r="6" fill="#1d3b53" stroke="none" stroke-width="1.2"/>
+<text x="80" y="96" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="10.5" font-weight="700" fill="#1d3b53" text-anchor="middle">10:00</text>
+<text x="80" y="134" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.6" font-weight="400" fill="#22313d" text-anchor="middle">最后恢复点</text>
+<circle cx="230" cy="110" r="6" fill="#c0504d" stroke="none" stroke-width="1.2"/>
+<text x="230" y="96" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="10.5" font-weight="700" fill="#c0504d" text-anchor="middle">10:20</text>
+<text x="230" y="134" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.6" font-weight="400" fill="#22313d" text-anchor="middle">故障</text>
+<circle cx="342" cy="110" r="6" fill="#1d3b53" stroke="none" stroke-width="1.2"/>
+<text x="342" y="96" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="10.5" font-weight="700" fill="#1d3b53" text-anchor="middle">10:35</text>
+<text x="342" y="134" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.6" font-weight="400" fill="#22313d" text-anchor="middle">启动恢复</text>
+<circle cx="492" cy="110" r="6" fill="#1d3b53" stroke="none" stroke-width="1.2"/>
+<text x="492" y="96" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="10.5" font-weight="700" fill="#1d3b53" text-anchor="middle">10:55</text>
+<text x="492" y="134" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.6" font-weight="400" fill="#22313d" text-anchor="middle">新表就绪</text>
+<circle cx="567" cy="110" r="6" fill="#1d3b53" stroke="none" stroke-width="1.2"/>
+<text x="567" y="96" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="10.5" font-weight="700" fill="#1d3b53" text-anchor="middle">11:05</text>
+<text x="567" y="134" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.6" font-weight="400" fill="#22313d" text-anchor="middle">业务验证通过</text>
+<path d="M80 62 V52 H230 V62" fill="none" stroke="#e0954a" stroke-width="1.6"/>
+<text x="155" y="44" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.8" font-weight="700" fill="#e0954a" text-anchor="middle">实际数据丢失窗口 20 分钟（对照 RPO）</text>
+<path d="M230 158 V168 H567 V158" fill="none" stroke="#1a8a8f" stroke-width="1.6"/>
+<text x="398" y="186" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.8" font-weight="700" fill="#1a8a8f" text-anchor="middle">实际恢复耗时 45 分钟（对照 RTO）</text>
+<path d="M342 62 V52 H492 V62" fill="none" stroke="#6f55a8" stroke-width="1.4" stroke-dasharray="4 3"/>
+<text x="417" y="44" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="400" fill="#6f55a8" text-anchor="middle">Restore 作业 20 分钟：只是 RTO 的一部分</text>
+<text x="380" y="212" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="400" fill="#5d6d7a" text-anchor="middle">发现、决策、权限、恢复、验证、切流都算进 RTO；备份频率决定最坏情况下的 RPO</text>
+</svg>

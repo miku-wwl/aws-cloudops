@@ -1,0 +1,6 @@
+# Q3 错误率：同一分组内的错误数 ÷ 同一分组内的请求数（分母不能先被 filter 掉）
+stats count(*) as requests,
+      sum(if(status >= 500, 1, 0)) as errors,
+      100 * sum(if(status >= 500, 1, 0)) / count(*) as errorPct
+  by phase, release
+| sort errorPct desc

@@ -1,0 +1,4 @@
+# Q6 只看金丝雀：错误是整个 v2 都坏，还是只坏一条路径？
+filter phase = "canary"
+| stats count(*) as requests, sum(if(status >= 500, 1, 0)) as errors by route
+| sort errors desc

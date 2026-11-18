@@ -1,0 +1,19 @@
+S1  DNS=ok TCP=ok     基线：app 访问本地数据库
+S2  TCP=FAIL          隔离：app 访问 data（同在 spoke 表）
+      └ 去程：TGW 表 spoke 中没有匹配 10.20.1.10 的路由
+S3  TCP=FAIL          本地缺少 10.10/16 回程
+      └ 回程：本地路由表没有到 10.10.2.20 的路由（不会送进 VPN）
+S4  TCP=FAIL          spoke 表多了 172.16.20.0/24 黑洞
+      └ 去程：TGW 表 spoke 命中 172.16.20.0/24 → blackhole（被丢弃）
+S5  TCP=FAIL          app 附件关联错了表（hybrid）
+      └ 去程：TGW 表 hybrid 中没有匹配 172.16.20.10 的路由
+S6  TCP=FAIL          app 附件只开了 az1，源在 az2
+      └ 去程：app-b 所在 use1-az2 没有 TGW 附件子网，进不了 TGW
+S7  TCP=ok            DX 与 VPN 同时传播 172.16/16
+S8  TCP=ok            再加一条静态 172.16/16 → VPN
+S9  TCP=ok            默认表：所有附件关联并传播到 default
+S10 DNS=FAIL TCP=ok   没有 corp.example 转发规则
+      └ DNS：db.corp.example 命中 .（RECURSIVE），VPC Resolver 自己解析 → NXDOMAIN
+S11 DNS=FAIL TCP=ok   本地防火墙拒绝 53 端口
+      └ DNS 转发路径不通：服务：172.16.0.53:53 没有监听或被防火墙拒绝
+S12 DNS=ok TCP=ok     本地 DNS 经 Inbound 端点查 AWS 名字

@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 300" width="760" height="300" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif">
+<defs><marker id="marrow1d3b53" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0.8 L9.2 5 L0 9.2 z" fill="#1d3b53"/></marker><marker id="marrowc0504d" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0.8 L9.2 5 L0 9.2 z" fill="#c0504d"/></marker></defs>
+<rect x="20" y="40" width="128" height="66" rx="8" ry="8" fill="#e9eff5" stroke="#1d3b53" stroke-width="1.4"/>
+<text x="84.0" y="62.897000000000006" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="11" font-weight="700" fill="#17384f" text-anchor="middle">Client</text>
+<text x="84.0" y="80.095" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="400" fill="#22313d" text-anchor="middle">SG 出站</text>
+<text x="84.0" y="93.443" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="400" fill="#22313d" text-anchor="middle">有状态</text>
+<path d="M148 73 L168 73" fill="none" stroke="#1d3b53" stroke-width="1.5" marker-end="url(#marrow1d3b53)" stroke-linejoin="round"/>
+<rect x="168" y="40" width="128" height="66" rx="8" ry="8" fill="#fdf1e3" stroke="#e0954a" stroke-width="1.4"/>
+<text x="232.0" y="62.897000000000006" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="11" font-weight="700" fill="#9a5a1c" text-anchor="middle">acl-public</text>
+<text x="232.0" y="80.095" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="400" fill="#22313d" text-anchor="middle">出站</text>
+<text x="232.0" y="93.443" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="400" fill="#22313d" text-anchor="middle">目的端口 8080</text>
+<path d="M296 73 L316 73" fill="none" stroke="#1d3b53" stroke-width="1.5" marker-end="url(#marrow1d3b53)" stroke-linejoin="round"/>
+<rect x="316" y="40" width="128" height="66" rx="8" ry="8" fill="#e6f3f3" stroke="#1a8a8f" stroke-width="1.4"/>
+<text x="380.0" y="62.897000000000006" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="11" font-weight="700" fill="#12676b" text-anchor="middle">路由</text>
+<text x="380.0" y="80.095" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="400" fill="#22313d" text-anchor="middle">最长前缀</text>
+<text x="380.0" y="93.443" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="400" fill="#22313d" text-anchor="middle">10.20.0.0/16 → local</text>
+<path d="M444 73 L464 73" fill="none" stroke="#1d3b53" stroke-width="1.5" marker-end="url(#marrow1d3b53)" stroke-linejoin="round"/>
+<rect x="464" y="40" width="128" height="66" rx="8" ry="8" fill="#fdf1e3" stroke="#e0954a" stroke-width="1.4"/>
+<text x="528.0" y="62.897000000000006" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="11" font-weight="700" fill="#9a5a1c" text-anchor="middle">acl-private</text>
+<text x="528.0" y="80.095" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="400" fill="#22313d" text-anchor="middle">入站</text>
+<text x="528.0" y="93.443" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="400" fill="#22313d" text-anchor="middle">目的端口 8080</text>
+<path d="M592 73 L612 73" fill="none" stroke="#1d3b53" stroke-width="1.5" marker-end="url(#marrow1d3b53)" stroke-linejoin="round"/>
+<rect x="612" y="40" width="128" height="66" rx="8" ry="8" fill="#e9eff5" stroke="#1d3b53" stroke-width="1.4"/>
+<text x="676.0" y="62.897000000000006" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="11" font-weight="700" fill="#17384f" text-anchor="middle">Server</text>
+<text x="676.0" y="80.095" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="400" fill="#22313d" text-anchor="middle">SG 入站 + 监听</text>
+<text x="676.0" y="93.443" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="400" fill="#22313d" text-anchor="middle">有状态</text>
+<text x="24" y="28" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="10.5" font-weight="700" fill="#1d3b53" text-anchor="start">请求：10.20.1.15:49152 → 10.20.2.20:8080（SYN）</text>
+<text x="24" y="150" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="10.5" font-weight="700" fill="#c0504d" text-anchor="start">响应：10.20.2.20:8080 → 10.20.1.15:49152（SYN-ACK）</text>
+<rect x="20" y="162" width="128" height="66" rx="8" ry="8" fill="#f2f5f7" stroke="#9fb3c1" stroke-width="1.4"/>
+<text x="84.0" y="184.897" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="11" font-weight="700" fill="#41525f" text-anchor="middle">Client</text>
+<text x="84.0" y="202.095" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="400" fill="#5d6d7a" text-anchor="middle">SG 自动放行</text>
+<text x="84.0" y="215.44299999999998" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="400" fill="#5d6d7a" text-anchor="middle">连接已被跟踪</text>
+<path d="M168 195 L148 195" fill="none" stroke="#c0504d" stroke-width="1.5" marker-end="url(#marrowc0504d)" stroke-linejoin="round"/>
+<rect x="168" y="162" width="128" height="66" rx="8" ry="8" fill="#fbeceb" stroke="#c0504d" stroke-width="1.4"/>
+<text x="232.0" y="184.897" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="11" font-weight="700" fill="#8e2f2c" text-anchor="middle">acl-public</text>
+<text x="232.0" y="202.095" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="400" fill="#22313d" text-anchor="middle">入站</text>
+<text x="232.0" y="215.44299999999998" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="400" fill="#22313d" text-anchor="middle">目的端口 49152</text>
+<path d="M316 195 L296 195" fill="none" stroke="#c0504d" stroke-width="1.5" marker-end="url(#marrowc0504d)" stroke-linejoin="round"/>
+<rect x="316" y="162" width="128" height="66" rx="8" ry="8" fill="#e6f3f3" stroke="#1a8a8f" stroke-width="1.4"/>
+<text x="380.0" y="191.571" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="11" font-weight="700" fill="#12676b" text-anchor="middle">路由</text>
+<text x="380.0" y="208.769" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="400" fill="#22313d" text-anchor="middle">local</text>
+<path d="M464 195 L444 195" fill="none" stroke="#c0504d" stroke-width="1.5" marker-end="url(#marrowc0504d)" stroke-linejoin="round"/>
+<rect x="464" y="162" width="128" height="66" rx="8" ry="8" fill="#fbeceb" stroke="#c0504d" stroke-width="1.4"/>
+<text x="528.0" y="184.897" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="11" font-weight="700" fill="#8e2f2c" text-anchor="middle">acl-private</text>
+<text x="528.0" y="202.095" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="400" fill="#22313d" text-anchor="middle">出站</text>
+<text x="528.0" y="215.44299999999998" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="400" fill="#22313d" text-anchor="middle">目的端口 49152</text>
+<path d="M612 195 L592 195" fill="none" stroke="#c0504d" stroke-width="1.5" marker-end="url(#marrowc0504d)" stroke-linejoin="round"/>
+<rect x="612" y="162" width="128" height="66" rx="8" ry="8" fill="#f2f5f7" stroke="#9fb3c1" stroke-width="1.4"/>
+<text x="676.0" y="184.897" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="11" font-weight="700" fill="#41525f" text-anchor="middle">Server</text>
+<text x="676.0" y="202.095" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="400" fill="#5d6d7a" text-anchor="middle">SG 自动放行</text>
+<text x="676.0" y="215.44299999999998" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="400" fill="#5d6d7a" text-anchor="middle">连接已被跟踪</text>
+<text x="380" y="256" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="10.2" font-weight="600" fill="#c0504d" text-anchor="middle">NACL 无状态：回包要再过一遍两侧 NACL，而且目的端口变成了客户端的临时端口（49152）</text>
+<text x="380" y="276" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="10" font-weight="400" fill="#5d6d7a" text-anchor="middle">SG 有状态：入站放行了请求，回包自动允许，不看出站规则</text>
+</svg>

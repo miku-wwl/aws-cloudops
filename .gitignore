@@ -1,0 +1,55 @@
+# ---------------------------------------------------------------
+# 构建中间产物与缓存（都可以用 tools/build.py 重新生成）
+# ---------------------------------------------------------------
+textbook/**/build/
+textbook/**/work/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# ---------------------------------------------------------------
+# Terraform：本地缓存、锁文件、状态与计划都不入库
+#   .terraform/ 里是 provider 二进制（每个实验数百 MB）；
+#   锁文件只记录了本机平台的校验和，入库会让其他平台 init 失败，各实验已用 "~> 6.0" 约束版本。
+# ---------------------------------------------------------------
+.terraform/
+.terraform.lock.hcl
+*.tfstate
+*.tfstate.*
+*.tfplan
+tfplan
+plan.json
+crash.log
+crash.*.log
+*.tfvars
+*.tfvars.json
+!*.tfvars.example
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+.terraformrc
+terraform.rc
+
+# ---------------------------------------------------------------
+# 本机敏感配置：真实账户号、别名、邮箱、凭证只留在本机
+#   例如 textbook/tools/console_prep.local.js、textbook/tools/sensitive.local.txt
+# ---------------------------------------------------------------
+*.local.*
+.env
+.env.*
+*.pem
+*.key
+.aws/
+credentials
+
+# ---------------------------------------------------------------
+# 操作系统与编辑器
+# ---------------------------------------------------------------
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+*.swp
+*~

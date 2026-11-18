@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 250" width="760" height="250" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif">
+
+<text x="14" y="30" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="11" font-weight="700" fill="#1d3b53" text-anchor="start">用量时钟（资源在计量）</text>
+<text x="14" y="136" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="11" font-weight="700" fill="#1a8a8f" text-anchor="start">出账时钟（账单里看得到）</text>
+<line x1="170" y1="60" x2="740" y2="60" stroke="#9fb3c1" stroke-width="1.2"/>
+<line x1="170" y1="166" x2="740" y2="166" stroke="#9fb3c1" stroke-width="1.2"/>
+<line x1="170.0" y1="52" x2="170.0" y2="176" stroke="#dbe6ec" stroke-width="1.0" stroke-dasharray="3 3"/>
+<text x="170.0" y="196" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9" font-weight="400" fill="#5d6d7a" text-anchor="start">10:00–10:40 实验并销毁</text>
+<line x1="455.0" y1="52" x2="455.0" y2="176" stroke="#dbe6ec" stroke-width="1.0" stroke-dasharray="3 3"/>
+<text x="455.0" y="196" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9" font-weight="400" fill="#5d6d7a" text-anchor="middle">次日 06:00</text>
+<line x1="711.5" y1="52" x2="711.5" y2="176" stroke="#dbe6ec" stroke-width="1.0" stroke-dasharray="3 3"/>
+<text x="711.5" y="196" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9" font-weight="400" fill="#5d6d7a" text-anchor="middle">7 天后</text>
+<rect x="170.0" y="50" width="9.500474999999994" height="20" rx="3" ry="3" fill="#1d3b53" stroke="none" stroke-width="1.2"/>
+<text x="185.500475" y="64" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9" font-weight="400" fill="#1d3b53" text-anchor="start">EC2、公网 IPv4、卷、日志写入：40 分钟</text>
+<rect x="179.500475" y="76" width="531.999525" height="14" rx="3" ry="3" fill="#fdf1e3" stroke="#e0954a" stroke-width="1"/>
+<text x="341.0" y="87" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9" font-weight="400" fill="#9a5a1c" text-anchor="start">快照与日志存储：销毁后仍在计量（保留 7 天）</text>
+<rect x="455.0" y="156" width="46" height="20" rx="3" ry="3" fill="#1a8a8f" stroke="none" stroke-width="1.2"/>
+<text x="507.0" y="170" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9" font-weight="400" fill="#1a8a8f" text-anchor="start">前一天 40 分钟的用量此时才入账（晚入账 ≠ 新用量）</text>
+<rect x="14" y="210" width="732" height="32" rx="5" ry="5" fill="#fdf1e3" stroke="#e0954a" stroke-width="1" stroke-dasharray="4 3"/>
+<text x="22" y="225.6" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.6" font-weight="400" fill="#22313d" text-anchor="start">判断“还有没有新费用”，看账单行的 usage_start / usage_end，而不是它第一次出现在账单里的日期（时间轴为示意）。</text>
+</svg>

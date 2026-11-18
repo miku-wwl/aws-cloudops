@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 300" width="760" height="300" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif">
+<defs><marker id="marrow1d3b53" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0.8 L9.2 5 L0 9.2 z" fill="#1d3b53"/></marker></defs>
+<rect x="14" y="14" width="262" height="176" rx="8" ry="8" fill="#e9eff5" stroke="#1d3b53" stroke-width="1.4"/>
+<text x="145.0" y="35.2" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="11.2" font-weight="700" fill="#17384f" text-anchor="middle">PutLogEvents 请求</text>
+<text x="26" y="58" font-family="'Cascadia Mono',Consolas,monospace" font-size="9.4" font-weight="400" fill="#22313d" text-anchor="start">logGroupName  /cloudops/a09/lab01</text>
+<text x="26" y="76" font-family="'Cascadia Mono',Consolas,monospace" font-size="9.4" font-weight="400" fill="#22313d" text-anchor="start">logStreamName sample-run-090412</text>
+<text x="26" y="94" font-family="'Cascadia Mono',Consolas,monospace" font-size="9.4" font-weight="400" fill="#22313d" text-anchor="start">logEvents: [</text>
+<text x="26" y="112" font-family="'Cascadia Mono',Consolas,monospace" font-size="9.4" font-weight="400" fill="#22313d" text-anchor="start">  { timestamp: 1763370000000,</text>
+<text x="26" y="130" font-family="'Cascadia Mono',Consolas,monospace" font-size="9.4" font-weight="400" fill="#22313d" text-anchor="start">    message: &#x27;{&quot;status&quot;:500,</text>
+<text x="26" y="148" font-family="'Cascadia Mono',Consolas,monospace" font-size="9.4" font-weight="400" fill="#22313d" text-anchor="start">      &quot;release&quot;:&quot;v2&quot;,…}&#x27; },</text>
+<text x="26" y="166" font-family="'Cascadia Mono',Consolas,monospace" font-size="9.4" font-weight="400" fill="#22313d" text-anchor="start">  … 共 16 条，按时间递增 ]</text>
+<path d="M276 102 L322 102" fill="none" stroke="#1d3b53" stroke-width="1.6" marker-end="url(#marrow1d3b53)" stroke-linejoin="round"/>
+<rect x="285.6" y="87.07" width="26.8" height="12.22" rx="3" ry="3" fill="#ffffff" stroke="none" stroke-width="1.2" opacity="0.92"/>
+<text x="299.0" y="96.0" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="500" fill="#1d3b53" text-anchor="middle">写入</text>
+<rect x="322" y="14" width="150" height="176" rx="6" ry="6" fill="#eef7f7" stroke="#1a8a8f" stroke-width="1.4"/>
+<path d="M322 20 a6 6 0 0 1 6 -6 h41.5 v19.5 h-47.5 z" fill="#1a8a8f"/>
+<text x="330" y="28.0" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="10.5" font-weight="700" fill="#ffffff" text-anchor="start">日志组</text>
+<rect x="334" y="60" width="126" height="50" rx="8" ry="8" fill="#ffffff" stroke="#b8c7d2" stroke-width="1.4"/>
+<text x="397.0" y="81.7075" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="10.5" font-weight="700" fill="#17384f" text-anchor="middle">日志流</text>
+<text x="397.0" y="98.1625" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9" font-weight="400" fill="#22313d" text-anchor="middle">sample-run-090412</text>
+<rect x="334" y="124" width="126" height="50" rx="8" ry="8" fill="#ffffff" stroke="#b8c7d2" stroke-width="1.4"/>
+<text x="397.0" y="145.7075" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="10.5" font-weight="700" fill="#17384f" text-anchor="middle">日志流</text>
+<text x="397.0" y="162.16250000000002" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9" font-weight="400" fill="#22313d" text-anchor="middle">sample-run-091530</text>
+<path d="M472 102 L512 102" fill="none" stroke="#1d3b53" stroke-width="1.6" marker-end="url(#marrow1d3b53)" stroke-linejoin="round"/>
+<rect x="478.6" y="87.07" width="26.8" height="12.22" rx="3" ry="3" fill="#ffffff" stroke="none" stroke-width="1.2" opacity="0.92"/>
+<text x="492.0" y="96.0" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="500" fill="#1d3b53" text-anchor="middle">查询</text>
+<rect x="512" y="14" width="234" height="176" rx="8" ry="8" fill="#e6f3f3" stroke="#1a8a8f" stroke-width="1.4"/>
+<text x="629.0" y="35.2" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="11.2" font-weight="700" fill="#12676b" text-anchor="middle">Logs Insights 看到的字段</text>
+<text x="524" y="60" font-family="'Cascadia Mono',Consolas,monospace" font-size="9.6" font-weight="700" fill="#1d3b53" text-anchor="start">@timestamp</text>
+<text x="524" y="73" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.2" font-weight="400" fill="#22313d" text-anchor="start">← 请求里的 timestamp（事件时间）</text>
+<text x="524" y="85" font-family="'Cascadia Mono',Consolas,monospace" font-size="9.6" font-weight="700" fill="#1d3b53" text-anchor="start">@ingestionTime</text>
+<text x="524" y="98" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.2" font-weight="400" fill="#22313d" text-anchor="start">← 服务收到它的时间</text>
+<text x="524" y="110" font-family="'Cascadia Mono',Consolas,monospace" font-size="9.6" font-weight="700" fill="#1d3b53" text-anchor="start">@logStream / @log</text>
+<text x="524" y="123" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.2" font-weight="400" fill="#22313d" text-anchor="start">← 流名 / 日志组标识</text>
+<text x="524" y="135" font-family="'Cascadia Mono',Consolas,monospace" font-size="9.6" font-weight="700" fill="#1d3b53" text-anchor="start">@message</text>
+<text x="524" y="148" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.2" font-weight="400" fill="#22313d" text-anchor="start">← message 原文</text>
+<text x="524" y="160" font-family="'Cascadia Mono',Consolas,monospace" font-size="9.6" font-weight="700" fill="#1d3b53" text-anchor="start">status, release…</text>
+<text x="524" y="173" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.2" font-weight="400" fill="#22313d" text-anchor="start">← JSON 字段自动发现</text>
+<text x="380" y="214" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.8" font-weight="700" fill="#1d3b53" text-anchor="middle">一批 PutLogEvents 的硬约束（违反时：整批失败，或部分事件被拒并在 rejectedLogEventsInfo 中报告）</text>
+<rect x="22" y="230.6" width="70.46800000000002" height="16.4" rx="8.2" ry="8.2" fill="#e9eff5" stroke="none" stroke-width="1.2"/>
+<text x="57.23400000000001" y="242.5" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="700" fill="#1d3b53" text-anchor="middle">≤ 10 000 条</text>
+<rect x="100.46800000000002" y="230.6" width="143.41199999999998" height="16.4" rx="8.2" ry="8.2" fill="#e9eff5" stroke="none" stroke-width="1.2"/>
+<text x="172.174" y="242.5" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="700" fill="#1d3b53" text-anchor="middle">≤ 1 MB（每条另计 26 字节）</text>
+<rect x="251.88" y="230.6" width="70.37400000000001" height="16.4" rx="8.2" ry="8.2" fill="#e9eff5" stroke="none" stroke-width="1.2"/>
+<text x="287.067" y="242.5" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="700" fill="#1d3b53" text-anchor="middle">单条 ≤ 1 MB</text>
+<rect x="330.254" y="230.6" width="59.0" height="16.4" rx="8.2" ry="8.2" fill="#e9eff5" stroke="none" stroke-width="1.2"/>
+<text x="359.754" y="242.5" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="700" fill="#1d3b53" text-anchor="middle">按时间递增</text>
+<rect x="397.254" y="230.6" width="81.18400000000001" height="16.4" rx="8.2" ry="8.2" fill="#e9eff5" stroke="none" stroke-width="1.2"/>
+<text x="437.846" y="242.5" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="700" fill="#1d3b53" text-anchor="middle">跨度 ≤ 24 小时</text>
+<rect x="22" y="262.6" width="199.34200000000004" height="16.4" rx="8.2" ry="8.2" fill="#fbeceb" stroke="none" stroke-width="1.2"/>
+<text x="121.67100000000002" y="274.5" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="700" fill="#c0504d" text-anchor="middle">早于 14 天或早于保留期 → 拒收（tooOld）</text>
+<rect x="229.34200000000004" y="262.6" width="161.08399999999997" height="16.4" rx="8.2" ry="8.2" fill="#fbeceb" stroke="none" stroke-width="1.2"/>
+<text x="309.884" y="274.5" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="700" fill="#c0504d" text-anchor="middle">晚于 2 小时后 → 拒收（tooNew）</text>
+<rect x="398.42600000000004" y="262.6" width="115.4" height="16.4" rx="8.2" ry="8.2" fill="#eaf5ee" stroke="none" stroke-width="1.2"/>
+<text x="456.12600000000003" y="274.5" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="700" fill="#2e7d55" text-anchor="middle">序列号已废弃，可并行写</text>
+</svg>

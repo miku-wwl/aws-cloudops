@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 380" width="760" height="380" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif">
+<defs><marker id="marrow1d3b53" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0.8 L9.2 5 L0 9.2 z" fill="#1d3b53"/></marker><marker id="marrowe0954a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0.8 L9.2 5 L0 9.2 z" fill="#e0954a"/></marker></defs>
+<rect x="8" y="8" width="744" height="364" rx="6" ry="6" fill="#fbfcfd" stroke="#232f3e" stroke-width="1.4"/>
+<path d="M8 14 a6 6 0 0 1 6 -6 h131.58999999999997 v19.5 h-137.58999999999997 z" fill="#232f3e"/>
+<text x="16" y="22.0" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="10.5" font-weight="700" fill="#ffffff" text-anchor="start">AWS Cloud · us-east-1</text>
+<rect x="22" y="38" width="600" height="326" rx="6" ry="6" fill="#fbf9ff" stroke="#7b5cc4" stroke-width="1.4"/>
+<path d="M22 44 a6 6 0 0 1 6 -6 h199.83999999999997 v19.5 h-205.83999999999997 z" fill="#7b5cc4"/>
+<text x="30" y="52.0" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="10.5" font-weight="700" fill="#ffffff" text-anchor="start">VPC 10.20.0.0/16（单 AZ 教学拓扑）</text>
+<rect x="40" y="78" width="250" height="230" rx="6" ry="6" fill="#f2f8ee" stroke="#4f9a3c" stroke-width="1.4"/>
+<path d="M40 84 a6 6 0 0 1 6 -6 h119.19999999999999 v19 h-125.19999999999999 z" fill="#4f9a3c"/>
+<text x="48" y="91.5" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="10" font-weight="700" fill="#ffffff" text-anchor="start">公有子网 10.20.1.0/24</text>
+<rect x="330" y="78" width="276" height="230" rx="6" ry="6" fill="#eef7f7" stroke="#1a8a8f" stroke-width="1.4"/>
+<path d="M330 84 a6 6 0 0 1 6 -6 h119.19999999999999 v19 h-125.19999999999999 z" fill="#1a8a8f"/>
+<text x="338" y="91.5" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="10" font-weight="700" fill="#ffffff" text-anchor="start">私有子网 10.20.2.0/24</text>
+<rect x="62" y="116" width="120" height="52" rx="8" ry="8" fill="#ffffff" stroke="#b8c7d2" stroke-width="1.4"/>
+<text x="122.0" y="131.897" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="11" font-weight="700" fill="#17384f" text-anchor="middle">Client</text>
+<text x="122.0" y="149.095" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="400" fill="#22313d" text-anchor="middle">10.20.1.15</text>
+<text x="122.0" y="162.44299999999998" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="400" fill="#22313d" text-anchor="middle">无公网 IP</text>
+<rect x="352" y="116" width="126" height="52" rx="8" ry="8" fill="#ffffff" stroke="#b8c7d2" stroke-width="1.4"/>
+<text x="415.0" y="131.897" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="11" font-weight="700" fill="#17384f" text-anchor="middle">Server :8080</text>
+<text x="415.0" y="149.095" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="400" fill="#22313d" text-anchor="middle">10.20.2.20</text>
+<text x="415.0" y="162.44299999999998" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="400" fill="#22313d" text-anchor="middle">systemd http.server</text>
+<rect x="490" y="116" width="104" height="52" rx="8" ry="8" fill="#f1edf8" stroke="#6f55a8" stroke-width="1.4"/>
+<text x="542.0" y="132.3175" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="10.5" font-weight="700" fill="#4f3a86" text-anchor="middle">EIC 端点</text>
+<text x="542.0" y="148.77249999999998" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9" font-weight="400" fill="#22313d" text-anchor="middle">私网 SSH 入口</text>
+<text x="542.0" y="161.55249999999998" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9" font-weight="400" fill="#22313d" text-anchor="middle">无小时费</text>
+<rect x="56" y="222" width="220" height="72" rx="8" ry="8" fill="#e6f3f3" stroke="#1a8a8f" stroke-width="1.4"/>
+<text x="166.0" y="247.74949999999998" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="10.5" font-weight="700" fill="#12676b" text-anchor="middle">rt-public</text>
+<text x="166.0" y="264.7725" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="400" fill="#22313d" text-anchor="middle">10.20.0.0/16 → local</text>
+<text x="166.0" y="278.1205" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="400" fill="#22313d" text-anchor="middle">0.0.0.0/0 → igw</text>
+<rect x="346" y="222" width="130" height="72" rx="8" ry="8" fill="#e6f3f3" stroke="#1a8a8f" stroke-width="1.4"/>
+<text x="411.0" y="247.74949999999998" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="10.5" font-weight="700" fill="#12676b" text-anchor="middle">rt-private</text>
+<text x="411.0" y="264.7725" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="400" fill="#22313d" text-anchor="middle">10.20.0.0/16 → local</text>
+<text x="411.0" y="278.1205" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="400" fill="#22313d" text-anchor="middle">（无 0.0.0.0/0）</text>
+<rect x="486" y="222" width="108" height="72" rx="8" ry="8" fill="#fdf1e3" stroke="#e0954a" stroke-width="1.4"/>
+<text x="540.0" y="242.3535" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="10.5" font-weight="700" fill="#9a5a1c" text-anchor="middle">acl-private</text>
+<text x="540.0" y="258.5245" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="8.8" font-weight="400" fill="#22313d" text-anchor="middle">#90 DENY 8080（故障）</text>
+<text x="540.0" y="271.02049999999997" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="8.8" font-weight="400" fill="#22313d" text-anchor="middle">#100 ALLOW …</text>
+<text x="540.0" y="283.51649999999995" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="8.8" font-weight="400" fill="#22313d" text-anchor="middle">* DENY</text>
+<path d="M182 142 L352 142" fill="none" stroke="#1d3b53" stroke-width="1.6" marker-end="url(#marrow1d3b53)" stroke-linejoin="round"/>
+<rect x="239.624" y="126.88" width="54.752" height="12.48" rx="3" ry="3" fill="#ffffff" stroke="none" stroke-width="1.2" opacity="0.92"/>
+<text x="267.0" y="136.0" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.6" font-weight="500" fill="#1d3b53" text-anchor="middle">TCP 8080</text>
+<rect x="640" y="52" width="100" height="52" rx="8" ry="8" fill="#e9eff5" stroke="#1d3b53" stroke-width="1.4"/>
+<text x="690.0" y="74.429" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="11" font-weight="700" fill="#17384f" text-anchor="middle">Internet</text>
+<text x="690.0" y="91.911" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.6" font-weight="400" fill="#22313d" text-anchor="middle">Gateway</text>
+<path d="M276 246 L310 246 L310 60 L628 60 L628 78 L640 78" fill="none" stroke="#1d3b53" stroke-width="1.6" stroke-dasharray="5 4" marker-end="url(#marrow1d3b53)" stroke-linejoin="round"/>
+<rect x="393.612" y="46.07" width="55.376000000000005" height="12.22" rx="3" ry="3" fill="#ffffff" stroke="none" stroke-width="1.2" opacity="0.92"/>
+<text x="421.3" y="55.0" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="500" fill="#1d3b53" text-anchor="middle">0/0 → igw</text>
+<rect x="640" y="230" width="100" height="60" rx="8" ry="8" fill="#fdf1e3" stroke="#e0954a" stroke-width="1.4"/>
+<text x="690.0" y="250.3175" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="10.5" font-weight="700" fill="#9a5a1c" text-anchor="middle">Amazon S3</text>
+<text x="690.0" y="266.7725" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9" font-weight="400" fill="#22313d" text-anchor="middle">网关终端节点</text>
+<text x="690.0" y="279.55249999999995" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9" font-weight="400" fill="#22313d" text-anchor="middle">（可选）</text>
+<path d="M411 294 L411 318 L690 318 L690 290" fill="none" stroke="#e0954a" stroke-width="1.6" stroke-dasharray="5 4" marker-end="url(#marrowe0954a)" stroke-linejoin="round"/>
+<rect x="442.724" y="304.26" width="215.55200000000005" height="11.959999999999999" rx="3" ry="3" fill="#ffffff" stroke="none" stroke-width="1.2" opacity="0.92"/>
+<text x="550.5" y="313.0" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.2" font-weight="500" fill="#e0954a" text-anchor="middle">S3 前缀列表 pl-… → vpce-…（加在 rt-private）</text>
+<text x="330" y="348" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="10" font-weight="400" fill="#5d6d7a" text-anchor="middle">路由决定“去哪里”，NACL 管子网边界，SG 管实例网卡，监听进程决定“有没有人接”</text>
+</svg>

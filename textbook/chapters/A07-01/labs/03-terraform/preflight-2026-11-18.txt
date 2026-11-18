@@ -1,0 +1,5 @@
+DynamoDB 已纳入 AWS Backup： True
+DynamoDB 高级功能（由 AWS Backup 完整管理）： True
+已纳入的资源类型： 19 / 19
+备份库：0  计划：0  受保护资源：0  恢复测试计划：0
+DynamoDB 表：0

@@ -1,0 +1,3 @@
+# Q5 按分钟看错误与请求——这正是指标过滤器 + 告警在后台做的事
+stats sum(if(status >= 500, 1, 0)) as errors, count(*) as requests by bin(1m) as minute
+| sort minute asc

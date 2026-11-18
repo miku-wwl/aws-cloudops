@@ -1,0 +1,12 @@
+{
+  "recorded": "2026-11-18",
+  "api": "iam:SimulateCustomPolicy",
+  "results": {
+    "G1": "explicitDeny",
+    "G2": "allowed",
+    "G3": "explicitDeny",
+    "G4": "allowed",
+    "G5": "explicitDeny",
+    "G6": "allowed"
+  }
+}

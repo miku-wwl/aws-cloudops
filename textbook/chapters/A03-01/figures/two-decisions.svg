@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 250" width="760" height="250" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif">
+<defs><marker id="marrow1d3b53" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0.8 L9.2 5 L0 9.2 z" fill="#1d3b53"/></marker></defs>
+<rect x="16" y="70" width="140" height="70" rx="8" ry="8" fill="#f2f5f7" stroke="#9fb3c1" stroke-width="1.4"/>
+<text x="86.0" y="95.0445" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="11.5" font-weight="700" fill="#41525f" text-anchor="middle">操作者</text>
+<text x="86.0" y="112.41749999999999" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="400" fill="#5d6d7a" text-anchor="middle">IAM 用户 ci-operator</text>
+<text x="86.0" y="125.76549999999999" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="400" fill="#5d6d7a" text-anchor="middle">（长期凭证）</text>
+<rect x="220" y="60" width="170" height="90" rx="8" ry="8" fill="#e9eff5" stroke="#1d3b53" stroke-width="1.4"/>
+<text x="305.0" y="88.7965" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="11.5" font-weight="700" fill="#17384f" text-anchor="middle">① sts:AssumeRole</text>
+<text x="305.0" y="105.8855" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.2" font-weight="400" fill="#22313d" text-anchor="middle">检查角色的信任策略：</text>
+<text x="305.0" y="118.94949999999999" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.2" font-weight="400" fill="#22313d" text-anchor="middle">Principal 是否包含调用者</text>
+<text x="305.0" y="132.0135" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.2" font-weight="400" fill="#22313d" text-anchor="middle">（同时看调用者自身权限）</text>
+<rect x="450" y="70" width="130" height="70" rx="8" ry="8" fill="#e6f3f3" stroke="#1a8a8f" stroke-width="1.4"/>
+<text x="515.0" y="95.3285" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="11.5" font-weight="700" fill="#12676b" text-anchor="middle">角色会话</text>
+<text x="515.0" y="112.4175" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.2" font-weight="400" fill="#22313d" text-anchor="middle">assumed-role/…</text>
+<text x="515.0" y="125.4815" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.2" font-weight="400" fill="#22313d" text-anchor="middle">临时凭证 ≤ 1 小时</text>
+<rect x="620" y="60" width="126" height="90" rx="8" ry="8" fill="#fdf1e3" stroke="#e0954a" stroke-width="1.4"/>
+<text x="683.0" y="88.7965" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="11.5" font-weight="700" fill="#9a5a1c" text-anchor="middle">② s3:GetObject</text>
+<text x="683.0" y="105.8855" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.2" font-weight="400" fill="#22313d" text-anchor="middle">检查角色权限策略、</text>
+<text x="683.0" y="118.94949999999999" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.2" font-weight="400" fill="#22313d" text-anchor="middle">桶策略、边界、</text>
+<text x="683.0" y="132.0135" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.2" font-weight="400" fill="#22313d" text-anchor="middle">会话策略、SCP…</text>
+<path d="M156 105 L220 105" fill="none" stroke="#1d3b53" stroke-width="1.6" marker-end="url(#marrow1d3b53)" stroke-linejoin="round"/>
+<path d="M390 105 L450 105" fill="none" stroke="#1d3b53" stroke-width="1.6" marker-end="url(#marrow1d3b53)" stroke-linejoin="round"/>
+<rect x="397.2" y="90.07" width="45.6" height="12.22" rx="3" ry="3" fill="#ffffff" stroke="none" stroke-width="1.2" opacity="0.92"/>
+<text x="420.0" y="99.0" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="500" fill="#1d3b53" text-anchor="middle">临时凭证</text>
+<path d="M580 105 L620 105" fill="none" stroke="#1d3b53" stroke-width="1.6" marker-end="url(#marrow1d3b53)" stroke-linejoin="round"/>
+<text x="305" y="182" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="10.4" font-weight="700" fill="#1d3b53" text-anchor="middle">信任策略回答：谁能变成这个角色？</text>
+<text x="683" y="182" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="10.4" font-weight="700" fill="#e0954a" text-anchor="middle">权限策略回答：变成之后能做什么？</text>
+<text x="380" y="222" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="10" font-weight="400" fill="#5d6d7a" text-anchor="middle">两次判定彼此独立：AssumeRole 成功，只证明拿到了身份，不证明有权读取某个对象</text>
+</svg>

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 240" width="760" height="240" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif">
+
+<rect x="24" y="30" width="220" height="80" rx="8" ry="8" fill="#fdf1e3" stroke="#e0954a" stroke-width="1.4"/>
+<text x="134.0" y="53.3705" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="11.5" font-weight="700" fill="#9a5a1c" text-anchor="middle">密钥策略（必需）</text>
+<text x="134.0" y="70.7435" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="400" fill="#22313d" text-anchor="middle">每把 KMS 密钥都有且必须有</text>
+<text x="134.0" y="84.0915" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="400" fill="#22313d" text-anchor="middle">没有它允许，谁都用不了</text>
+<text x="134.0" y="97.4395" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="400" fill="#22313d" text-anchor="middle">包括账户管理员</text>
+<rect x="270" y="30" width="220" height="80" rx="8" ry="8" fill="#e9eff5" stroke="#1d3b53" stroke-width="1.4"/>
+<text x="380.0" y="53.3705" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="11.5" font-weight="700" fill="#17384f" text-anchor="middle">IAM 策略（可选的第二条腿）</text>
+<text x="380.0" y="70.7435" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="400" fill="#22313d" text-anchor="middle">只有密钥策略里</text>
+<text x="380.0" y="84.0915" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="400" fill="#22313d" text-anchor="middle">“允许本账户 IAM 策略”</text>
+<text x="380.0" y="97.4395" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="400" fill="#22313d" text-anchor="middle">时才生效</text>
+<rect x="516" y="30" width="220" height="80" rx="8" ry="8" fill="#f1edf8" stroke="#6f55a8" stroke-width="1.4"/>
+<text x="626.0" y="53.3705" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="11.5" font-weight="700" fill="#4f3a86" text-anchor="middle">授权（Grant）</text>
+<text x="626.0" y="70.7435" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="400" fill="#22313d" text-anchor="middle">临时、可撤销的委托</text>
+<text x="626.0" y="84.0915" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="400" fill="#22313d" text-anchor="middle">常被 AWS 服务代用</text>
+<text x="626.0" y="97.4395" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="400" fill="#22313d" text-anchor="middle">（如 EBS、RDS）</text>
+<rect x="24" y="140" width="712" height="84" rx="8" ry="8" fill="#f2f5f7" stroke="#9fb3c1" stroke-width="1.4"/>
+<text x="34" y="164.797" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="11" font-weight="700" fill="#41525f" text-anchor="start">判断 kms:Decrypt 能否成功</text>
+<text x="34" y="182.279" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.6" font-weight="400" fill="#5d6d7a" text-anchor="start">密钥策略直接允许该主体  →  可以</text>
+<text x="34" y="195.911" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.6" font-weight="400" fill="#5d6d7a" text-anchor="start">密钥策略允许账户（root）+ IAM 策略允许该主体  →  可以</text>
+<text x="34" y="209.543" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.6" font-weight="400" fill="#5d6d7a" text-anchor="start">密钥策略没有允许账户，只有 IAM 策略允许  →  不行（IAM 的 Allow 不生效）</text>
+</svg>

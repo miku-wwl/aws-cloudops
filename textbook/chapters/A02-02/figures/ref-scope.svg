@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 236" width="760" height="236" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif">
+
+<rect x="24" y="20" width="196" height="32" rx="0" ry="0" fill="#eef4f7" stroke="#c9d6df" stroke-width="1"/>
+<text x="34" y="41" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="10.4" font-weight="700" fill="#1d3b53" text-anchor="start">场景</text>
+<rect x="220" y="20" width="120" height="32" rx="0" ry="0" fill="#eef4f7" stroke="#c9d6df" stroke-width="1"/>
+<text x="230" y="41" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="10.4" font-weight="700" fill="#1d3b53" text-anchor="start">入站规则可引用</text>
+<rect x="340" y="20" width="120" height="32" rx="0" ry="0" fill="#eef4f7" stroke="#c9d6df" stroke-width="1"/>
+<text x="350" y="41" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="10.4" font-weight="700" fill="#1d3b53" text-anchor="start">出站规则可引用</text>
+<rect x="460" y="20" width="276" height="32" rx="0" ry="0" fill="#eef4f7" stroke="#c9d6df" stroke-width="1"/>
+<text x="470" y="41" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="10.4" font-weight="700" fill="#1d3b53" text-anchor="start">说明</text>
+<rect x="24" y="52" width="196" height="42" rx="0" ry="0" fill="#ffffff" stroke="#dde6ec" stroke-width="1"/>
+<text x="34" y="78" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.8" font-weight="400" fill="#22313d" text-anchor="start">同一个 VPC</text>
+<rect x="220" y="52" width="120" height="42" rx="0" ry="0" fill="#ffffff" stroke="#dde6ec" stroke-width="1"/>
+<circle cx="280.0" cy="73" r="8.06" fill="#2e7d55" stroke="none" stroke-width="1.2"/>
+<path d="M276.1 73 l2.86 3.12 l5.2 -5.72" fill="none" stroke="#fff" stroke-width="1.8"/>
+<rect x="340" y="52" width="120" height="42" rx="0" ry="0" fill="#ffffff" stroke="#dde6ec" stroke-width="1"/>
+<circle cx="400.0" cy="73" r="8.06" fill="#2e7d55" stroke="none" stroke-width="1.2"/>
+<path d="M396.1 73 l2.86 3.12 l5.2 -5.72" fill="none" stroke="#fff" stroke-width="1.8"/>
+<rect x="460" y="52" width="276" height="42" rx="0" ry="0" fill="#ffffff" stroke="#dde6ec" stroke-width="1"/>
+<text x="470" y="78" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.8" font-weight="400" fill="#22313d" text-anchor="start">最常用：app ← sg-web</text>
+<rect x="24" y="94" width="196" height="42" rx="0" ry="0" fill="#ffffff" stroke="#dde6ec" stroke-width="1"/>
+<text x="34" y="120" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.8" font-weight="400" fill="#22313d" text-anchor="start">VPC 对等连接（同区域）</text>
+<rect x="220" y="94" width="120" height="42" rx="0" ry="0" fill="#ffffff" stroke="#dde6ec" stroke-width="1"/>
+<circle cx="280.0" cy="115" r="8.06" fill="#2e7d55" stroke="none" stroke-width="1.2"/>
+<path d="M276.1 115 l2.86 3.12 l5.2 -5.72" fill="none" stroke="#fff" stroke-width="1.8"/>
+<rect x="340" y="94" width="120" height="42" rx="0" ry="0" fill="#ffffff" stroke="#dde6ec" stroke-width="1"/>
+<circle cx="400.0" cy="115" r="8.06" fill="#2e7d55" stroke="none" stroke-width="1.2"/>
+<path d="M396.1 115 l2.86 3.12 l5.2 -5.72" fill="none" stroke="#fff" stroke-width="1.8"/>
+<rect x="460" y="94" width="276" height="42" rx="0" ry="0" fill="#ffffff" stroke="#dde6ec" stroke-width="1"/>
+<text x="470" y="120" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.8" font-weight="400" fill="#22313d" text-anchor="start">跨 VPC 引用对方 SG；删除对等后规则变为 stale</text>
+<rect x="24" y="136" width="196" height="42" rx="0" ry="0" fill="#ffffff" stroke="#dde6ec" stroke-width="1"/>
+<text x="34" y="162" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.8" font-weight="400" fill="#22313d" text-anchor="start">Transit Gateway</text>
+<rect x="220" y="136" width="120" height="42" rx="0" ry="0" fill="#ffffff" stroke="#dde6ec" stroke-width="1"/>
+<circle cx="280.0" cy="157" r="8.06" fill="#2e7d55" stroke="none" stroke-width="1.2"/>
+<path d="M276.1 157 l2.86 3.12 l5.2 -5.72" fill="none" stroke="#fff" stroke-width="1.8"/>
+<rect x="340" y="136" width="120" height="42" rx="0" ry="0" fill="#ffffff" stroke="#dde6ec" stroke-width="1"/>
+<circle cx="400.0" cy="157" r="8.06" fill="#c0504d" stroke="none" stroke-width="1.2"/>
+<path d="M396.62 153.62 l6.76 6.76 M403.38 153.62 l-6.76 6.76" fill="none" stroke="#fff" stroke-width="1.8"/>
+<rect x="460" y="136" width="276" height="42" rx="0" ry="0" fill="#ffffff" stroke="#dde6ec" stroke-width="1"/>
+<text x="470" y="162" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.8" font-weight="400" fill="#22313d" text-anchor="start">仅入站规则可引用（TGW 需开启 SG 引用支持）</text>
+<rect x="24" y="178" width="196" height="42" rx="0" ry="0" fill="#ffffff" stroke="#dde6ec" stroke-width="1"/>
+<text x="34" y="204" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.8" font-weight="400" fill="#22313d" text-anchor="start">经中间设备（防火墙）转发</text>
+<rect x="220" y="178" width="120" height="42" rx="0" ry="0" fill="#ffffff" stroke="#dde6ec" stroke-width="1"/>
+<circle cx="280.0" cy="199" r="8.06" fill="#c0504d" stroke="none" stroke-width="1.2"/>
+<path d="M276.62 195.62 l6.76 6.76 M283.38 195.62 l-6.76 6.76" fill="none" stroke="#fff" stroke-width="1.8"/>
+<rect x="340" y="178" width="120" height="42" rx="0" ry="0" fill="#ffffff" stroke="#dde6ec" stroke-width="1"/>
+<circle cx="400.0" cy="199" r="8.06" fill="#c0504d" stroke="none" stroke-width="1.2"/>
+<path d="M396.62 195.62 l6.76 6.76 M403.38 195.62 l-6.76 6.76" fill="none" stroke="#fff" stroke-width="1.8"/>
+<rect x="460" y="178" width="276" height="42" rx="0" ry="0" fill="#ffffff" stroke="#dde6ec" stroke-width="1"/>
+<text x="470" y="204" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.8" font-weight="400" fill="#22313d" text-anchor="start">必须改用对端私有 IP 或子网 CIDR</text>
+<text x="380" y="230" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9" font-weight="400" fill="#5d6d7a" text-anchor="middle">依据：AWS VPC 用户指南《Security group referencing》（2026-11-17 核对）</text>
+</svg>

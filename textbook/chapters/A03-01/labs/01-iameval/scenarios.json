@@ -1,0 +1,320 @@
+[
+  {
+    "name": "S1",
+    "title": "基线：角色只允许读 health",
+    "action": "s3:GetObject",
+    "resources": [
+      "arn:aws:s3:::a06-lab/logs/health.txt",
+      "arn:aws:s3:::a06-lab/reports/summary.csv"
+    ],
+    "identity": [
+      {
+        "Version": "2012-10-17",
+        "Statement": [
+          {
+            "Sid": "ReadHealthOnly",
+            "Effect": "Allow",
+            "Action": "s3:GetObject",
+            "Resource": "arn:aws:s3:::a06-lab/logs/health.txt"
+          }
+        ]
+      }
+    ],
+    "expect": {
+      "arn:aws:s3:::a06-lab/logs/health.txt": "allowed",
+      "arn:aws:s3:::a06-lab/reports/summary.csv": "implicitDeny"
+    }
+  },
+  {
+    "name": "S2",
+    "title": "最小修复：再加一条 report 的精确 Allow",
+    "action": "s3:GetObject",
+    "resources": [
+      "arn:aws:s3:::a06-lab/logs/health.txt",
+      "arn:aws:s3:::a06-lab/reports/summary.csv"
+    ],
+    "identity": [
+      {
+        "Version": "2012-10-17",
+        "Statement": [
+          {
+            "Sid": "ReadHealthOnly",
+            "Effect": "Allow",
+            "Action": "s3:GetObject",
+            "Resource": "arn:aws:s3:::a06-lab/logs/health.txt"
+          },
+          {
+            "Sid": "ReadReportAfterFix",
+            "Effect": "Allow",
+            "Action": "s3:GetObject",
+            "Resource": "arn:aws:s3:::a06-lab/reports/summary.csv"
+          }
+        ]
+      }
+    ],
+    "expect": {
+      "arn:aws:s3:::a06-lab/logs/health.txt": "allowed",
+      "arn:aws:s3:::a06-lab/reports/summary.csv": "allowed"
+    }
+  },
+  {
+    "name": "S3",
+    "title": "桶策略对 reports/* 显式拒绝",
+    "action": "s3:GetObject",
+    "resources": [
+      "arn:aws:s3:::a06-lab/logs/health.txt",
+      "arn:aws:s3:::a06-lab/reports/summary.csv"
+    ],
+    "identity": [
+      {
+        "Version": "2012-10-17",
+        "Statement": [
+          {
+            "Sid": "ReadBoth",
+            "Effect": "Allow",
+            "Action": "s3:GetObject",
+            "Resource": [
+              "arn:aws:s3:::a06-lab/logs/*",
+              "arn:aws:s3:::a06-lab/reports/*"
+            ]
+          }
+        ]
+      }
+    ],
+    "resource_policy": {
+      "Version": "2012-10-17",
+      "Statement": [
+        {
+          "Sid": "DenyReports",
+          "Effect": "Deny",
+          "Principal": "*",
+          "Action": "s3:GetObject",
+          "Resource": "arn:aws:s3:::a06-lab/reports/*"
+        }
+      ]
+    },
+    "caller_arn": "arn:aws:iam::111122223333:user/ci-operator",
+    "resource_owner": "arn:aws:iam::111122223333:root",
+    "principal_type": "user",
+    "expect": {
+      "arn:aws:s3:::a06-lab/logs/health.txt": "allowed",
+      "arn:aws:s3:::a06-lab/reports/summary.csv": "explicitDeny"
+    }
+  },
+  {
+    "name": "S4",
+    "title": "权限边界只允许 logs/*，身份策略给了 s3:*",
+    "action": "s3:GetObject",
+    "resources": [
+      "arn:aws:s3:::a06-lab/logs/health.txt",
+      "arn:aws:s3:::a06-lab/reports/summary.csv"
+    ],
+    "identity": [
+      {
+        "Version": "2012-10-17",
+        "Statement": [
+          {
+            "Sid": "Broad",
+            "Effect": "Allow",
+            "Action": "s3:*",
+            "Resource": "arn:aws:s3:::a06-lab/*"
+          }
+        ]
+      }
+    ],
+    "boundary": {
+      "Version": "2012-10-17",
+      "Statement": [
+        {
+          "Sid": "BoundaryLogsOnly",
+          "Effect": "Allow",
+          "Action": "s3:GetObject",
+          "Resource": "arn:aws:s3:::a06-lab/logs/*"
+        }
+      ]
+    },
+    "expect": {
+      "arn:aws:s3:::a06-lab/logs/health.txt": "allowed",
+      "arn:aws:s3:::a06-lab/reports/summary.csv": "implicitDeny"
+    }
+  },
+  {
+    "name": "S5",
+    "title": "同账户：桶策略直接授予 IAM 用户，身份策略没有 S3 权限",
+    "action": "s3:GetObject",
+    "resources": [
+      "arn:aws:s3:::a06-lab/reports/summary.csv"
+    ],
+    "identity": [
+      {
+        "Version": "2012-10-17",
+        "Statement": [
+          {
+            "Sid": "Unrelated",
+            "Effect": "Allow",
+            "Action": "sqs:ListQueues",
+            "Resource": "*"
+          }
+        ]
+      }
+    ],
+    "resource_policy": {
+      "Version": "2012-10-17",
+      "Statement": [
+        {
+          "Sid": "GrantUser",
+          "Effect": "Allow",
+          "Principal": {
+            "AWS": "arn:aws:iam::111122223333:user/ci-operator"
+          },
+          "Action": "s3:GetObject",
+          "Resource": "arn:aws:s3:::a06-lab/reports/*"
+        }
+      ]
+    },
+    "caller_arn": "arn:aws:iam::111122223333:user/ci-operator",
+    "resource_owner": "arn:aws:iam::111122223333:root",
+    "principal_type": "user",
+    "expect": {
+      "arn:aws:s3:::a06-lab/reports/summary.csv": "allowed"
+    }
+  },
+  {
+    "name": "S6",
+    "title": "条件：桶策略拒绝非 HTTPS 请求（aws:SecureTransport=false）",
+    "action": "s3:GetObject",
+    "resources": [
+      "arn:aws:s3:::a06-lab/logs/health.txt"
+    ],
+    "identity": [
+      {
+        "Version": "2012-10-17",
+        "Statement": [
+          {
+            "Sid": "ReadAll",
+            "Effect": "Allow",
+            "Action": "s3:GetObject",
+            "Resource": "arn:aws:s3:::a06-lab/*"
+          }
+        ]
+      }
+    ],
+    "resource_policy": {
+      "Version": "2012-10-17",
+      "Statement": [
+        {
+          "Sid": "DenyInsecure",
+          "Effect": "Deny",
+          "Principal": "*",
+          "Action": "s3:*",
+          "Resource": "arn:aws:s3:::a06-lab/*",
+          "Condition": {
+            "Bool": {
+              "aws:SecureTransport": "false"
+            }
+          }
+        }
+      ]
+    },
+    "caller_arn": "arn:aws:iam::111122223333:user/ci-operator",
+    "resource_owner": "arn:aws:iam::111122223333:root",
+    "principal_type": "user",
+    "context": {
+      "aws:SecureTransport": "false"
+    },
+    "expect": {
+      "arn:aws:s3:::a06-lab/logs/health.txt": "explicitDeny"
+    }
+  },
+  {
+    "name": "S7",
+    "title": "会话策略只允许 logs/*（AssumeRole --policy）",
+    "action": "s3:GetObject",
+    "resources": [
+      "arn:aws:s3:::a06-lab/logs/health.txt",
+      "arn:aws:s3:::a06-lab/reports/summary.csv"
+    ],
+    "local_only": true,
+    "identity": [
+      {
+        "Version": "2012-10-17",
+        "Statement": [
+          {
+            "Sid": "RoleReadAll",
+            "Effect": "Allow",
+            "Action": "s3:GetObject",
+            "Resource": "arn:aws:s3:::a06-lab/*"
+          }
+        ]
+      }
+    ],
+    "session_policy": {
+      "Version": "2012-10-17",
+      "Statement": [
+        {
+          "Sid": "SessionLogsOnly",
+          "Effect": "Allow",
+          "Action": "s3:GetObject",
+          "Resource": "arn:aws:s3:::a06-lab/logs/*"
+        }
+      ]
+    },
+    "principal_type": "role-session",
+    "expect": {
+      "arn:aws:s3:::a06-lab/logs/health.txt": "allowed",
+      "arn:aws:s3:::a06-lab/reports/summary.csv": "implicitDeny"
+    }
+  },
+  {
+    "name": "S8",
+    "title": "同账户：桶策略直接授予 IAM 用户，且用户有一个不含 S3 的权限边界",
+    "action": "s3:GetObject",
+    "resources": [
+      "arn:aws:s3:::a06-lab/reports/summary.csv"
+    ],
+    "identity": [
+      {
+        "Version": "2012-10-17",
+        "Statement": [
+          {
+            "Sid": "Unrelated",
+            "Effect": "Allow",
+            "Action": "sqs:ListQueues",
+            "Resource": "*"
+          }
+        ]
+      }
+    ],
+    "boundary": {
+      "Version": "2012-10-17",
+      "Statement": [
+        {
+          "Sid": "BoundarySqsOnly",
+          "Effect": "Allow",
+          "Action": "sqs:*",
+          "Resource": "*"
+        }
+      ]
+    },
+    "resource_policy": {
+      "Version": "2012-10-17",
+      "Statement": [
+        {
+          "Sid": "GrantUser",
+          "Effect": "Allow",
+          "Principal": {
+            "AWS": "arn:aws:iam::111122223333:user/ci-operator"
+          },
+          "Action": "s3:GetObject",
+          "Resource": "arn:aws:s3:::a06-lab/reports/*"
+        }
+      ]
+    },
+    "caller_arn": "arn:aws:iam::111122223333:user/ci-operator",
+    "resource_owner": "arn:aws:iam::111122223333:root",
+    "principal_type": "user",
+    "expect": {
+      "arn:aws:s3:::a06-lab/reports/summary.csv": "allowed"
+    }
+  }
+]

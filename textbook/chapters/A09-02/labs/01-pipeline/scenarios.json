@@ -1,0 +1,238 @@
+{
+ "_comment": "第 16 讲实验 16-1：部署尝试与漂移事件。",
+ "deploys": [
+  {
+   "id": "D1",
+   "title": "production 环境已批准，令牌与信任一致",
+   "job": {
+    "token": {
+     "aud": "sts.amazonaws.com",
+     "sub": "repo:example-org@1234/cloudops-lab@5678:environment:production"
+    },
+    "needs": [
+     "s3:GetObject",
+     "s3:PutObject",
+     "ssm:PutParameter"
+    ],
+    "environment": {
+     "required_reviewers": true,
+     "approved": true
+    }
+   },
+   "role": {
+    "sub_op": "StringEquals",
+    "sub": "repo:example-org@1234/cloudops-lab@5678:environment:production",
+    "allows": [
+     "s3:ListBucket",
+     "s3:GetObject",
+     "s3:PutObject",
+     "s3:DeleteObject",
+     "ssm:PutParameter",
+     "ssm:GetParameter"
+    ]
+   }
+  },
+  {
+   "id": "D2",
+   "title": "production 环境尚未批准",
+   "job": {
+    "token": {
+     "aud": "sts.amazonaws.com",
+     "sub": "repo:example-org@1234/cloudops-lab@5678:environment:production"
+    },
+    "needs": [
+     "s3:GetObject",
+     "s3:PutObject",
+     "ssm:PutParameter"
+    ],
+    "environment": {
+     "required_reviewers": true,
+     "approved": false
+    }
+   },
+   "role": {
+    "sub_op": "StringEquals",
+    "sub": "repo:example-org@1234/cloudops-lab@5678:environment:production",
+    "allows": [
+     "s3:ListBucket",
+     "s3:GetObject",
+     "s3:PutObject",
+     "s3:DeleteObject",
+     "ssm:PutParameter",
+     "ssm:GetParameter"
+    ]
+   }
+  },
+  {
+   "id": "D3",
+   "title": "已批准，但信任策略只认 main 分支格式的 sub",
+   "job": {
+    "token": {
+     "aud": "sts.amazonaws.com",
+     "sub": "repo:example-org@1234/cloudops-lab@5678:environment:production"
+    },
+    "needs": [
+     "s3:GetObject",
+     "s3:PutObject",
+     "ssm:PutParameter"
+    ],
+    "environment": {
+     "required_reviewers": true,
+     "approved": true
+    }
+   },
+   "role": {
+    "sub_op": "StringEquals",
+    "sub": "repo:example-org@1234/cloudops-lab@5678:ref:refs/heads/main",
+    "allows": [
+     "s3:ListBucket",
+     "s3:GetObject",
+     "s3:PutObject",
+     "s3:DeleteObject",
+     "ssm:PutParameter",
+     "ssm:GetParameter"
+    ]
+   }
+  },
+  {
+   "id": "D4",
+   "title": "已批准，信任写的是旧格式 sub（新仓库令牌含数字 ID）",
+   "job": {
+    "token": {
+     "aud": "sts.amazonaws.com",
+     "sub": "repo:example-org@1234/cloudops-lab@5678:environment:production"
+    },
+    "needs": [
+     "s3:GetObject",
+     "s3:PutObject",
+     "ssm:PutParameter"
+    ],
+    "environment": {
+     "required_reviewers": true,
+     "approved": true
+    }
+   },
+   "role": {
+    "sub_op": "StringEquals",
+    "sub": "repo:example-org/cloudops-lab:environment:production",
+    "allows": [
+     "s3:ListBucket",
+     "s3:GetObject",
+     "s3:PutObject",
+     "s3:DeleteObject",
+     "ssm:PutParameter",
+     "ssm:GetParameter"
+    ]
+   }
+  },
+  {
+   "id": "D5",
+   "title": "能扮演角色，但角色没有 ssm:PutParameter",
+   "job": {
+    "token": {
+     "aud": "sts.amazonaws.com",
+     "sub": "repo:example-org@1234/cloudops-lab@5678:environment:production"
+    },
+    "needs": [
+     "s3:GetObject",
+     "s3:PutObject",
+     "ssm:PutParameter"
+    ],
+    "environment": {
+     "required_reviewers": true,
+     "approved": true
+    }
+   },
+   "role": {
+    "sub_op": "StringEquals",
+    "sub": "repo:example-org@1234/cloudops-lab@5678:environment:production",
+    "allows": [
+     "s3:GetObject",
+     "s3:PutObject"
+    ]
+   }
+  },
+  {
+   "id": "D6",
+   "title": "一切正常，但另一个作业正持有状态锁",
+   "job": {
+    "token": {
+     "aud": "sts.amazonaws.com",
+     "sub": "repo:example-org@1234/cloudops-lab@5678:environment:production"
+    },
+    "needs": [
+     "s3:GetObject",
+     "s3:PutObject",
+     "ssm:PutParameter"
+    ],
+    "environment": {
+     "required_reviewers": true,
+     "approved": true
+    }
+   },
+   "role": {
+    "sub_op": "StringEquals",
+    "sub": "repo:example-org@1234/cloudops-lab@5678:environment:production",
+    "allows": [
+     "s3:ListBucket",
+     "s3:GetObject",
+     "s3:PutObject",
+     "s3:DeleteObject",
+     "ssm:PutParameter",
+     "ssm:GetParameter"
+    ]
+   },
+   "lock_held_by": "runner-17 / run 4521"
+  },
+  {
+   "id": "D7",
+   "title": "别人的仓库伪造同名环境",
+   "job": {
+    "token": {
+     "aud": "sts.amazonaws.com",
+     "sub": "repo:attacker@999/cloudops-lab@111:environment:production"
+    },
+    "needs": [
+     "s3:GetObject",
+     "s3:PutObject",
+     "ssm:PutParameter"
+    ],
+    "environment": {
+     "required_reviewers": true,
+     "approved": true
+    }
+   },
+   "role": {
+    "sub_op": "StringEquals",
+    "sub": "repo:example-org@1234/cloudops-lab@5678:environment:production",
+    "allows": [
+     "s3:ListBucket",
+     "s3:GetObject",
+     "s3:PutObject",
+     "s3:DeleteObject",
+     "ssm:PutParameter",
+     "ssm:GetParameter"
+    ]
+   }
+  }
+ ],
+ "drifts": [
+  {
+   "id": "R1",
+   "title": "有人在控制台把 SSM 参数改成了 debug=true，没有工单",
+   "source": "known",
+   "approved_change": false
+  },
+  {
+   "id": "R2",
+   "title": "值班在事故中把超时从 5 秒调到 15 秒，变更已获批",
+   "source": "known",
+   "approved_change": true
+  },
+  {
+   "id": "R3",
+   "title": "参数值变了，CloudTrail 里找不到对应调用者",
+   "source": "unknown"
+  }
+ ]
+}

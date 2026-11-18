@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 300" width="760" height="300" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif">
+
+<text x="14" y="22" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.6" font-weight="400" fill="#5d6d7a" text-anchor="start">观察 →</text>
+<text x="276" y="22" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="10" font-weight="700" fill="#1d3b53" text-anchor="middle">O1</text>
+<text x="338" y="22" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="10" font-weight="700" fill="#1d3b53" text-anchor="middle">O2</text>
+<text x="400" y="22" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="10" font-weight="700" fill="#1d3b53" text-anchor="middle">O3</text>
+<text x="462" y="22" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="10" font-weight="700" fill="#1d3b53" text-anchor="middle">O4</text>
+<text x="524" y="22" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="10" font-weight="700" fill="#1d3b53" text-anchor="middle">O5</text>
+<text x="586" y="22" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="10" font-weight="700" fill="#1d3b53" text-anchor="middle">O6</text>
+<text x="648" y="22" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="10" font-weight="700" fill="#1d3b53" text-anchor="middle">O7</text>
+<text x="710" y="22" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="10" font-weight="700" fill="#1d3b53" text-anchor="middle">O8</text>
+<rect x="14" y="36" width="226" height="30" rx="5" ry="5" fill="#eaf5ee" stroke="none" stroke-width="1.2"/>
+<text x="24" y="56" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="700" fill="#2e7d55" text-anchor="start">H1 SG 的 TCP 80 入站规则被删除</text>
+<circle cx="276" cy="55" r="6.82" fill="#2e7d55" stroke="none" stroke-width="1.2"/>
+<path d="M272.7 55 l2.42 2.6399999999999997 l4.4 -4.84" fill="none" stroke="#fff" stroke-width="1.8"/>
+<text x="338" y="56" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="12" font-weight="400" fill="#b8c7d2" text-anchor="middle">·</text>
+<circle cx="400" cy="55" r="6.82" fill="#2e7d55" stroke="none" stroke-width="1.2"/>
+<path d="M396.7 55 l2.42 2.6399999999999997 l4.4 -4.84" fill="none" stroke="#fff" stroke-width="1.8"/>
+<text x="462" y="56" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="12" font-weight="400" fill="#b8c7d2" text-anchor="middle">·</text>
+<circle cx="524" cy="55" r="6.82" fill="#2e7d55" stroke="none" stroke-width="1.2"/>
+<path d="M520.7 55 l2.42 2.6399999999999997 l4.4 -4.84" fill="none" stroke="#fff" stroke-width="1.8"/>
+<circle cx="586" cy="55" r="6.82" fill="#2e7d55" stroke="none" stroke-width="1.2"/>
+<path d="M582.7 55 l2.42 2.6399999999999997 l4.4 -4.84" fill="none" stroke="#fff" stroke-width="1.8"/>
+<text x="648" y="56" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="12" font-weight="400" fill="#b8c7d2" text-anchor="middle">·</text>
+<circle cx="710" cy="55" r="6.82" fill="#2e7d55" stroke="none" stroke-width="1.2"/>
+<path d="M706.7 55 l2.42 2.6399999999999997 l4.4 -4.84" fill="none" stroke="#fff" stroke-width="1.8"/>
+<rect x="14" y="72" width="226" height="30" rx="5" ry="5" fill="#fbeceb" stroke="none" stroke-width="1.2"/>
+<text x="24" y="92" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="400" fill="#c0504d" text-anchor="start">H2 Nginx 停止或崩溃</text>
+<circle cx="276" cy="91" r="6.82" fill="#c0504d" stroke="none" stroke-width="1.2"/>
+<path d="M273.14 88.14 l5.720000000000001 5.720000000000001 M278.86 88.14 l-5.720000000000001 5.720000000000001" fill="none" stroke="#fff" stroke-width="1.8"/>
+<text x="338" y="92" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="12" font-weight="400" fill="#b8c7d2" text-anchor="middle">·</text>
+<circle cx="400" cy="91" r="6.82" fill="#c0504d" stroke="none" stroke-width="1.2"/>
+<path d="M397.14 88.14 l5.720000000000001 5.720000000000001 M402.86 88.14 l-5.720000000000001 5.720000000000001" fill="none" stroke="#fff" stroke-width="1.8"/>
+<text x="462" y="92" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="12" font-weight="400" fill="#b8c7d2" text-anchor="middle">·</text>
+<text x="524" y="92" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="12" font-weight="400" fill="#b8c7d2" text-anchor="middle">·</text>
+<text x="586" y="92" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="12" font-weight="400" fill="#b8c7d2" text-anchor="middle">·</text>
+<text x="648" y="92" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="12" font-weight="400" fill="#b8c7d2" text-anchor="middle">·</text>
+<circle cx="710" cy="91" r="6.82" fill="#c0504d" stroke="none" stroke-width="1.2"/>
+<path d="M707.14 88.14 l5.720000000000001 5.720000000000001 M712.86 88.14 l-5.720000000000001 5.720000000000001" fill="none" stroke="#fff" stroke-width="1.8"/>
+<rect x="14" y="108" width="226" height="30" rx="5" ry="5" fill="#fbeceb" stroke="none" stroke-width="1.2"/>
+<text x="24" y="128" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="400" fill="#c0504d" text-anchor="start">H3 客户端出口 IP 变了，不再匹配 /32</text>
+<text x="276" y="128" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="12" font-weight="400" fill="#b8c7d2" text-anchor="middle">·</text>
+<text x="338" y="128" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="12" font-weight="400" fill="#b8c7d2" text-anchor="middle">·</text>
+<text x="400" y="128" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="12" font-weight="400" fill="#b8c7d2" text-anchor="middle">·</text>
+<circle cx="462" cy="127" r="6.82" fill="#c0504d" stroke="none" stroke-width="1.2"/>
+<path d="M459.14 124.14 l5.720000000000001 5.720000000000001 M464.86 124.14 l-5.720000000000001 5.720000000000001" fill="none" stroke="#fff" stroke-width="1.8"/>
+<text x="524" y="128" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="12" font-weight="400" fill="#b8c7d2" text-anchor="middle">·</text>
+<text x="586" y="128" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="12" font-weight="400" fill="#b8c7d2" text-anchor="middle">·</text>
+<text x="648" y="128" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="12" font-weight="400" fill="#b8c7d2" text-anchor="middle">·</text>
+<circle cx="710" cy="127" r="6.82" fill="#c0504d" stroke="none" stroke-width="1.2"/>
+<path d="M707.14 124.14 l5.720000000000001 5.720000000000001 M712.86 124.14 l-5.720000000000001 5.720000000000001" fill="none" stroke="#fff" stroke-width="1.8"/>
+<rect x="14" y="144" width="226" height="30" rx="5" ry="5" fill="#fbeceb" stroke="none" stroke-width="1.2"/>
+<text x="24" y="164" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="400" fill="#c0504d" text-anchor="start">H4 NACL 被改成拒绝</text>
+<circle cx="276" cy="163" r="6.82" fill="#2e7d55" stroke="none" stroke-width="1.2"/>
+<path d="M272.7 163 l2.42 2.6399999999999997 l4.4 -4.84" fill="none" stroke="#fff" stroke-width="1.8"/>
+<text x="338" y="164" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="12" font-weight="400" fill="#b8c7d2" text-anchor="middle">·</text>
+<text x="400" y="164" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="12" font-weight="400" fill="#b8c7d2" text-anchor="middle">·</text>
+<text x="462" y="164" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="12" font-weight="400" fill="#b8c7d2" text-anchor="middle">·</text>
+<text x="524" y="164" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="12" font-weight="400" fill="#b8c7d2" text-anchor="middle">·</text>
+<text x="586" y="164" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="12" font-weight="400" fill="#b8c7d2" text-anchor="middle">·</text>
+<circle cx="648" cy="163" r="6.82" fill="#c0504d" stroke="none" stroke-width="1.2"/>
+<path d="M645.14 160.14 l5.720000000000001 5.720000000000001 M650.86 160.14 l-5.720000000000001 5.720000000000001" fill="none" stroke="#fff" stroke-width="1.8"/>
+<circle cx="710" cy="163" r="6.82" fill="#c0504d" stroke="none" stroke-width="1.2"/>
+<path d="M707.14 160.14 l5.720000000000001 5.720000000000001 M712.86 160.14 l-5.720000000000001 5.720000000000001" fill="none" stroke="#fff" stroke-width="1.8"/>
+<rect x="14" y="180" width="226" height="30" rx="5" ry="5" fill="#fbeceb" stroke="none" stroke-width="1.2"/>
+<text x="24" y="200" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="400" fill="#c0504d" text-anchor="start">H5 实例被停止或宕机</text>
+<text x="276" y="200" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="12" font-weight="400" fill="#b8c7d2" text-anchor="middle">·</text>
+<circle cx="338" cy="199" r="6.82" fill="#c0504d" stroke="none" stroke-width="1.2"/>
+<path d="M335.14 196.14 l5.720000000000001 5.720000000000001 M340.86 196.14 l-5.720000000000001 5.720000000000001" fill="none" stroke="#fff" stroke-width="1.8"/>
+<circle cx="400" cy="199" r="6.82" fill="#c0504d" stroke="none" stroke-width="1.2"/>
+<path d="M397.14 196.14 l5.720000000000001 5.720000000000001 M402.86 196.14 l-5.720000000000001 5.720000000000001" fill="none" stroke="#fff" stroke-width="1.8"/>
+<text x="462" y="200" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="12" font-weight="400" fill="#b8c7d2" text-anchor="middle">·</text>
+<text x="524" y="200" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="12" font-weight="400" fill="#b8c7d2" text-anchor="middle">·</text>
+<text x="586" y="200" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="12" font-weight="400" fill="#b8c7d2" text-anchor="middle">·</text>
+<text x="648" y="200" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="12" font-weight="400" fill="#b8c7d2" text-anchor="middle">·</text>
+<text x="710" y="200" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="12" font-weight="400" fill="#b8c7d2" text-anchor="middle">·</text>
+<rect x="14" y="216" width="226" height="30" rx="5" ry="5" fill="#fbeceb" stroke="none" stroke-width="1.2"/>
+<text x="24" y="236" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="400" fill="#c0504d" text-anchor="start">H6 路由表默认路由被改</text>
+<circle cx="276" cy="235" r="6.82" fill="#2e7d55" stroke="none" stroke-width="1.2"/>
+<path d="M272.7 235 l2.42 2.6399999999999997 l4.4 -4.84" fill="none" stroke="#fff" stroke-width="1.8"/>
+<text x="338" y="236" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="12" font-weight="400" fill="#b8c7d2" text-anchor="middle">·</text>
+<text x="400" y="236" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="12" font-weight="400" fill="#b8c7d2" text-anchor="middle">·</text>
+<text x="462" y="236" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="12" font-weight="400" fill="#b8c7d2" text-anchor="middle">·</text>
+<text x="524" y="236" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="12" font-weight="400" fill="#b8c7d2" text-anchor="middle">·</text>
+<text x="586" y="236" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="12" font-weight="400" fill="#b8c7d2" text-anchor="middle">·</text>
+<circle cx="648" cy="235" r="6.82" fill="#c0504d" stroke="none" stroke-width="1.2"/>
+<path d="M645.14 232.14 l5.720000000000001 5.720000000000001 M650.86 232.14 l-5.720000000000001 5.720000000000001" fill="none" stroke="#fff" stroke-width="1.8"/>
+<circle cx="710" cy="235" r="6.82" fill="#c0504d" stroke="none" stroke-width="1.2"/>
+<path d="M707.14 232.14 l5.720000000000001 5.720000000000001 M712.86 232.14 l-5.720000000000001 5.720000000000001" fill="none" stroke="#fff" stroke-width="1.8"/>
+<text x="380" y="270" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="400" fill="#5d6d7a" text-anchor="middle">✓ 观察与预测一致   ✗ 观察与预测矛盾（证伪）   · 该观察与此假设无关</text>
+<text x="380" y="290" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.6" font-weight="600" fill="#1d3b53" text-anchor="middle">只有 H1 与所有观察相容；去掉 O7、O8，H4（NACL）就无法排除——证据决定结论能写到多肯定</text>
+</svg>

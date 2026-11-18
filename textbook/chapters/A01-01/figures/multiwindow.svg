@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 250" width="760" height="250" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif">
+<defs><marker id="marrow1d3b53" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0.8 L9.2 5 L0 9.2 z" fill="#1d3b53"/></marker><marker id="marrow1a8a8f" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0.8 L9.2 5 L0 9.2 z" fill="#1a8a8f"/></marker><marker id="marrowc0504d" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0.8 L9.2 5 L0 9.2 z" fill="#c0504d"/></marker></defs>
+<rect x="24" y="30" width="170" height="64" rx="8" ry="8" fill="#e9eff5" stroke="#1d3b53" stroke-width="1.4"/>
+<text x="109.0" y="51.7605" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="11.5" font-weight="700" fill="#17384f" text-anchor="middle">长窗口 1 小时</text>
+<text x="109.0" y="69.4175" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.6" font-weight="400" fill="#22313d" text-anchor="middle">失败率 &gt; 1.44% ？</text>
+<text x="109.0" y="83.04950000000001" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.6" font-weight="400" fill="#22313d" text-anchor="middle">证明“问题够严重”</text>
+<rect x="24" y="120" width="170" height="64" rx="8" ry="8" fill="#e6f3f3" stroke="#1a8a8f" stroke-width="1.4"/>
+<text x="109.0" y="141.7605" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="11.5" font-weight="700" fill="#12676b" text-anchor="middle">短窗口 5 分钟</text>
+<text x="109.0" y="159.41750000000002" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.6" font-weight="400" fill="#22313d" text-anchor="middle">失败率 &gt; 1.44% ？</text>
+<text x="109.0" y="173.04950000000002" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.6" font-weight="400" fill="#22313d" text-anchor="middle">证明“问题还在发生”</text>
+<rect x="270" y="75" width="110" height="64" rx="8" ry="8" fill="#ffffff" stroke="#b8c7d2" stroke-width="1.4"/>
+<text x="325.0" y="104.314" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="14" font-weight="700" fill="#17384f" text-anchor="middle">AND</text>
+<text x="325.0" y="122.84599999999999" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.6" font-weight="400" fill="#22313d" text-anchor="middle">两者同时 ALARM</text>
+<path d="M194 62 L270 98" fill="none" stroke="#1d3b53" stroke-width="1.6" marker-end="url(#marrow1d3b53)" stroke-linejoin="round"/>
+<path d="M194 152 L270 118" fill="none" stroke="#1a8a8f" stroke-width="1.6" marker-end="url(#marrow1a8a8f)" stroke-linejoin="round"/>
+<rect x="24" y="196" width="356" height="44" rx="8" ry="8" fill="#f2f5f7" stroke="#9fb3c1" stroke-width="1.4"/>
+<text x="202.0" y="220.058" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.8" font-weight="400" fill="#5d6d7a" text-anchor="middle">6 小时 / 30 分钟、燃烧率 6（0.6%）的组合同理，两组之间是 OR</text>
+<rect x="450" y="75" width="130" height="64" rx="8" ry="8" fill="#c0504d" stroke="#c0504d" stroke-width="1.4"/>
+<text x="515.0" y="96.62400000000001" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="12" font-weight="700" fill="#ffffff" text-anchor="middle">复合告警</text>
+<text x="515.0" y="114.74000000000001" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.8" font-weight="400" fill="#fde9e8" text-anchor="middle">slo-page</text>
+<text x="515.0" y="128.656" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.8" font-weight="400" fill="#fde9e8" text-anchor="middle">→ 呼叫值班</text>
+<path d="M380 107 L450 107" fill="none" stroke="#c0504d" stroke-width="1.8" marker-end="url(#marrowc0504d)" stroke-linejoin="round"/>
+<rect x="600" y="24" width="148" height="202" rx="5" ry="5" fill="#fdf1e3" stroke="#e0954a" stroke-width="1" stroke-dasharray="4 3"/>
+<text x="608" y="39.8" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.8" font-weight="700" fill="#9a5a1c" text-anchor="start">为什么要两个窗口</text>
+<text x="608" y="54.01" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.8" font-weight="400" fill="#22313d" text-anchor="start">只看长窗口：</text>
+<text x="608" y="68.22" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.8" font-weight="400" fill="#22313d" text-anchor="start">故障已恢复，</text>
+<text x="608" y="82.43" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.8" font-weight="400" fill="#22313d" text-anchor="start">告警还要再响</text>
+<text x="608" y="96.64000000000001" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.8" font-weight="400" fill="#22313d" text-anchor="start">近一小时。</text>
+<text x="608" y="110.85000000000002" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.8" font-weight="400" fill="#22313d" text-anchor="start"></text>
+<text x="608" y="125.06000000000003" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.8" font-weight="400" fill="#22313d" text-anchor="start">只看短窗口：</text>
+<text x="608" y="139.27000000000004" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.8" font-weight="400" fill="#22313d" text-anchor="start">一阵抖动就呼人，</text>
+<text x="608" y="153.48000000000005" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.8" font-weight="400" fill="#22313d" text-anchor="start">噪声大。</text>
+<text x="608" y="167.69000000000005" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.8" font-weight="400" fill="#22313d" text-anchor="start"></text>
+<text x="608" y="181.90000000000006" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.8" font-weight="400" fill="#22313d" text-anchor="start">两者相与：</text>
+<text x="608" y="196.11000000000007" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.8" font-weight="400" fill="#22313d" text-anchor="start">既灵敏，又能</text>
+<text x="608" y="210.32000000000008" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.8" font-weight="400" fill="#22313d" text-anchor="start">及时复位。</text>
+</svg>

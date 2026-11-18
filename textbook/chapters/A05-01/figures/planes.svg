@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 330" width="760" height="330" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif">
+<defs><marker id="marrow1d3b53" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0.8 L9.2 5 L0 9.2 z" fill="#1d3b53"/></marker><marker id="marrow5d6d7a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0.8 L9.2 5 L0 9.2 z" fill="#5d6d7a"/></marker><marker id="marrow1a8a8f" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0.8 L9.2 5 L0 9.2 z" fill="#1a8a8f"/></marker><marker id="marrowe0954a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0.8 L9.2 5 L0 9.2 z" fill="#e0954a"/></marker><marker id="marrow6f55a8" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0.8 L9.2 5 L0 9.2 z" fill="#6f55a8"/></marker><marker id="marrowc0504d" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0.8 L9.2 5 L0 9.2 z" fill="#c0504d"/></marker></defs>
+<rect x="14" y="30" width="150" height="74" rx="8" ry="8" fill="#ffffff" stroke="#b8c7d2" stroke-width="1.4"/>
+<text x="89.0" y="57.0445" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="11.5" font-weight="700" fill="#17384f" text-anchor="middle">操作者</text>
+<text x="89.0" y="74.41749999999999" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="400" fill="#22313d" text-anchor="middle">IAM 用户 / 角色</text>
+<text x="89.0" y="87.76549999999999" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="400" fill="#22313d" text-anchor="middle">SendCommand · StartSession</text>
+<rect x="214" y="14" width="250" height="196" rx="6" ry="6" fill="#fbfcfd" stroke="#232f3e" stroke-width="1.4"/>
+<path d="M214 20 a6 6 0 0 1 6 -6 h132.01 v19.5 h-138.01 z" fill="#232f3e"/>
+<text x="222" y="28.0" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="10.5" font-weight="700" fill="#ffffff" text-anchor="start">AWS 控制面（区域服务）</text>
+<rect x="232" y="52" width="214" height="56" rx="8" ry="8" fill="#e9eff5" stroke="#1d3b53" stroke-width="1.4"/>
+<text x="339.0" y="76.71849999999999" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="11.5" font-weight="700" fill="#17384f" text-anchor="middle">Systems Manager</text>
+<text x="339.0" y="94.0915" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="400" fill="#22313d" text-anchor="middle">鉴权 · 排队 · 记录命令与执行</text>
+<rect x="232" y="128" width="100" height="66" rx="8" ry="8" fill="#f2f5f7" stroke="#9fb3c1" stroke-width="1.4"/>
+<text x="282.0" y="151.6015" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="10.5" font-weight="700" fill="#41525f" text-anchor="middle">CloudTrail</text>
+<text x="282.0" y="167.77249999999998" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="8.8" font-weight="400" fill="#5d6d7a" text-anchor="middle">记录 API 调用</text>
+<text x="282.0" y="180.2685" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="8.8" font-weight="400" fill="#5d6d7a" text-anchor="middle">不含会话正文</text>
+<rect x="346" y="128" width="100" height="66" rx="8" ry="8" fill="#e6f3f3" stroke="#1a8a8f" stroke-width="1.4"/>
+<text x="396.0" y="151.6015" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="10.5" font-weight="700" fill="#12676b" text-anchor="middle">EC2 API</text>
+<text x="396.0" y="167.77249999999998" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="8.8" font-weight="400" fill="#22313d" text-anchor="middle">Runbook 直接调用</text>
+<text x="396.0" y="180.2685" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="8.8" font-weight="400" fill="#22313d" text-anchor="middle">不经过节点</text>
+<path d="M164 67 L232 74" fill="none" stroke="#1d3b53" stroke-width="1.6" marker-end="url(#marrow1d3b53)" stroke-linejoin="round"/>
+<rect x="142.828" y="54.14" width="110.34399999999998" height="11.440000000000001" rx="3" ry="3" fill="#ffffff" stroke="none" stroke-width="1.2" opacity="0.92"/>
+<text x="198.0" y="62.5" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="8.8" font-weight="500" fill="#1d3b53" text-anchor="middle">① API（操作者的 IAM）</text>
+<path d="M339 108 L282 128" fill="none" stroke="#5d6d7a" stroke-width="1.2" stroke-dasharray="5 4" marker-end="url(#marrow5d6d7a)" stroke-linejoin="round"/>
+<path d="M339 108 L396 128" fill="none" stroke="#1a8a8f" stroke-width="1.4" marker-end="url(#marrow1a8a8f)" stroke-linejoin="round"/>
+<rect x="361.936" y="111.83" width="55.128" height="11.18" rx="3" ry="3" fill="#ffffff" stroke="none" stroke-width="1.2" opacity="0.92"/>
+<text x="389.5" y="120.0" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="8.6" font-weight="500" fill="#1a8a8f" text-anchor="middle">Automation</text>
+<rect x="514" y="14" width="232" height="300" rx="6" ry="6" fill="#fbf9ff" stroke="#7b5cc4" stroke-width="1.4"/>
+<path d="M514 20 a6 6 0 0 1 6 -6 h88.22500000000001 v19.5 h-94.22500000000001 z" fill="#7b5cc4"/>
+<text x="522" y="28.0" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="10.5" font-weight="700" fill="#ffffff" text-anchor="start">VPC · 受管节点</text>
+<rect x="532" y="52" width="196" height="76" rx="8" ry="8" fill="#fdf1e3" stroke="#e0954a" stroke-width="1.4"/>
+<text x="630.0" y="80.3285" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="11.5" font-weight="700" fill="#9a5a1c" text-anchor="middle">SSM Agent</text>
+<text x="630.0" y="97.4175" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.2" font-weight="400" fill="#22313d" text-anchor="middle">主动向外建连（443）</text>
+<text x="630.0" y="110.4815" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.2" font-weight="400" fill="#22313d" text-anchor="middle">注册、心跳、取命令、开会话</text>
+<rect x="532" y="146" width="196" height="54" rx="8" ry="8" fill="#f1edf8" stroke="#6f55a8" stroke-width="1.4"/>
+<text x="630.0" y="163.406" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="10.8" font-weight="700" fill="#4f3a86" text-anchor="middle">实例身份</text>
+<text x="630.0" y="179.966" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9" font-weight="400" fill="#22313d" text-anchor="middle">实例配置文件 或 DHMC</text>
+<text x="630.0" y="192.746" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9" font-weight="400" fill="#22313d" text-anchor="middle">凭证来自 IMDS</text>
+<rect x="532" y="218" width="196" height="74" rx="8" ry="8" fill="#fbeceb" stroke="#c0504d" stroke-width="1.4"/>
+<text x="630.0" y="245.406" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="10.8" font-weight="700" fill="#8e2f2c" text-anchor="middle">操作系统</text>
+<text x="630.0" y="261.966" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9" font-weight="400" fill="#22313d" text-anchor="middle">文档里的命令以 root 运行</text>
+<text x="630.0" y="274.746" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9" font-weight="400" fill="#22313d" text-anchor="middle">“只读”只是命令的选择，不是沙箱</text>
+<path d="M532 84 L446 84" fill="none" stroke="#e0954a" stroke-width="1.6" marker-end="url(#marrowe0954a)" stroke-linejoin="round"/>
+<rect x="412.356" y="67.64" width="153.28799999999995" height="11.440000000000001" rx="3" ry="3" fill="#ffffff" stroke="none" stroke-width="1.2" opacity="0.92"/>
+<text x="489.0" y="76.0" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="8.8" font-weight="500" fill="#e0954a" text-anchor="middle">② 出站 443：ssm / ssmmessages</text>
+<path d="M630 128 L630 146" fill="none" stroke="#6f55a8" stroke-width="1.2" marker-end="url(#marrow6f55a8)" marker-start="url(#marrow6f55a8)" stroke-linejoin="round"/>
+<path d="M630 200 L630 218" fill="none" stroke="#c0504d" stroke-width="1.2" marker-end="url(#marrowc0504d)" stroke-linejoin="round"/>
+<rect x="560" y="298" width="140" height="14" rx="7" ry="7" fill="#fbeceb" stroke="none" stroke-width="1.2"/>
+<text x="630" y="309" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9" font-weight="700" fill="#c0504d" text-anchor="middle">安全组：没有任何入站规则</text>
+<rect x="14" y="226" width="470" height="88" rx="5" ry="5" fill="#f2f5f7" stroke="#9fb3c1" stroke-width="1" stroke-dasharray="4 3"/>
+<text x="22" y="241.4" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="700" fill="#41525f" text-anchor="start">读图要点</text>
+<text x="22" y="255.03" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="400" fill="#5d6d7a" text-anchor="start">① 操作者能不能下命令：看操作者的 IAM（与节点是否在线无关）</text>
+<text x="22" y="268.66" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="400" fill="#5d6d7a" text-anchor="start">② 节点能不能收命令：看 Agent、实例身份、出站 443 —— 方向是“节点找服务”</text>
+<text x="22" y="282.29" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="400" fill="#5d6d7a" text-anchor="start">③ Runbook 的 aws:executeAwsApi 只走控制面：节点离线时盘点照样能做</text>
+<text x="22" y="295.92" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="400" fill="#5d6d7a" text-anchor="start">审计：CloudTrail 只有 API 记录；会话内容要另配 S3 / CloudWatch Logs</text>
+</svg>

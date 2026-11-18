@@ -1,0 +1,296 @@
+{
+ "_comment": "第 12 讲实验 12-1 场景。",
+ "scenarios": [
+  {
+   "id": "T1",
+   "title": "reader 通过 HTTPS 读取",
+   "principal": {
+    "name": "reader",
+    "s3_actions": [
+     "s3:GetObject"
+    ],
+    "kms_actions": [
+     "kms:Decrypt"
+    ],
+    "kms_via_s3_only": true
+   },
+   "bucket": {
+    "bpa": true,
+    "deny_insecure_transport": true,
+    "owner_enforced": true
+   },
+   "key": {
+    "state": "Enabled",
+    "root_delegation": true,
+    "direct_grants": {}
+   },
+   "request": {
+    "op": "GetObject",
+    "sse": "aws:kms",
+    "tls": true,
+    "via_s3": true
+   }
+  },
+  {
+   "id": "T2",
+   "title": "reader 用 HTTP 读取",
+   "principal": {
+    "name": "reader",
+    "s3_actions": [
+     "s3:GetObject"
+    ],
+    "kms_actions": [
+     "kms:Decrypt"
+    ],
+    "kms_via_s3_only": true
+   },
+   "bucket": {
+    "bpa": true,
+    "deny_insecure_transport": true,
+    "owner_enforced": true
+   },
+   "key": {
+    "state": "Enabled",
+    "root_delegation": true,
+    "direct_grants": {}
+   },
+   "request": {
+    "op": "GetObject",
+    "sse": "aws:kms",
+    "tls": false,
+    "via_s3": true
+   }
+  },
+  {
+   "id": "T3",
+   "title": "只有 s3:GetObject、没有 kms:Decrypt 的 auditor",
+   "principal": {
+    "name": "auditor",
+    "s3_actions": [
+     "s3:GetObject"
+    ]
+   },
+   "bucket": {
+    "bpa": true,
+    "deny_insecure_transport": true,
+    "owner_enforced": true
+   },
+   "key": {
+    "state": "Enabled",
+    "root_delegation": true,
+    "direct_grants": {}
+   },
+   "request": {
+    "op": "GetObject",
+    "sse": "aws:kms",
+    "tls": true,
+    "via_s3": true
+   }
+  },
+  {
+   "id": "T4",
+   "title": "writer 上传",
+   "principal": {
+    "name": "writer",
+    "s3_actions": [
+     "s3:PutObject"
+    ],
+    "kms_actions": [
+     "kms:GenerateDataKey"
+    ],
+    "kms_via_s3_only": true
+   },
+   "bucket": {
+    "bpa": true,
+    "deny_insecure_transport": true,
+    "owner_enforced": true
+   },
+   "key": {
+    "state": "Enabled",
+    "root_delegation": true,
+    "direct_grants": {}
+   },
+   "request": {
+    "op": "PutObject",
+    "sse": "aws:kms",
+    "tls": true,
+    "via_s3": true
+   }
+  },
+  {
+   "id": "T5",
+   "title": "writer 只有 GenerateDataKey，分段上传大文件",
+   "principal": {
+    "name": "writer",
+    "s3_actions": [
+     "s3:PutObject"
+    ],
+    "kms_actions": [
+     "kms:GenerateDataKey"
+    ],
+    "kms_via_s3_only": true
+   },
+   "bucket": {
+    "bpa": true,
+    "deny_insecure_transport": true,
+    "owner_enforced": true
+   },
+   "key": {
+    "state": "Enabled",
+    "root_delegation": true,
+    "direct_grants": {}
+   },
+   "request": {
+    "op": "MultipartUpload",
+    "sse": "aws:kms",
+    "tls": true,
+    "via_s3": true
+   }
+  },
+  {
+   "id": "T6",
+   "title": "writer 上传时带 ACL bucket-owner-full-control",
+   "principal": {
+    "name": "writer",
+    "s3_actions": [
+     "s3:PutObject"
+    ],
+    "kms_actions": [
+     "kms:GenerateDataKey"
+    ],
+    "kms_via_s3_only": true
+   },
+   "bucket": {
+    "bpa": true,
+    "deny_insecure_transport": true,
+    "owner_enforced": true
+   },
+   "key": {
+    "state": "Enabled",
+    "root_delegation": true,
+    "direct_grants": {}
+   },
+   "request": {
+    "op": "PutObject",
+    "sse": "aws:kms",
+    "tls": true,
+    "via_s3": true,
+    "acl": true
+   }
+  },
+  {
+   "id": "T7",
+   "title": "匿名公开读取（即使策略写错）",
+   "principal": {
+    "name": "anonymous",
+    "public": true
+   },
+   "bucket": {
+    "bpa": true,
+    "deny_insecure_transport": true,
+    "owner_enforced": true
+   },
+   "key": {
+    "state": "Enabled",
+    "root_delegation": true,
+    "direct_grants": {}
+   },
+   "request": {
+    "op": "GetObject",
+    "sse": "aws:kms",
+    "tls": true,
+    "via_s3": true
+   }
+  },
+  {
+   "id": "T8",
+   "title": "密钥被计划删除",
+   "principal": {
+    "name": "reader",
+    "s3_actions": [
+     "s3:GetObject"
+    ],
+    "kms_actions": [
+     "kms:Decrypt"
+    ],
+    "kms_via_s3_only": true
+   },
+   "bucket": {
+    "bpa": true,
+    "deny_insecure_transport": true,
+    "owner_enforced": true
+   },
+   "key": {
+    "state": "PendingDeletion",
+    "root_delegation": true,
+    "direct_grants": {}
+   },
+   "request": {
+    "op": "GetObject",
+    "sse": "aws:kms",
+    "tls": true,
+    "via_s3": true
+   }
+  },
+  {
+   "id": "T9",
+   "title": "密钥策略去掉 root 委托、只授权 app-role",
+   "principal": {
+    "name": "reader",
+    "s3_actions": [
+     "s3:GetObject"
+    ],
+    "kms_actions": [
+     "kms:Decrypt"
+    ],
+    "kms_via_s3_only": true
+   },
+   "bucket": {
+    "bpa": true,
+    "deny_insecure_transport": true,
+    "owner_enforced": true
+   },
+   "key": {
+    "state": "Enabled",
+    "root_delegation": false,
+    "direct_grants": {
+     "app-role": [
+      "kms:Decrypt"
+     ]
+    }
+   },
+   "request": {
+    "op": "GetObject",
+    "sse": "aws:kms",
+    "tls": true,
+    "via_s3": true
+   }
+  },
+  {
+   "id": "T10",
+   "title": "对象是 SSE-S3（旧对象，默认加密改动前上传）",
+   "principal": {
+    "name": "auditor",
+    "s3_actions": [
+     "s3:GetObject"
+    ]
+   },
+   "bucket": {
+    "bpa": true,
+    "deny_insecure_transport": true,
+    "owner_enforced": true
+   },
+   "key": {
+    "state": "Enabled",
+    "root_delegation": true,
+    "direct_grants": {}
+   },
+   "request": {
+    "op": "GetObject",
+    "sse": "AES256",
+    "tls": true,
+    "via_s3": true
+   }
+  }
+ ]
+}

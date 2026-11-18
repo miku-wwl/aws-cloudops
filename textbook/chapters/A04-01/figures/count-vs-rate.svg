@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 230" width="760" height="230" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif">
+
+<rect x="20" y="18" width="90" height="32" rx="0" ry="0" fill="#eef4f7" stroke="#c9d6df" stroke-width="1"/>
+<text x="30" y="39" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="10.4" font-weight="700" fill="#1d3b53" text-anchor="start">场景</text>
+<rect x="110" y="18" width="100" height="32" rx="0" ry="0" fill="#eef4f7" stroke="#c9d6df" stroke-width="1"/>
+<text x="120" y="39" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="10.4" font-weight="700" fill="#1d3b53" text-anchor="start">Requests</text>
+<rect x="210" y="18" width="90" height="32" rx="0" ry="0" fill="#eef4f7" stroke="#c9d6df" stroke-width="1"/>
+<text x="220" y="39" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="10.4" font-weight="700" fill="#1d3b53" text-anchor="start">Errors</text>
+<rect x="300" y="18" width="90" height="32" rx="0" ry="0" fill="#eef4f7" stroke="#c9d6df" stroke-width="1"/>
+<text x="310" y="39" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="10.4" font-weight="700" fill="#1d3b53" text-anchor="start">错误率</text>
+<rect x="390" y="18" width="350" height="32" rx="0" ry="0" fill="#eef4f7" stroke="#c9d6df" stroke-width="1"/>
+<text x="400" y="39" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="10.4" font-weight="700" fill="#1d3b53" text-anchor="start">两种告警的反应</text>
+<rect x="20" y="50" width="90" height="40" rx="0" ry="0" fill="#ffffff" stroke="#dde6ec" stroke-width="1"/>
+<text x="30" y="75" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.8" font-weight="400" fill="#22313d" text-anchor="start">低流量</text>
+<rect x="110" y="50" width="100" height="40" rx="0" ry="0" fill="#ffffff" stroke="#dde6ec" stroke-width="1"/>
+<text x="120" y="75" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.8" font-weight="400" fill="#22313d" text-anchor="start">10</text>
+<rect x="210" y="50" width="90" height="40" rx="0" ry="0" fill="#ffffff" stroke="#dde6ec" stroke-width="1"/>
+<text x="220" y="75" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.8" font-weight="400" fill="#22313d" text-anchor="start">5</text>
+<rect x="300" y="50" width="90" height="40" rx="0" ry="0" fill="#ffffff" stroke="#dde6ec" stroke-width="1"/>
+<text x="310" y="75" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.8" font-weight="400" fill="#22313d" text-anchor="start">50%</text>
+<rect x="390" y="50" width="350" height="40" rx="0" ry="0" fill="#ffffff" stroke="#dde6ec" stroke-width="1"/>
+<text x="400" y="75" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.8" font-weight="600" fill="#c0504d" text-anchor="start">错误数告警：触发；错误率告警：触发（严重）</text>
+<rect x="20" y="90" width="90" height="40" rx="0" ry="0" fill="#ffffff" stroke="#dde6ec" stroke-width="1"/>
+<text x="30" y="115" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.8" font-weight="400" fill="#22313d" text-anchor="start">高流量</text>
+<rect x="110" y="90" width="100" height="40" rx="0" ry="0" fill="#ffffff" stroke="#dde6ec" stroke-width="1"/>
+<text x="120" y="115" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.8" font-weight="400" fill="#22313d" text-anchor="start">10 000</text>
+<rect x="210" y="90" width="90" height="40" rx="0" ry="0" fill="#ffffff" stroke="#dde6ec" stroke-width="1"/>
+<text x="220" y="115" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.8" font-weight="400" fill="#22313d" text-anchor="start">5</text>
+<rect x="300" y="90" width="90" height="40" rx="0" ry="0" fill="#ffffff" stroke="#dde6ec" stroke-width="1"/>
+<text x="310" y="115" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.8" font-weight="400" fill="#22313d" text-anchor="start">0.05%</text>
+<rect x="390" y="90" width="350" height="40" rx="0" ry="0" fill="#ffffff" stroke="#dde6ec" stroke-width="1"/>
+<text x="400" y="115" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.8" font-weight="600" fill="#e0954a" text-anchor="start">错误数告警：触发（噪声）；错误率告警：不触发</text>
+<rect x="20" y="130" width="90" height="40" rx="0" ry="0" fill="#ffffff" stroke="#dde6ec" stroke-width="1"/>
+<text x="30" y="155" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.8" font-weight="400" fill="#22313d" text-anchor="start">无流量</text>
+<rect x="110" y="130" width="100" height="40" rx="0" ry="0" fill="#ffffff" stroke="#dde6ec" stroke-width="1"/>
+<text x="120" y="155" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.8" font-weight="400" fill="#22313d" text-anchor="start">0</text>
+<rect x="210" y="130" width="90" height="40" rx="0" ry="0" fill="#ffffff" stroke="#dde6ec" stroke-width="1"/>
+<text x="220" y="155" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.8" font-weight="400" fill="#22313d" text-anchor="start">0</text>
+<rect x="300" y="130" width="90" height="40" rx="0" ry="0" fill="#ffffff" stroke="#dde6ec" stroke-width="1"/>
+<text x="310" y="155" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.8" font-weight="400" fill="#22313d" text-anchor="start">无定义</text>
+<rect x="390" y="130" width="350" height="40" rx="0" ry="0" fill="#ffffff" stroke="#dde6ec" stroke-width="1"/>
+<text x="400" y="155" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.8" font-weight="600" fill="#5d6d7a" text-anchor="start">错误数：OK；错误率：样本不足，交给心跳告警</text>
+<text x="380" y="200" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="10" font-weight="600" fill="#1d3b53" text-anchor="middle">错误率 = 100 × Sum(Errors) ÷ Sum(Requests)；再加“最小样本”保护：IF(req ≥ 50, 100*err/req, 0)</text>
+<text x="380" y="220" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.6" font-weight="400" fill="#5d6d7a" text-anchor="middle">零流量时除法没有意义：指标数学里除以 0 的数据点会被丢弃，零流量要由心跳 / 合成探针另行发现</text>
+</svg>

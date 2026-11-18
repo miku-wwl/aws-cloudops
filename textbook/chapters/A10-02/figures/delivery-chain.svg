@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 250" width="760" height="250" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif">
+<defs><marker id="marrow1d3b53" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0.8 L9.2 5 L0 9.2 z" fill="#1d3b53"/></marker></defs>
+<rect x="14" y="40" width="132" height="70" rx="8" ry="8" fill="#ffffff" stroke="#b8c7d2" stroke-width="1.4"/>
+<text x="80.0" y="71.7185" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="11.5" font-weight="700" fill="#17384f" text-anchor="middle">申请</text>
+<text x="80.0" y="89.0915" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="400" fill="#22313d" text-anchor="middle">工单 / Git 请求</text>
+<path d="M146 75 L164 75" fill="none" stroke="#1d3b53" stroke-width="1.6" marker-end="url(#marrow1d3b53)" stroke-linejoin="round"/>
+<rect x="164" y="40" width="132" height="70" rx="8" ry="8" fill="#e9eff5" stroke="#1d3b53" stroke-width="1.4"/>
+<text x="230.0" y="65.0445" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="11.5" font-weight="700" fill="#17384f" text-anchor="middle">创建</text>
+<text x="230.0" y="82.41749999999999" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="400" fill="#22313d" text-anchor="middle">Organizations</text>
+<text x="230.0" y="95.76549999999999" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="400" fill="#22313d" text-anchor="middle">中出现账户 ID</text>
+<path d="M296 75 L314 75" fill="none" stroke="#1d3b53" stroke-width="1.6" marker-end="url(#marrow1d3b53)" stroke-linejoin="round"/>
+<rect x="314" y="40" width="132" height="70" rx="8" ry="8" fill="#e6f3f3" stroke="#1a8a8f" stroke-width="1.4"/>
+<text x="380.0" y="65.0445" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="11.5" font-weight="700" fill="#12676b" text-anchor="middle">纳管</text>
+<text x="380.0" y="82.41749999999999" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="400" fill="#22313d" text-anchor="middle">OU 基线成功</text>
+<text x="380.0" y="95.76549999999999" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="400" fill="#22313d" text-anchor="middle">账户 ENROLLED</text>
+<path d="M446 75 L464 75" fill="none" stroke="#1d3b53" stroke-width="1.6" marker-end="url(#marrow1d3b53)" stroke-linejoin="round"/>
+<rect x="464" y="40" width="132" height="70" rx="8" ry="8" fill="#fdf1e3" stroke="#e0954a" stroke-width="1.4"/>
+<text x="530.0" y="65.0445" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="11.5" font-weight="700" fill="#9a5a1c" text-anchor="middle">定制（可选）</text>
+<text x="530.0" y="82.41749999999999" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="400" fill="#22313d" text-anchor="middle">AFT / CfCT / AFC</text>
+<text x="530.0" y="95.76549999999999" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="400" fill="#22313d" text-anchor="middle">LZA 配置</text>
+<path d="M596 75 L614 75" fill="none" stroke="#1d3b53" stroke-width="1.6" marker-end="url(#marrow1d3b53)" stroke-linejoin="round"/>
+<rect x="614" y="40" width="132" height="70" rx="8" ry="8" fill="#eaf5ee" stroke="#2e7d55" stroke-width="1.4"/>
+<text x="680.0" y="65.0445" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="11.5" font-weight="700" fill="#1f5c3d" text-anchor="middle">独立验收</text>
+<text x="680.0" y="82.41749999999999" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="400" fill="#22313d" text-anchor="middle">日志真的送达</text>
+<text x="680.0" y="95.76549999999999" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="400" fill="#22313d" text-anchor="middle">身份真的可用</text>
+<line x1="14" y1="128" x2="296" y2="128" stroke="#1d3b53" stroke-width="2.4"/>
+<text x="155.0" y="146" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="10" font-weight="700" fill="#1d3b53" text-anchor="middle">里程碑 ①  Account Created</text>
+<line x1="314" y1="128" x2="446" y2="128" stroke="#1a8a8f" stroke-width="2.4"/>
+<text x="380.0" y="146" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="10" font-weight="700" fill="#1a8a8f" text-anchor="middle">②  Governed</text>
+<line x1="464" y1="128" x2="746" y2="128" stroke="#2e7d55" stroke-width="2.4"/>
+<text x="605.0" y="146" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="10" font-weight="700" fill="#2e7d55" text-anchor="middle">③  Customized &amp; Accepted</text>
+<rect x="14" y="170" width="732" height="66" rx="5" ry="5" fill="#fdf1e3" stroke="#e0954a" stroke-width="1" stroke-dasharray="4 3"/>
+<text x="22" y="185.6" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.6" font-weight="400" fill="#22313d" text-anchor="start">每一个里程碑都要单独取证：账户存在 ≠ 已纳管；已纳管 ≠ 公司额外基线已生效；流水线成功 ≠ 业务验收通过。</text>
+<text x="22" y="199.51999999999998" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.6" font-weight="400" fill="#22313d" text-anchor="start">并不是所有账户都经过 AFT：控制台 Account Factory、Organizations + 自动纳管、LZA 都是合法的开户路径。</text>
+</svg>

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 200" width="760" height="200" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif">
+<defs><marker id="marrow1d3b53" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0.8 L9.2 5 L0 9.2 z" fill="#1d3b53"/></marker></defs>
+<rect x="30" y="26" width="200" height="70" rx="8" ry="8" fill="#e9eff5" stroke="#1d3b53" stroke-width="1.4"/>
+<text x="130.0" y="50.908" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="12" font-weight="700" fill="#17384f" text-anchor="middle">联邦身份</text>
+<text x="130.0" y="68.74000000000001" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.6" font-weight="400" fill="#22313d" text-anchor="middle">OIDC 令牌 → STS</text>
+<text x="130.0" y="82.37200000000001" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.6" font-weight="400" fill="#22313d" text-anchor="middle">信任策略：aud / sub</text>
+<text x="130" y="118" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="400" fill="#c0504d" text-anchor="middle">失败：AssumeRoleWithWebIdentity 被拒</text>
+<path d="M230 61 L280 61" fill="none" stroke="#1d3b53" stroke-width="1.6" marker-end="url(#marrow1d3b53)" stroke-linejoin="round"/>
+<rect x="280" y="26" width="200" height="70" rx="8" ry="8" fill="#e6f3f3" stroke="#1a8a8f" stroke-width="1.4"/>
+<text x="380.0" y="50.908" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="12" font-weight="700" fill="#12676b" text-anchor="middle">秘密 API</text>
+<text x="380.0" y="68.74000000000001" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.6" font-weight="400" fill="#22313d" text-anchor="middle">secretsmanager:</text>
+<text x="380.0" y="82.37200000000001" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.6" font-weight="400" fill="#22313d" text-anchor="middle">GetSecretValue</text>
+<text x="380" y="118" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="400" fill="#c0504d" text-anchor="middle">失败：AccessDenied（未提 KMS）</text>
+<path d="M480 61 L530 61" fill="none" stroke="#1d3b53" stroke-width="1.6" marker-end="url(#marrow1d3b53)" stroke-linejoin="round"/>
+<rect x="530" y="26" width="200" height="70" rx="8" ry="8" fill="#fdf1e3" stroke="#e0954a" stroke-width="1.4"/>
+<text x="630.0" y="50.908" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="12" font-weight="700" fill="#9a5a1c" text-anchor="middle">KMS 解密</text>
+<text x="630.0" y="68.74000000000001" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.6" font-weight="400" fill="#22313d" text-anchor="middle">kms:Decrypt</text>
+<text x="630.0" y="82.37200000000001" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.6" font-weight="400" fill="#22313d" text-anchor="middle">密钥策略 + IAM</text>
+<text x="630" y="118" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="400" fill="#c0504d" text-anchor="middle">失败：AccessDenied（提到 kms:Decrypt）</text>
+<rect x="30" y="140" width="700" height="48" rx="8" ry="8" fill="#f2f5f7" stroke="#9fb3c1" stroke-width="1.4"/>
+<text x="380.0" y="159.1" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.8" font-weight="400" fill="#5d6d7a" text-anchor="middle">身份成功 ≠ 有权调用 API ≠ 能解密数据；三道门由三种不同的策略把守：</text>
+<text x="380.0" y="173.016" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.8" font-weight="400" fill="#5d6d7a" text-anchor="middle">信任策略（角色上）、身份策略 / 秘密的资源策略、KMS 密钥策略（+ IAM 委托）</text>
+</svg>

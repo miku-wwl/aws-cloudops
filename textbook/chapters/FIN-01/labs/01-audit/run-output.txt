@@ -1,0 +1,37 @@
+== F1 有晚入账，也有批准保留的快照与日志
+   PRE_DESTROY  BoxUsage:t4g.nano          0.0028  销毁前的用量，销毁后才入账
+   PRE_DESTROY  PublicIPv4:InUseAddress    0.0033  销毁前的用量，销毁后才入账
+   PRE_DESTROY  EBS:VolumeUsage.gp3        0.0006  销毁前的用量，销毁后才入账
+   PRE_DESTROY  DataProcessing-Bytes       0.1000  销毁前的用量，销毁后才入账
+   RETAINED     EBS:SnapshotUsage          0.0575  批准保留至 2026-11-25（platform-team）
+   RETAINED     TimedStorage-ByteHrs       0.0014  批准保留至 2026-11-25（platform-team）
+   销毁前用量 0.1067 美元 · 销毁后仍在计量 0.0589 美元
+   结论：已清理（保留项均获批准）：等旧用量入账后复核
+== F2 全部是销毁前的用量，只是晚入账
+   PRE_DESTROY  BoxUsage:t4g.nano          0.0028  销毁前的用量，销毁后才入账
+   PRE_DESTROY  PublicIPv4:InUseAddress    0.0033  销毁前的用量，销毁后才入账
+   PRE_DESTROY  EBS:VolumeUsage.gp3        0.0006  销毁前的用量，销毁后才入账
+   PRE_DESTROY  DataProcessing-Bytes       0.1000  销毁前的用量，销毁后才入账
+   销毁前用量 0.1067 美元 · 销毁后仍在计量 0.0000 美元
+   结论：已清理（保留项均获批准）：等旧用量入账后复核
+== F3 忘了的 EBS 卷与闲置公网 IPv4
+   PRE_DESTROY  BoxUsage:t4g.nano          0.0028  销毁前的用量，销毁后才入账
+   RESIDUAL     EBS:VolumeUsage.gp3        0.1473  vol-0lab000000000001 仍存在且未获批准保留
+   RESIDUAL     PublicIPv4:IdleAddress     0.8400  eipalloc-lab02 仍存在且未获批准保留
+   销毁前用量 0.0028 美元 · 销毁后仍在计量 0.9873 美元
+   结论：发现未批准的残留：按归属与审批处置
+== F4 另一个区域的快照，盘点只查了 us-east-1
+   PRE_DESTROY  BoxUsage:t4g.nano          0.0028  销毁前的用量，销毁后才入账
+   COVERAGE_GAP EBS:SnapshotUsage          0.0575  us-west-2/AmazonEC2 不在盘点范围内
+   销毁前用量 0.0028 美元 · 销毁后仍在计量 0.0575 美元
+   结论：盘点覆盖不足：不能宣称已清理
+== F5 账单里多了一行负数
+   PRE_DESTROY  BoxUsage:t4g.nano          0.0028  销毁前的用量，销毁后才入账
+   ADJUSTMENT   Credit:Promotional        -0.0028  Credit -0.0028
+   销毁前用量 0.0028 美元 · 销毁后仍在计量 0.0000 美元
+   结论：已清理（保留项均获批准）：等旧用量入账后复核
+== F6 销毁后有用量，盘点完整却找不到资源
+   PRE_DESTROY  BoxUsage:t4g.nano          0.0028  销毁前的用量，销毁后才入账
+   UNEXPLAINED  EBS:SnapshotUsage          0.0575  盘点中找不到 snap-0other00000000001
+   销毁前用量 0.0028 美元 · 销毁后仍在计量 0.0575 美元
+   结论：销毁后有无法解释的用量：查其他 State / 账户

@@ -1,0 +1,60 @@
+{
+  "title": "忘了的 EBS 卷与闲置公网 IPv4",
+  "destroy_utc": "2026-11-18T10:40:00Z",
+  "coverage": {
+    "regions": [
+      "us-east-1"
+    ],
+    "services": [
+      "AmazonEC2",
+      "AmazonVPC",
+      "AmazonCloudWatch"
+    ]
+  },
+  "inventory": [
+    {
+      "id": "vol-0lab000000000001",
+      "type": "volume"
+    },
+    {
+      "id": "eipalloc-lab02",
+      "type": "address"
+    }
+  ],
+  "lines": [
+    {
+      "service": "AmazonEC2",
+      "usage_type": "BoxUsage:t4g.nano",
+      "line_item_resource_id": "i-0lab0000000000001",
+      "product_region": "us-east-1",
+      "line_item_usage_start_date": "2026-11-18T10:00:00Z",
+      "line_item_usage_end_date": "2026-11-18T10:40:00Z",
+      "observed": "2026-11-19T06:00:00Z",
+      "line_item_line_item_type": "Usage",
+      "cost": 0.0028
+    },
+    {
+      "service": "AmazonEC2",
+      "usage_type": "EBS:VolumeUsage.gp3",
+      "line_item_resource_id": "vol-0lab000000000001",
+      "product_region": "us-east-1",
+      "line_item_usage_start_date": "2026-11-18T10:40:00Z",
+      "line_item_usage_end_date": "2026-11-25T10:40:00Z",
+      "observed": "2026-11-19T06:00:00Z",
+      "line_item_line_item_type": "Usage",
+      "cost": 0.1473
+    },
+    {
+      "service": "AmazonVPC",
+      "usage_type": "PublicIPv4:IdleAddress",
+      "line_item_resource_id": "eipalloc-lab02",
+      "product_region": "us-east-1",
+      "line_item_usage_start_date": "2026-11-18T10:40:00Z",
+      "line_item_usage_end_date": "2026-11-25T10:40:00Z",
+      "observed": "2026-11-19T06:00:00Z",
+      "line_item_line_item_type": "Usage",
+      "cost": 0.84
+    }
+  ],
+  "id": "F3"
+}

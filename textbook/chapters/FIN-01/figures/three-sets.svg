@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 220" width="760" height="220" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif">
+
+<rect x="14" y="20" width="232" height="92" rx="8" ry="8" fill="#e9eff5" stroke="#1d3b53" stroke-width="1.4"/>
+<text x="130.0" y="55.624" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="12" font-weight="700" fill="#17384f" text-anchor="middle">A　Terraform 状态</text>
+<text x="130.0" y="73.74000000000001" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.8" font-weight="400" fill="#22313d" text-anchor="middle">本工程管理的对象</text>
+<text x="130.0" y="87.656" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.8" font-weight="400" fill="#22313d" text-anchor="middle">destroy 能删除它们</text>
+<text x="130" y="134" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.6" font-weight="600" fill="#22313d" text-anchor="middle">核查：state 与 destroy 输出</text>
+<rect x="264" y="20" width="232" height="92" rx="8" ry="8" fill="#fdf1e3" stroke="#e0954a" stroke-width="1.4"/>
+<text x="380.0" y="55.624" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="12" font-weight="700" fill="#9a5a1c" text-anchor="middle">B　仍然存在的资源</text>
+<text x="380.0" y="73.74000000000001" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.8" font-weight="400" fill="#22313d" text-anchor="middle">手工快照、日志组、其他 State</text>
+<text x="380.0" y="87.656" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.8" font-weight="400" fill="#22313d" text-anchor="middle">其他区域、其他账户</text>
+<text x="380" y="134" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.6" font-weight="600" fill="#22313d" text-anchor="middle">核查：跨服务、跨区域盘点</text>
+<rect x="514" y="20" width="232" height="92" rx="8" ry="8" fill="#e6f3f3" stroke="#1a8a8f" stroke-width="1.4"/>
+<text x="630.0" y="55.624" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="12" font-weight="700" fill="#12676b" text-anchor="middle">C　已经发生的用量</text>
+<text x="630.0" y="73.74000000000001" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.8" font-weight="400" fill="#22313d" text-anchor="middle">销毁前的计量</text>
+<text x="630.0" y="87.656" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.8" font-weight="400" fill="#22313d" text-anchor="middle">可能明天才入账</text>
+<text x="630" y="134" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.6" font-weight="600" fill="#22313d" text-anchor="middle">核查：usage 时间段</text>
+<text x="380" y="172" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="12" font-weight="700" fill="#c0504d" text-anchor="middle">destroy 成功  ≠  账户里没有残留  ≠  账单最终为 0</text>
+<text x="380" y="196" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.8" font-weight="400" fill="#5d6d7a" text-anchor="middle">A 能删；B 要先确认归属与保留要求再处置；C 删不掉，只能等它入账后核对</text>
+</svg>

@@ -1,0 +1,4 @@
+# Q1 数据进来了吗？按事件时间看前 20 条
+fields @timestamp, requestId, phase, release, route, status
+| sort @timestamp asc
+| limit 20

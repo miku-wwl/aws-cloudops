@@ -1,0 +1,24 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "AllowTaggingInGeneral",
+      "Effect": "Allow",
+      "Action": ["s3:TagResource", "s3:UntagResource", "s3:ListTagsForResource", "s3:GetBucketTagging"],
+      "Resource": "arn:aws:s3:::*"
+    },
+    {
+      "Sid": "NeverRemoveOwner",
+      "Effect": "Deny",
+      "Action": "s3:UntagResource",
+      "Resource": "arn:aws:s3:::*",
+      "Condition": { "ForAnyValue:StringEquals": { "aws:TagKeys": ["Owner"] } }
+    },
+    {
+      "Sid": "NoWholesaleReplace",
+      "Effect": "Deny",
+      "Action": "s3:PutBucketTagging",
+      "Resource": "arn:aws:s3:::*"
+    }
+  ]
+}

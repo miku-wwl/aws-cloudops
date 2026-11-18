@@ -1,0 +1,260 @@
+{
+ "_comment": "第 10 讲实验 10-1 场景。字段含义见 ssmdiag.py 文档字符串。",
+ "scenarios": [
+  {
+   "id": "S1",
+   "title": "基线：公有子网、公网 IP、出站 443、实例配置文件",
+   "ec2_state": "running",
+   "agent": {
+    "installed": true,
+    "running": true,
+    "version": "3.3.1957.0"
+   },
+   "identity": {
+    "profile_update_info": true
+   },
+   "network": {
+    "route": "igw",
+    "public_ip": true,
+    "sg_egress_443": true
+   },
+   "operator": {}
+  },
+  {
+   "id": "S2",
+   "title": "拔掉出站 443 并重启实例（清掉已跟踪的长连接）",
+   "ec2_state": "running",
+   "agent": {
+    "installed": true,
+    "running": true,
+    "version": "3.3.1957.0"
+   },
+   "identity": {
+    "profile_update_info": true
+   },
+   "network": {
+    "route": "igw",
+    "public_ip": true,
+    "sg_egress_443": false
+   },
+   "operator": {},
+   "was_online": true
+  },
+  {
+   "id": "S3",
+   "title": "忘了挂实例配置文件，也没启用 DHMC",
+   "ec2_state": "running",
+   "agent": {
+    "installed": true,
+    "running": true,
+    "version": "3.3.1957.0"
+   },
+   "identity": {
+    "profile_update_info": false
+   },
+   "network": {
+    "route": "igw",
+    "public_ip": true,
+    "sg_egress_443": true
+   },
+   "operator": {}
+  },
+  {
+   "id": "S4",
+   "title": "没有实例配置文件，但启用了 DHMC（IMDSv2、Agent 新）",
+   "ec2_state": "running",
+   "agent": {
+    "installed": true,
+    "running": true,
+    "version": "3.3.1957.0"
+   },
+   "identity": {
+    "profile_update_info": false,
+    "dhmc": true,
+    "imdsv2": true
+   },
+   "network": {
+    "route": "igw",
+    "public_ip": true,
+    "sg_egress_443": true
+   },
+   "operator": {}
+  },
+  {
+   "id": "S5",
+   "title": "启用了 DHMC，但 Agent 太旧（3.1.x）",
+   "ec2_state": "running",
+   "agent": {
+    "installed": true,
+    "running": true,
+    "version": "3.1.1446.0"
+   },
+   "identity": {
+    "profile_update_info": false,
+    "dhmc": true
+   },
+   "network": {
+    "route": "igw",
+    "public_ip": true,
+    "sg_egress_443": true
+   },
+   "operator": {}
+  },
+  {
+   "id": "S6",
+   "title": "私有子网只建了 ssm 端点",
+   "ec2_state": "running",
+   "agent": {
+    "installed": true,
+    "running": true,
+    "version": "3.3.1957.0"
+   },
+   "identity": {
+    "profile_update_info": true
+   },
+   "network": {
+    "route": "none",
+    "public_ip": false,
+    "sg_egress_443": true,
+    "endpoints": [
+     "ssm"
+    ],
+    "private_dns": true
+   },
+   "operator": {}
+  },
+  {
+   "id": "S7",
+   "title": "私有子网 ssm + ssmmessages 端点，新 Agent",
+   "ec2_state": "running",
+   "agent": {
+    "installed": true,
+    "running": true,
+    "version": "3.3.1957.0"
+   },
+   "identity": {
+    "profile_update_info": true
+   },
+   "network": {
+    "route": "none",
+    "public_ip": false,
+    "sg_egress_443": true,
+    "endpoints": [
+     "ssm",
+     "ssmmessages"
+    ]
+   },
+   "operator": {}
+  },
+  {
+   "id": "S8",
+   "title": "同 S7，但 Agent 是 3.2.x（命令走 ec2messages）",
+   "ec2_state": "running",
+   "agent": {
+    "installed": true,
+    "running": true,
+    "version": "3.2.2303.0"
+   },
+   "identity": {
+    "profile_update_info": true
+   },
+   "network": {
+    "route": "none",
+    "public_ip": false,
+    "sg_egress_443": true,
+    "endpoints": [
+     "ssm",
+     "ssmmessages"
+    ]
+   },
+   "operator": {}
+  },
+  {
+   "id": "S9",
+   "title": "端点齐全，但关闭了私有 DNS",
+   "ec2_state": "running",
+   "agent": {
+    "installed": true,
+    "running": true,
+    "version": "3.3.1957.0"
+   },
+   "identity": {
+    "profile_update_info": true
+   },
+   "network": {
+    "route": "none",
+    "public_ip": false,
+    "sg_egress_443": true,
+    "endpoints": [
+     "ssm",
+     "ssmmessages",
+     "ec2messages"
+    ],
+    "private_dns": false
+   },
+   "operator": {}
+  },
+  {
+   "id": "S10",
+   "title": "IMDS 被整体关闭（http_endpoint = disabled）",
+   "ec2_state": "running",
+   "agent": {
+    "installed": true,
+    "running": true,
+    "version": "3.3.1957.0"
+   },
+   "identity": {
+    "profile_update_info": true,
+    "imds": false
+   },
+   "network": {
+    "route": "igw",
+    "public_ip": true,
+    "sg_egress_443": true
+   },
+   "operator": {}
+  },
+  {
+   "id": "S11",
+   "title": "节点正常，但操作者没有 ssm:SendCommand",
+   "ec2_state": "running",
+   "agent": {
+    "installed": true,
+    "running": true,
+    "version": "3.3.1957.0"
+   },
+   "identity": {
+    "profile_update_info": true
+   },
+   "network": {
+    "route": "igw",
+    "public_ip": true,
+    "sg_egress_443": true
+   },
+   "operator": {
+    "send_command": false
+   }
+  },
+  {
+   "id": "S12",
+   "title": "Runbook 未指定执行角色，操作者又没有 ec2:DescribeInstances",
+   "ec2_state": "running",
+   "agent": {
+    "installed": true,
+    "running": true,
+    "version": "3.3.1957.0"
+   },
+   "identity": {
+    "profile_update_info": true
+   },
+   "network": {
+    "route": "igw",
+    "public_ip": true,
+    "sg_egress_443": true
+   },
+   "operator": {
+    "runbook": false
+   }
+  }
+ ]
+}

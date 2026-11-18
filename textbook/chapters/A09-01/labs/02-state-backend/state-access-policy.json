@@ -1,0 +1,12 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    { "Sid": "ListOnlyThisEnvironment", "Effect": "Allow", "Action": "s3:ListBucket",
+      "Resource": "arn:aws:s3:::a15-lab01-state",
+      "Condition": { "StringLike": { "s3:prefix": ["platform/dev/*"] } } },
+    { "Sid": "ReadWriteState", "Effect": "Allow", "Action": ["s3:GetObject", "s3:PutObject"],
+      "Resource": "arn:aws:s3:::a15-lab01-state/platform/dev/terraform.tfstate" },
+    { "Sid": "LockFile", "Effect": "Allow", "Action": ["s3:GetObject", "s3:PutObject", "s3:DeleteObject"],
+      "Resource": "arn:aws:s3:::a15-lab01-state/platform/dev/terraform.tfstate.tflock" }
+  ]
+}

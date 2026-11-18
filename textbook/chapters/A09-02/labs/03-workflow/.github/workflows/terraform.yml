@@ -1,0 +1,61 @@
+# 第 16 讲实验 16-3：PR 上只做 plan；合入 main 后在受保护环境中 apply 同一个作业里生成的计划。
+# 仓库设置（不在本文件中）：环境 production → Required reviewers + Deployment branches 只允许 main。
+name: terraform
+on:
+  pull_request:
+    paths: ["infra/**"]
+  push:
+    branches: [main]
+    paths: ["infra/**"]
+
+permissions:
+  contents: read            # 默认最小；需要 OIDC 的作业再单独加 id-token: write
+
+jobs:
+  plan:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write       # 只允许“请求 OIDC 令牌”，不等于任何 AWS 权限
+    steps:
+      - uses: actions/checkout@v7
+      - uses: aws-actions/configure-aws-credentials@v6   # 截至 2026-11 最新 v6.3.0；生产中固定到提交 SHA
+        with:
+          role-to-assume: ${{ vars.PLAN_ROLE_ARN }}      # 信任 sub = …:pull_request；只读 + 状态读 + 锁
+          aws-region: us-east-1
+      - uses: hashicorp/setup-terraform@v4
+        with:
+          terraform_version: 1.17.2
+          terraform_wrapper: false   # 不需要包装器把输出转成步骤变量；JSON 直接重定向到文件
+      - run: terraform -chdir=infra init -input=false
+      - run: terraform -chdir=infra plan -input=false -lock-timeout=5m -out=tfplan
+      - run: terraform -chdir=infra show -json tfplan > plan.json
+      - run: python tools/inspect_plan.py plan.json          # PR 上只展示动作，不阻断
+        # 不把 tfplan / plan.json 上传为公开制品：它们可能含明文机密
+
+  apply:
+    if: github.event_name == 'push'
+    runs-on: ubuntu-latest
+    environment: production                      # 审批在作业开始前发生；没批准就拿不到令牌
+    concurrency:
+      group: terraform-state-production          # 同一份状态排队执行（锁之外的第二道保险）
+      cancel-in-progress: false
+    permissions:
+      contents: read
+      id-token: write
+    steps:
+      - uses: actions/checkout@v7
+      - uses: aws-actions/configure-aws-credentials@v6
+        with:
+          role-to-assume: ${{ vars.APPLY_ROLE_ARN }}     # 信任 sub = …:environment:production
+          aws-region: us-east-1
+      - uses: hashicorp/setup-terraform@v4
+        with:
+          terraform_version: 1.17.2
+          terraform_wrapper: false   # 不需要包装器把输出转成步骤变量；JSON 直接重定向到文件
+      - run: terraform -chdir=infra init -input=false
+      - run: terraform -chdir=infra plan -input=false -lock-timeout=5m -out=tfplan
+      - run: terraform -chdir=infra show -json tfplan > plan.json
+      - run: python tools/inspect_plan.py plan.json --allow create,update,no-op   # delete / replace → 失败
+      - run: terraform -chdir=infra apply -input=false tfplan   # 只执行刚刚通过闸门的那一份计划

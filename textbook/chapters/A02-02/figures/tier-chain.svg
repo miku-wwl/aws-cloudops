@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 250" width="760" height="250" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif">
+<defs><marker id="marrow1d3b53" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0.8 L9.2 5 L0 9.2 z" fill="#1d3b53"/></marker><marker id="marrow1a8a8f" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0.8 L9.2 5 L0 9.2 z" fill="#1a8a8f"/></marker></defs>
+<rect x="16" y="80" width="120" height="70" rx="8" ry="8" fill="#f2f5f7" stroke="#9fb3c1" stroke-width="1.4"/>
+<text x="76.0" y="104.897" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="11" font-weight="700" fill="#41525f" text-anchor="middle">办公网</text>
+<text x="76.0" y="122.095" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="400" fill="#5d6d7a" text-anchor="middle">前缀列表</text>
+<text x="76.0" y="135.44299999999998" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="400" fill="#5d6d7a" text-anchor="middle">pl-office</text>
+<rect x="186" y="80" width="120" height="70" rx="8" ry="8" fill="#e9eff5" stroke="#1d3b53" stroke-width="1.4"/>
+<text x="246.0" y="105.0445" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="11.5" font-weight="700" fill="#17384f" text-anchor="middle">sg-web</text>
+<text x="246.0" y="122.41749999999999" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="400" fill="#22313d" text-anchor="middle">入：443</text>
+<text x="246.0" y="135.76549999999997" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="400" fill="#22313d" text-anchor="middle">← pl-office</text>
+<rect x="356" y="80" width="120" height="70" rx="8" ry="8" fill="#e6f3f3" stroke="#1a8a8f" stroke-width="1.4"/>
+<text x="416.0" y="105.0445" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="11.5" font-weight="700" fill="#12676b" text-anchor="middle">sg-app</text>
+<text x="416.0" y="122.41749999999999" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="400" fill="#22313d" text-anchor="middle">入：8080</text>
+<text x="416.0" y="135.76549999999997" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="400" fill="#22313d" text-anchor="middle">← sg-web</text>
+<rect x="526" y="80" width="120" height="70" rx="8" ry="8" fill="#fdf1e3" stroke="#e0954a" stroke-width="1.4"/>
+<text x="586.0" y="105.0445" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="11.5" font-weight="700" fill="#9a5a1c" text-anchor="middle">sg-db</text>
+<text x="586.0" y="122.41749999999999" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="400" fill="#22313d" text-anchor="middle">入：5432</text>
+<text x="586.0" y="135.76549999999997" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="400" fill="#22313d" text-anchor="middle">← sg-app</text>
+<path d="M136 115 L186 115" fill="none" stroke="#1d3b53" stroke-width="1.6" marker-end="url(#marrow1d3b53)" stroke-linejoin="round"/>
+<rect x="148.072" y="99.88" width="25.855999999999998" height="12.48" rx="3" ry="3" fill="#ffffff" stroke="none" stroke-width="1.2" opacity="0.92"/>
+<text x="161.0" y="109.0" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.6" font-weight="500" fill="#1d3b53" text-anchor="middle">443</text>
+<path d="M306 115 L356 115" fill="none" stroke="#1d3b53" stroke-width="1.6" marker-end="url(#marrow1d3b53)" stroke-linejoin="round"/>
+<rect x="315.096" y="99.88" width="31.808" height="12.48" rx="3" ry="3" fill="#ffffff" stroke="none" stroke-width="1.2" opacity="0.92"/>
+<text x="331.0" y="109.0" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.6" font-weight="500" fill="#1d3b53" text-anchor="middle">8080</text>
+<path d="M476 115 L526 115" fill="none" stroke="#1d3b53" stroke-width="1.6" marker-end="url(#marrow1d3b53)" stroke-linejoin="round"/>
+<rect x="485.096" y="99.88" width="31.808" height="12.48" rx="3" ry="3" fill="#ffffff" stroke="none" stroke-width="1.2" opacity="0.92"/>
+<text x="501.0" y="109.0" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.6" font-weight="500" fill="#1d3b53" text-anchor="middle">5432</text>
+<rect x="660" y="40" width="90" height="60" rx="8" ry="8" fill="#f2f5f7" stroke="#9fb3c1" stroke-width="1.4"/>
+<text x="705.0" y="60.454" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="10" font-weight="700" fill="#41525f" text-anchor="middle">Amazon S3</text>
+<text x="705.0" y="76.45" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="8.8" font-weight="400" fill="#5d6d7a" text-anchor="middle">前缀列表</text>
+<text x="705.0" y="88.946" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="8.8" font-weight="400" fill="#5d6d7a" text-anchor="middle">pl-63a5400a</text>
+<path d="M440 80 L440 58 L640 58 L660 70" fill="none" stroke="#1a8a8f" stroke-width="1.6" stroke-dasharray="5 4" marker-end="url(#marrow1a8a8f)" stroke-linejoin="round"/>
+<rect x="473.302" y="44.07" width="133.39600000000002" height="12.22" rx="3" ry="3" fill="#ffffff" stroke="none" stroke-width="1.2" opacity="0.92"/>
+<text x="540.0" y="53.0" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="500" fill="#1a8a8f" text-anchor="middle">app 出：443 → S3 前缀列表</text>
+<text x="380" y="186" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="10.2" font-weight="600" fill="#1d3b53" text-anchor="middle">每一层只信任上一层的“身份”（SG），而不是某段 IP：实例扩缩容、换 IP，规则都不用改</text>
+<text x="380" y="206" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.8" font-weight="400" fill="#5d6d7a" text-anchor="middle">出站也按需收紧：web 只能去 app:8080，app 只能去 db:5432 与 S3:443，db 没有任何出站规则</text>
+<text x="380" y="226" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.8" font-weight="400" fill="#5d6d7a" text-anchor="middle">db 的回包仍能返回 app——靠的是连接跟踪，而不是出站规则</text>
+</svg>

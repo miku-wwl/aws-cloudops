@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 262" width="760" height="262" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif">
+<defs><marker id="marrow1d3b53" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0.8 L9.2 5 L0 9.2 z" fill="#1d3b53"/></marker></defs>
+<rect x="24" y="70" width="150" height="64" rx="8" ry="8" fill="#e9eff5" stroke="#1d3b53" stroke-width="1.4"/>
+<text x="99.0" y="91.7605" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="11.5" font-weight="700" fill="#17384f" text-anchor="middle">入站包</text>
+<text x="99.0" y="109.41749999999999" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.6" font-weight="400" fill="#22313d" text-anchor="middle">TCP 来自 10.40.1.10</text>
+<text x="99.0" y="123.0495" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.6" font-weight="400" fill="#22313d" text-anchor="middle">目的端口 8080</text>
+<rect x="220" y="24" width="330" height="214" rx="6" ry="6" fill="#fbfcfd" stroke="#9fb3c1" stroke-width="1.4"/>
+<path d="M220 30 a6 6 0 0 1 6 -6 h103.03 v19.5 h-109.03 z" fill="#9fb3c1"/>
+<text x="228" y="38.0" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="10.5" font-weight="700" fill="#ffffff" text-anchor="start">ENI（实例的网卡）</text>
+<rect x="240" y="62" width="140" height="74" rx="8" ry="8" fill="#ffffff" stroke="#b8c7d2" stroke-width="1.4"/>
+<text x="310.0" y="88.897" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="11" font-weight="700" fill="#17384f" text-anchor="middle">SG-base</text>
+<text x="310.0" y="106.095" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="400" fill="#22313d" text-anchor="middle">22 ← sg-eic</text>
+<text x="310.0" y="119.443" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="400" fill="#22313d" text-anchor="middle">9100 ← 10.40.0.0/16</text>
+<rect x="392" y="62" width="140" height="74" rx="8" ry="8" fill="#ffffff" stroke="#b8c7d2" stroke-width="1.4"/>
+<text x="462.0" y="88.897" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="11" font-weight="700" fill="#17384f" text-anchor="middle">SG-app</text>
+<text x="462.0" y="106.095" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="400" fill="#22313d" text-anchor="middle">8080 ← sg-client</text>
+<text x="462.0" y="119.443" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="400" fill="#22313d" text-anchor="middle">（实验开关）</text>
+<rect x="240" y="152" width="292" height="70" rx="8" ry="8" fill="#e6f3f3" stroke="#1a8a8f" stroke-width="1.4"/>
+<text x="386.0" y="176.779" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="10.6" font-weight="700" fill="#12676b" text-anchor="middle">生效规则 ＝ 所有 SG 的允许规则之并集</text>
+<text x="386.0" y="193.837" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="400" fill="#22313d" text-anchor="middle">任何一条匹配 → 放行；没有一条匹配 → 静默丢弃</text>
+<text x="386.0" y="207.185" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="400" fill="#22313d" text-anchor="middle">（没有 Deny 规则，也就不存在“Deny 优先”）</text>
+<path d="M174 102 L240 102" fill="none" stroke="#1d3b53" stroke-width="1.6" marker-end="url(#marrow1d3b53)" stroke-linejoin="round"/>
+<rect x="596" y="40" width="146" height="82" rx="8" ry="8" fill="#f1edf8" stroke="#6f55a8" stroke-width="1.4"/>
+<text x="669.0" y="64.531" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="10.6" font-weight="700" fill="#4f3a86" text-anchor="middle">来源 = sg-client</text>
+<text x="669.0" y="81.305" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.2" font-weight="400" fill="#22313d" text-anchor="middle">匹配“挂了 sg-client 的</text>
+<text x="669.0" y="94.369" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.2" font-weight="400" fill="#22313d" text-anchor="middle">网卡的私有 IP”</text>
+<text x="669.0" y="107.43299999999999" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.2" font-weight="400" fill="#22313d" text-anchor="middle">不复制对方的规则</text>
+<rect x="596" y="140" width="146" height="82" rx="8" ry="8" fill="#fdf1e3" stroke="#e0954a" stroke-width="1.4"/>
+<text x="669.0" y="164.531" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="10.6" font-weight="700" fill="#9a5a1c" text-anchor="middle">配额</text>
+<text x="669.0" y="181.305" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.2" font-weight="400" fill="#22313d" text-anchor="middle">每块网卡默认 5 个 SG</text>
+<text x="669.0" y="194.369" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.2" font-weight="400" fill="#22313d" text-anchor="middle">每个 SG 每方向 60 条</text>
+<text x="669.0" y="207.433" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.2" font-weight="400" fill="#22313d" text-anchor="middle">（均可申请提高）</text>
+</svg>

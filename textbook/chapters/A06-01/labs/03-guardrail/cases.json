@@ -1,0 +1,12 @@
+{
+ "_comment": "第 11 讲实验 11-3：保护 Owner 标签的护栏策略。context 的值是列表（aws:TagKeys 为多值键）。",
+ "resource": "arn:aws:s3:::a11-lab01-bucket",
+ "cases": [
+  {"id": "G1", "title": "UntagResource 删除 Owner", "action": "s3:UntagResource", "context": {"aws:TagKeys": ["Owner"]}, "expect": "explicitDeny"},
+  {"id": "G2", "title": "UntagResource 删除 CostCenter", "action": "s3:UntagResource", "context": {"aws:TagKeys": ["CostCenter"]}, "expect": "allowed"},
+  {"id": "G3", "title": "一次删两个键，其中有 Owner", "action": "s3:UntagResource", "context": {"aws:TagKeys": ["CostCenter", "Owner"]}, "expect": "explicitDeny"},
+  {"id": "G4", "title": "TagResource 增加 CostCenter", "action": "s3:TagResource", "context": {"aws:TagKeys": ["CostCenter"]}, "expect": "allowed"},
+  {"id": "G5", "title": "PutBucketTagging（整体替换）", "action": "s3:PutBucketTagging", "context": {}, "expect": "explicitDeny"},
+  {"id": "G6", "title": "GetBucketTagging（只读）", "action": "s3:GetBucketTagging", "context": {}, "expect": "allowed"}
+ ]
+}

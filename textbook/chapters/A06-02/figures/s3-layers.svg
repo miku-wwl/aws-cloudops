@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 250" width="760" height="250" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif">
+
+<rect x="14" y="10" width="150" height="40" rx="6" ry="6" fill="#1d3b53" stroke="none" stroke-width="1.2"/>
+<text x="89" y="35" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="11" font-weight="700" fill="#ffffff" text-anchor="middle">身份与授权</text>
+<rect x="170" y="10" width="330" height="40" rx="6" ry="6" fill="#f6fafb" stroke="#dbe6ec" stroke-width="1"/>
+<text x="182" y="35" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.6" font-weight="400" fill="#22313d" text-anchor="start">IAM 策略 · 桶策略 · KMS 密钥策略</text>
+<rect x="506" y="10" width="240" height="40" rx="6" ry="6" fill="#fff8ec" stroke="#f0d5ad" stroke-width="1"/>
+<text x="518" y="35" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="400" fill="#7a4a14" text-anchor="start">S3 与 KMS 是两个授权点</text>
+<rect x="14" y="57" width="150" height="40" rx="6" ry="6" fill="#1a8a8f" stroke="none" stroke-width="1.2"/>
+<text x="89" y="82" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="11" font-weight="700" fill="#ffffff" text-anchor="middle">公开访问边界</text>
+<rect x="170" y="57" width="330" height="40" rx="6" ry="6" fill="#f6fafb" stroke="#dbe6ec" stroke-width="1"/>
+<text x="182" y="82" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.6" font-weight="400" fill="#22313d" text-anchor="start">BPA 四项（账户级 + 桶级 + 访问点）</text>
+<rect x="506" y="57" width="240" height="40" rx="6" ry="6" fill="#fff8ec" stroke="#f0d5ad" stroke-width="1"/>
+<text x="518" y="82" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="400" fill="#7a4a14" text-anchor="start">取最严格的组合；不替代权限审查</text>
+<rect x="14" y="104" width="150" height="40" rx="6" ry="6" fill="#6f55a8" stroke="none" stroke-width="1.2"/>
+<text x="89" y="129" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="11" font-weight="700" fill="#ffffff" text-anchor="middle">对象所有权</text>
+<rect x="170" y="104" width="330" height="40" rx="6" ry="6" fill="#f6fafb" stroke="#dbe6ec" stroke-width="1"/>
+<text x="182" y="129" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.6" font-weight="400" fill="#22313d" text-anchor="start">BucketOwnerEnforced：ACL 失效</text>
+<rect x="506" y="104" width="240" height="40" rx="6" ry="6" fill="#fff8ec" stroke="#f0d5ad" stroke-width="1"/>
+<text x="518" y="129" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="400" fill="#7a4a14" text-anchor="start">带 ACL 的请求会被拒</text>
+<rect x="14" y="151" width="150" height="40" rx="6" ry="6" fill="#e0954a" stroke="none" stroke-width="1.2"/>
+<text x="89" y="176" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="11" font-weight="700" fill="#ffffff" text-anchor="middle">静态加密</text>
+<rect x="170" y="151" width="330" height="40" rx="6" ry="6" fill="#f6fafb" stroke="#dbe6ec" stroke-width="1"/>
+<text x="182" y="176" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.6" font-weight="400" fill="#22313d" text-anchor="start">默认 SSE-KMS + Bucket Key；阻止 SSE-C</text>
+<rect x="506" y="151" width="240" height="40" rx="6" ry="6" fill="#fff8ec" stroke="#f0d5ad" stroke-width="1"/>
+<text x="518" y="176" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="400" fill="#7a4a14" text-anchor="start">只影响新对象；旧对象需另行重加密</text>
+<rect x="14" y="198" width="150" height="40" rx="6" ry="6" fill="#2e7d55" stroke="none" stroke-width="1.2"/>
+<text x="89" y="223" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="11" font-weight="700" fill="#ffffff" text-anchor="middle">传输加密</text>
+<rect x="170" y="198" width="330" height="40" rx="6" ry="6" fill="#f6fafb" stroke="#dbe6ec" stroke-width="1"/>
+<text x="182" y="223" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.6" font-weight="400" fill="#22313d" text-anchor="start">Deny aws:SecureTransport=false · s3:TlsVersion&lt;1.2</text>
+<rect x="506" y="198" width="240" height="40" rx="6" ry="6" fill="#fff8ec" stroke="#f0d5ad" stroke-width="1"/>
+<text x="518" y="223" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="400" fill="#7a4a14" text-anchor="start">要用负向测试证明它生效</text>
+</svg>

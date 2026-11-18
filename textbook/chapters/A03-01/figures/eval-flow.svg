@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 470" width="760" height="470" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif">
+<defs><marker id="marrowc0504d" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0.8 L9.2 5 L0 9.2 z" fill="#c0504d"/></marker><marker id="marrow5d6d7a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0.8 L9.2 5 L0 9.2 z" fill="#5d6d7a"/></marker><marker id="marrow1d3b53" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0.8 L9.2 5 L0 9.2 z" fill="#1d3b53"/></marker><marker id="marrow1a8a8f" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0.8 L9.2 5 L0 9.2 z" fill="#1a8a8f"/></marker><marker id="marrow6f55a8" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0.8 L9.2 5 L0 9.2 z" fill="#6f55a8"/></marker></defs>
+<rect x="24" y="16" width="330" height="56" rx="8" ry="8" fill="#fbeceb" stroke="#c0504d" stroke-width="1.4"/>
+<text x="189.0" y="40.713" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="11" font-weight="700" fill="#8e2f2c" text-anchor="middle">① 任何适用策略里有 Deny 吗？</text>
+<text x="189.0" y="57.626999999999995" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.2" font-weight="400" fill="#22313d" text-anchor="middle">身份 / 资源 / 边界 / 会话 / SCP / RCP</text>
+<path d="M354 44 L420 44" fill="none" stroke="#c0504d" stroke-width="1.4" marker-end="url(#marrowc0504d)" stroke-linejoin="round"/>
+<text x="428" y="48" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="10" font-weight="600" fill="#c0504d" text-anchor="start">是 → 显式拒绝 explicitDeny</text>
+<path d="M189 72 L189 88" fill="none" stroke="#5d6d7a" stroke-width="1.4" marker-end="url(#marrow5d6d7a)" stroke-linejoin="round"/>
+<rect x="24" y="88" width="330" height="56" rx="8" ry="8" fill="#e9eff5" stroke="#1d3b53" stroke-width="1.4"/>
+<text x="189.0" y="112.71300000000001" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="11" font-weight="700" fill="#17384f" text-anchor="middle">② SCP、RCP 允许吗？（若存在）</text>
+<text x="189.0" y="129.627" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.2" font-weight="400" fill="#22313d" text-anchor="middle">组织策略只设上限，不授予权限</text>
+<path d="M354 116 L420 116" fill="none" stroke="#1d3b53" stroke-width="1.4" marker-end="url(#marrow1d3b53)" stroke-linejoin="round"/>
+<text x="428" y="120" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="10" font-weight="600" fill="#22313d" text-anchor="start">否 → 隐式拒绝</text>
+<path d="M189 144 L189 160" fill="none" stroke="#5d6d7a" stroke-width="1.4" marker-end="url(#marrow5d6d7a)" stroke-linejoin="round"/>
+<rect x="24" y="160" width="330" height="56" rx="8" ry="8" fill="#e6f3f3" stroke="#1a8a8f" stroke-width="1.4"/>
+<text x="189.0" y="184.713" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="11" font-weight="700" fill="#12676b" text-anchor="middle">③ 资源策略直接授予调用者？</text>
+<text x="189.0" y="201.62699999999998" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.2" font-weight="400" fill="#22313d" text-anchor="middle">同账户：授予 IAM 用户 / 角色会话 ARN</text>
+<path d="M354 188 L420 188" fill="none" stroke="#1a8a8f" stroke-width="1.4" marker-end="url(#marrow1a8a8f)" stroke-linejoin="round"/>
+<text x="428" y="192" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="10" font-weight="600" fill="#1a8a8f" text-anchor="start">是 → 允许（不受④⑤⑥的隐式拒绝影响）</text>
+<path d="M189 216 L189 232" fill="none" stroke="#5d6d7a" stroke-width="1.4" marker-end="url(#marrow5d6d7a)" stroke-linejoin="round"/>
+<rect x="24" y="232" width="330" height="56" rx="8" ry="8" fill="#e9eff5" stroke="#1d3b53" stroke-width="1.4"/>
+<text x="189.0" y="256.71299999999997" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="11" font-weight="700" fill="#17384f" text-anchor="middle">④ 身份策略允许吗？</text>
+<text x="189.0" y="273.62699999999995" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.2" font-weight="400" fill="#22313d" text-anchor="middle">用户 / 组 / 角色上的策略</text>
+<path d="M354 260 L420 260" fill="none" stroke="#1d3b53" stroke-width="1.4" marker-end="url(#marrow1d3b53)" stroke-linejoin="round"/>
+<text x="428" y="264" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="10" font-weight="600" fill="#22313d" text-anchor="start">否（且资源策略也没允许）→ 隐式拒绝</text>
+<path d="M189 288 L189 304" fill="none" stroke="#5d6d7a" stroke-width="1.4" marker-end="url(#marrow5d6d7a)" stroke-linejoin="round"/>
+<rect x="24" y="304" width="330" height="56" rx="8" ry="8" fill="#f1edf8" stroke="#6f55a8" stroke-width="1.4"/>
+<text x="189.0" y="328.713" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="11" font-weight="700" fill="#4f3a86" text-anchor="middle">⑤ 权限边界允许吗？（若存在）</text>
+<text x="189.0" y="345.627" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.2" font-weight="400" fill="#22313d" text-anchor="middle">边界只设上限</text>
+<path d="M354 332 L420 332" fill="none" stroke="#6f55a8" stroke-width="1.4" marker-end="url(#marrow6f55a8)" stroke-linejoin="round"/>
+<text x="428" y="336" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="10" font-weight="600" fill="#6f55a8" text-anchor="start">否 → 隐式拒绝</text>
+<path d="M189 360 L189 376" fill="none" stroke="#5d6d7a" stroke-width="1.4" marker-end="url(#marrow5d6d7a)" stroke-linejoin="round"/>
+<rect x="24" y="376" width="330" height="56" rx="8" ry="8" fill="#f1edf8" stroke="#6f55a8" stroke-width="1.4"/>
+<text x="189.0" y="400.713" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="11" font-weight="700" fill="#4f3a86" text-anchor="middle">⑥ 会话策略允许吗？（若存在）</text>
+<text x="189.0" y="417.627" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.2" font-weight="400" fill="#22313d" text-anchor="middle">AssumeRole 时传入的 --policy</text>
+<path d="M354 404 L420 404" fill="none" stroke="#6f55a8" stroke-width="1.4" marker-end="url(#marrow6f55a8)" stroke-linejoin="round"/>
+<text x="428" y="408" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="10" font-weight="600" fill="#6f55a8" text-anchor="start">否 → 隐式拒绝</text>
+<rect x="24" y="448" width="330" height="34" rx="8" ry="8" fill="#1a8a8f" stroke="#1a8a8f" stroke-width="1.4"/>
+<text x="189.0" y="467.226" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="10.6" font-weight="400" fill="#e3f4f4" text-anchor="middle">全部通过 → 允许（allowed）</text>
+<text x="560" y="470" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="10" font-weight="400" fill="#5d6d7a" text-anchor="middle">默认：一切请求都被隐式拒绝</text>
+</svg>

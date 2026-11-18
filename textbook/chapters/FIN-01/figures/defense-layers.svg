@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 230" width="760" height="230" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif">
+
+<rect x="14" y="14" width="672" height="60" rx="8" ry="8" fill="#e9eff5" stroke="#1d3b53" stroke-width="1.4"/>
+<text x="24" y="33.897000000000006" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="11" font-weight="700" fill="#17384f" text-anchor="start">第一层　事前</text>
+<text x="24" y="51.095000000000006" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="400" fill="#22313d" text-anchor="start">估算（真实单价 × 用量）、审批、最小权限</text>
+<text x="24" y="64.44300000000001" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="400" fill="#22313d" text-anchor="start">TTL 标签与停止条件；默认零资源的代码</text>
+<rect x="44" y="84" width="642" height="60" rx="8" ry="8" fill="#e6f3f3" stroke="#1a8a8f" stroke-width="1.4"/>
+<text x="54" y="103.897" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="11" font-weight="700" fill="#12676b" text-anchor="start">第二层　事中</text>
+<text x="54" y="121.095" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="400" fill="#22313d" text-anchor="start">预算告警（实际 + 预测）、预算动作（IAM / SCP / 停止实例）</text>
+<text x="54" y="134.44299999999998" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="400" fill="#22313d" text-anchor="start">成本异常检测——都依赖账单数据，不是实时闸门</text>
+<rect x="74" y="154" width="612" height="60" rx="8" ry="8" fill="#eaf5ee" stroke="#2e7d55" stroke-width="1.4"/>
+<text x="84" y="173.897" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="11" font-weight="700" fill="#1f5c3d" text-anchor="start">第三层　事后</text>
+<text x="84" y="191.095" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="400" fill="#22313d" text-anchor="start">跨服务、跨区域盘点 + 覆盖清单</text>
+<text x="84" y="204.44299999999998" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="400" fill="#22313d" text-anchor="start">等旧用量入账后再复核，才写“已结清”</text>
+<text x="380" y="224" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="10" font-weight="600" fill="#c0504d" text-anchor="middle">预算不是防火墙：20 美元的预算不会在 20.01 美元时自动阻断所有消费</text>
+</svg>

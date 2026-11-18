@@ -1,0 +1,74 @@
+{
+  "_comment": "第 17 讲实验 17-1。base 是基线拓扑：app、data 两个 VPC 共用 spoke 表（只装本地前缀，彼此隔离），VPN 附件关联 hybrid 表（装两个 VPC 前缀）。每个 case 用 patch（路径 → 新值，null 表示删除）只改一处。",
+  "base": {
+    "vpcs": {
+      "app": {
+        "cidr": "10.10.0.0/16",
+        "subnets": {
+          "app-a": { "cidr": "10.10.1.0/24", "az": "use1-az1", "rt": "app-rt" },
+          "app-b": { "cidr": "10.10.2.0/24", "az": "use1-az2", "rt": "app-rt" }
+        },
+        "route_tables": { "app-rt": [["172.16.0.0/16", "tgw"], ["10.20.0.0/16", "tgw"]] }
+      },
+      "data": {
+        "cidr": "10.20.0.0/16",
+        "subnets": {
+          "data-a": { "cidr": "10.20.1.0/24", "az": "use1-az1", "rt": "data-rt" },
+          "data-b": { "cidr": "10.20.2.0/24", "az": "use1-az2", "rt": "data-rt" }
+        },
+        "route_tables": { "data-rt": [["10.10.0.0/16", "tgw"], ["172.16.0.0/16", "tgw"]] }
+      }
+    },
+    "tgw": {
+      "route_tables": { "spoke": { "static": [] }, "hybrid": { "static": [] } },
+      "attachments": {
+        "att-app":  { "type": "vpc", "vpc": "app",  "azs": ["use1-az1", "use1-az2"], "associated": "spoke",  "propagates_to": ["hybrid"], "prefixes": ["10.10.0.0/16"] },
+        "att-data": { "type": "vpc", "vpc": "data", "azs": ["use1-az1", "use1-az2"], "associated": "spoke",  "propagates_to": ["hybrid"], "prefixes": ["10.20.0.0/16"] },
+        "att-vpn":  { "type": "vpn", "associated": "hybrid", "propagates_to": ["spoke"], "prefixes": ["172.16.0.0/16"] }
+      }
+    },
+    "onprem": {
+      "networks": ["172.16.0.0/16"],
+      "attachment": "att-vpn",
+      "routes": [["10.10.0.0/16", "vpn"], ["10.20.0.0/16", "vpn"]]
+    },
+    "listeners": [["172.16.20.10", 5432], ["172.16.0.53", 53], ["10.20.1.10", 5432], ["10.10.1.53", 53]],
+    "dns": {
+      "outbound_ip": "10.10.1.10",
+      "rules": [
+        { "domain": "corp.example", "type": "FORWARD", "target": "172.16.0.53" },
+        { "domain": "aws.example", "type": "SYSTEM", "target": "PHZ", "autodefined": true },
+        { "domain": "", "type": "RECURSIVE", "target": "Internet Resolver", "autodefined": true }
+      ],
+      "onprem_records": { "db.corp.example": "172.16.20.10" },
+      "phz_records": { "app.aws.example": "10.10.2.20" }
+    }
+  },
+  "cases": [
+    { "id": "S1", "title": "基线：app 访问本地数据库", "dns": "db.corp.example", "tcp": ["10.10.2.20", "172.16.20.10", 5432] },
+    { "id": "S2", "title": "隔离：app 访问 data（同在 spoke 表）", "tcp": ["10.10.1.20", "10.20.1.10", 5432] },
+    { "id": "S3", "title": "本地缺少 10.10/16 回程", "tcp": ["10.10.2.20", "172.16.20.10", 5432],
+      "patch": { "onprem/routes": [["10.20.0.0/16", "vpn"]] } },
+    { "id": "S4", "title": "spoke 表多了 172.16.20.0/24 黑洞", "tcp": ["10.10.2.20", "172.16.20.10", 5432],
+      "patch": { "tgw/route_tables/spoke/static": [["172.16.20.0/24", "blackhole"]] } },
+    { "id": "S5", "title": "app 附件关联错了表（hybrid）", "tcp": ["10.10.2.20", "172.16.20.10", 5432],
+      "patch": { "tgw/attachments/att-app/associated": "hybrid" } },
+    { "id": "S6", "title": "app 附件只开了 az1，源在 az2", "tcp": ["10.10.2.20", "172.16.20.10", 5432],
+      "patch": { "tgw/attachments/att-app/azs": ["use1-az1"] } },
+    { "id": "S7", "title": "DX 与 VPN 同时传播 172.16/16", "tcp": ["10.10.2.20", "172.16.20.10", 5432],
+      "patch": { "tgw/attachments/att-dx": { "type": "dxgw", "associated": "hybrid", "propagates_to": ["spoke"], "prefixes": ["172.16.0.0/16"] } } },
+    { "id": "S8", "title": "再加一条静态 172.16/16 → VPN", "tcp": ["10.10.2.20", "172.16.20.10", 5432],
+      "patch": { "tgw/attachments/att-dx": { "type": "dxgw", "associated": "hybrid", "propagates_to": ["spoke"], "prefixes": ["172.16.0.0/16"] },
+                 "tgw/route_tables/spoke/static": [["172.16.0.0/16", "att-vpn"]] } },
+    { "id": "S9", "title": "默认表：所有附件关联并传播到 default", "tcp": ["10.10.1.20", "10.20.1.10", 5432],
+      "patch": { "tgw/route_tables/default": { "static": [] },
+                 "tgw/attachments/att-app/associated": "default",  "tgw/attachments/att-app/propagates_to": ["default"],
+                 "tgw/attachments/att-data/associated": "default", "tgw/attachments/att-data/propagates_to": ["default"],
+                 "tgw/attachments/att-vpn/associated": "default",  "tgw/attachments/att-vpn/propagates_to": ["default"] } },
+    { "id": "S10", "title": "没有 corp.example 转发规则", "dns": "db.corp.example", "tcp": ["10.10.2.20", "172.16.20.10", 5432],
+      "patch": { "dns/rules": [{ "domain": "", "type": "RECURSIVE", "target": "Internet Resolver", "autodefined": true }] } },
+    { "id": "S11", "title": "本地防火墙拒绝 53 端口", "dns": "db.corp.example", "tcp": ["10.10.2.20", "172.16.20.10", 5432],
+      "patch": { "listeners": [["172.16.20.10", 5432], ["10.20.1.10", 5432], ["10.10.1.53", 53]] } },
+    { "id": "S12", "title": "本地 DNS 经 Inbound 端点查 AWS 名字", "dns": "app.aws.example", "tcp": ["172.16.0.53", "10.10.1.53", 53] }
+  ]
+}

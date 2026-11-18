@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 220" width="760" height="220" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif">
+
+<rect x="14" y="14" width="236" height="76" rx="8" ry="8" fill="#ffffff" stroke="#2e7d55" stroke-width="1.4"/>
+<text x="50" y="62" font-family="'Cascadia Mono',Consolas,monospace" font-size="22" font-weight="800" fill="#2e7d55" text-anchor="middle">+</text>
+<text x="86" y="46" font-family="'Cascadia Mono',Consolas,monospace" font-size="11.5" font-weight="800" fill="#2e7d55" text-anchor="start">create</text>
+<text x="86" y="68" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.6" font-weight="400" fill="#22313d" text-anchor="start">新建对象</text>
+<rect x="262" y="14" width="236" height="76" rx="8" ry="8" fill="#ffffff" stroke="#e0954a" stroke-width="1.4"/>
+<text x="298" y="62" font-family="'Cascadia Mono',Consolas,monospace" font-size="22" font-weight="800" fill="#e0954a" text-anchor="middle">~</text>
+<text x="334" y="46" font-family="'Cascadia Mono',Consolas,monospace" font-size="11.5" font-weight="800" fill="#e0954a" text-anchor="start">update</text>
+<text x="334" y="68" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.6" font-weight="400" fill="#22313d" text-anchor="start">原地修改</text>
+<rect x="510" y="14" width="236" height="76" rx="8" ry="8" fill="#ffffff" stroke="#c0504d" stroke-width="1.4"/>
+<text x="546" y="62" font-family="'Cascadia Mono',Consolas,monospace" font-size="22" font-weight="800" fill="#c0504d" text-anchor="middle">-/+</text>
+<text x="582" y="46" font-family="'Cascadia Mono',Consolas,monospace" font-size="11.5" font-weight="800" fill="#c0504d" text-anchor="start">replace</text>
+<text x="582" y="68" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.6" font-weight="400" fill="#22313d" text-anchor="start">先删后建（或先建后删）</text>
+<rect x="14" y="104" width="236" height="76" rx="8" ry="8" fill="#ffffff" stroke="#c0504d" stroke-width="1.4"/>
+<text x="50" y="152" font-family="'Cascadia Mono',Consolas,monospace" font-size="22" font-weight="800" fill="#c0504d" text-anchor="middle">-</text>
+<text x="86" y="136" font-family="'Cascadia Mono',Consolas,monospace" font-size="11.5" font-weight="800" fill="#c0504d" text-anchor="start">delete</text>
+<text x="86" y="158" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.6" font-weight="400" fill="#22313d" text-anchor="start">销毁对象</text>
+<rect x="262" y="104" width="236" height="76" rx="8" ry="8" fill="#ffffff" stroke="#5d6d7a" stroke-width="1.4"/>
+<text x="298" y="152" font-family="'Cascadia Mono',Consolas,monospace" font-size="22" font-weight="800" fill="#5d6d7a" text-anchor="middle">·</text>
+<text x="334" y="136" font-family="'Cascadia Mono',Consolas,monospace" font-size="11.5" font-weight="800" fill="#5d6d7a" text-anchor="start">no-op</text>
+<text x="334" y="158" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.6" font-weight="400" fill="#22313d" text-anchor="start">无变化（moved 只改地址）</text>
+<rect x="510" y="104" width="236" height="76" rx="8" ry="8" fill="#ffffff" stroke="#6f55a8" stroke-width="1.4"/>
+<text x="546" y="152" font-family="'Cascadia Mono',Consolas,monospace" font-size="22" font-weight="800" fill="#6f55a8" text-anchor="middle">⌀</text>
+<text x="582" y="136" font-family="'Cascadia Mono',Consolas,monospace" font-size="11.5" font-weight="800" fill="#6f55a8" text-anchor="start">forget</text>
+<text x="582" y="158" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.6" font-weight="400" fill="#22313d" text-anchor="start">不再管理，但不销毁</text>
+<text x="380" y="208" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.6" font-weight="600" fill="#1d3b53" text-anchor="middle">replace 的原因看 action_reason：本章实测 triggers_replace 变化报告为 replace_because_cannot_update</text>
+</svg>

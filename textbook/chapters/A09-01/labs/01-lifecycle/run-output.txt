@@ -1,0 +1,56 @@
+Terraform v1.15.5
+
+================ 阶段 0：根模块里创建 terraform_data.orders（release=v1）
+  # terraform_data.orders will be created
+Plan: 1 to add, 0 to change, 0 to destroy.
+  create   terraform_data.orders
+  闸门：通过
+Apply complete! Resources: 1 added, 0 changed, 0 destroyed.
+对象 ID：87b15a20-75c1-73d7-0a56-0e730b74c6f3
+
+================ 阶段 1：收进模块 + moved（期望：no-op，仅地址变化）
+  # terraform_data.orders has moved to module.orders.terraform_data.release
+Plan: 0 to add, 0 to change, 0 to destroy.
+  no-op    module.orders.terraform_data.release（由 terraform_data.orders 移来）
+  闸门：通过
+Apply complete! Resources: 0 added, 0 changed, 0 destroyed.
+对象 ID：87b15a20-75c1-73d7-0a56-0e730b74c6f3  （与阶段 0 相同：没有重建）
+
+================ 阶段 2：release v1 → v2（期望：replace，原因 replace_by_triggers）
+  # module.orders.terraform_data.release must be replaced
+Plan: 1 to add, 0 to change, 1 to destroy.
+  replace  module.orders.terraform_data.release  原因：replace_because_cannot_update
+  ✗ 未获批准的动作：replace module.orders.terraform_data.release
+  闸门：拒绝
+  → 闸门拒绝：替换需要单独审批（本实验在审查后继续）
+Apply complete! Resources: 1 added, 0 changed, 1 destroyed.
+
+================ 阶段 2b：同样的 v2 再 plan 一次（期望：No changes）
+No changes. Your infrastructure matches the configuration.
+
+================ 阶段 3：模块改名却忘了 moved（只 plan 不 apply；期望：一删一建）
+  # module.order_svc.terraform_data.release will be created
+  # module.orders.terraform_data.release will be destroyed
+  # (because terraform_data.release is not in configuration)
+Plan: 1 to add, 0 to change, 1 to destroy.
+  create   module.order_svc.terraform_data.release
+  delete   module.orders.terraform_data.release  原因：delete_because_no_resource_config
+  ✗ 未获批准的动作：delete module.orders.terraform_data.release
+  闸门：拒绝
+  → 闸门拒绝：这不是“改个名字”，是销毁并重建
+
+================ 阶段 4：removed + destroy=false（期望：forget，对象不被销毁）
+ # module.orders.terraform_data.release will no longer be managed by Terraform, but will not be destroyed
+Plan: 0 to add, 0 to change, 0 to destroy.
+Warning: Some objects will no longer be managed by Terraform
+  forget   module.orders.terraform_data.release  原因：delete_because_no_resource_config
+  闸门：通过
+Apply complete! Resources: 0 added, 0 changed, 0 destroyed.
+状态中剩余的资源：0
+
+================ 阶段 5：sensitive 变量会不会出现在计划文件里？
+  # terraform_data.conn will be created
+Plan: 1 to add, 0 to change, 0 to destroy.
+  create   terraform_data.conn
+  计划 JSON 中包含明文 “Example-Not-A-Real-Secret-42”
+          + password = (sensitive value)

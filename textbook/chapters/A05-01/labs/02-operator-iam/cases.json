@@ -1,0 +1,97 @@
+{
+ "_comment": "第 10 讲实验 10-2：操作者最小权限策略的判定用例。expect 是按 IAM 评估逻辑手推的结果。",
+ "cases": [
+  {
+   "id": "P1",
+   "title": "lab 节点（实例资源）",
+   "action": "ssm:SendCommand",
+   "resource": "arn:aws:ec2:us-east-1:111122223333:instance/i-0abc1234def567890",
+   "context": {
+    "ssm:resourceTag/Env": "lab"
+   },
+   "expect": "allowed"
+  },
+  {
+   "id": "P2",
+   "title": "批准的文档 a10-*（文档资源）",
+   "action": "ssm:SendCommand",
+   "resource": "arn:aws:ssm:us-east-1:111122223333:document/a10-lab01-diagnostics",
+   "context": {},
+   "expect": "allowed"
+  },
+  {
+   "id": "P3",
+   "title": "AWS-RunShellScript",
+   "action": "ssm:SendCommand",
+   "resource": "arn:aws:ssm:us-east-1::document/AWS-RunShellScript",
+   "context": {},
+   "expect": "explicitDeny"
+  },
+  {
+   "id": "P4",
+   "title": "prod 节点",
+   "action": "ssm:SendCommand",
+   "resource": "arn:aws:ec2:us-east-1:111122223333:instance/i-0abc1234def567890",
+   "context": {
+    "ssm:resourceTag/Env": "prod"
+   },
+   "expect": "implicitDeny"
+  },
+  {
+   "id": "P5",
+   "title": "会话：lab 节点",
+   "action": "ssm:StartSession",
+   "resource": "arn:aws:ec2:us-east-1:111122223333:instance/i-0abc1234def567890",
+   "context": {
+    "ssm:resourceTag/Env": "lab"
+   },
+   "expect": "allowed"
+  },
+  {
+   "id": "P6",
+   "title": "会话：prod 节点",
+   "action": "ssm:StartSession",
+   "resource": "arn:aws:ec2:us-east-1:111122223333:instance/i-0abc1234def567890",
+   "context": {
+    "ssm:resourceTag/Env": "prod"
+   },
+   "expect": "implicitDeny"
+  },
+  {
+   "id": "P7",
+   "title": "启动盘点 Runbook",
+   "action": "ssm:StartAutomationExecution",
+   "resource": "arn:aws:ssm:us-east-1:111122223333:automation-definition/a10-lab01-inventory:$DEFAULT",
+   "context": {},
+   "expect": "allowed"
+  },
+  {
+   "id": "P8",
+   "title": "自己直接查 EC2",
+   "action": "ec2:DescribeInstances",
+   "resource": "*",
+   "context": {},
+   "expect": "implicitDeny"
+  },
+  {
+   "id": "P9",
+   "title": "PassRole → ssm",
+   "action": "iam:PassRole",
+   "resource": "arn:aws:iam::111122223333:role/a10-lab01-automation",
+   "context": {
+    "iam:PassedToService": "ssm.amazonaws.com"
+   },
+   "expect": "allowed"
+  },
+  {
+   "id": "P10",
+   "title": "PassRole → ec2",
+   "action": "iam:PassRole",
+   "resource": "arn:aws:iam::111122223333:role/a10-lab01-automation",
+   "context": {
+    "iam:PassedToService": "ec2.amazonaws.com"
+   },
+   "expect": "implicitDeny"
+  }
+ ]
+}

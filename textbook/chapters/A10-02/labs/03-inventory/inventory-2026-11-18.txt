@@ -1,0 +1,12 @@
+== 组织
+
+An error occurred (AWSOrganizationsNotInUseException) when calling the DescribeOrganization operation: Your account is not a member of an organization.
+== Control Tower 着陆区（us-east-1）
+（无着陆区）
+== Control Tower 基线目录（可以在 OU / 账户上启用的基线）
+AWSControlTowerBaseline AuditBaseline BackupAdminBaseline BackupBaseline BackupCentralVaultBaseline CentralConfigBaseline CentralSecurityRolesBaseline ConfigBaseline IdentityCenterBaseline LogArchiveBaseline
+== 已在 OU 上启用的基线
+
+An error occurred (ValidationException) when calling the ListEnabledBaselines operation: AWS Control Tower could not complete the operation because it could not assume the 'AWSControlTowerAdmin' role. Check the configuration for this role and try again.
+== Service Catalog 组合数（Account Factory 依赖它）
+0

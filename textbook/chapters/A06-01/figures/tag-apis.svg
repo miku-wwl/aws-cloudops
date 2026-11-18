@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 238" width="760" height="238" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif">
+
+<text x="129" y="20" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="11.5" font-weight="800" fill="#1d3b53" text-anchor="middle">PutBucketTagging</text>
+<text x="129" y="38" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.2" font-weight="400" fill="#5d6d7a" text-anchor="middle">请求：{Project, CostCenter}</text>
+<rect x="34" y="52" width="190" height="22" rx="5" ry="5" fill="#eaf5ee" stroke="none" stroke-width="1.2"/>
+<text x="129" y="67" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="400" fill="#22313d" text-anchor="middle">Project</text>
+<rect x="34" y="78" width="190" height="22" rx="5" ry="5" fill="#e6f3f3" stroke="none" stroke-width="1.2"/>
+<text x="129" y="93" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="400" fill="#22313d" text-anchor="middle">CostCenter</text>
+<text x="129" y="119" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.6" font-weight="700" fill="#c0504d" text-anchor="middle">Owner 不见了</text>
+<text x="129" y="222" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="700" fill="#c0504d" text-anchor="middle">整体替换：没写进去的全被删</text>
+<text x="379" y="20" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="11.5" font-weight="800" fill="#1d3b53" text-anchor="middle">TagResource</text>
+<text x="379" y="38" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.2" font-weight="400" fill="#5d6d7a" text-anchor="middle">请求：{CostCenter}</text>
+<rect x="284" y="52" width="190" height="22" rx="5" ry="5" fill="#eaf5ee" stroke="none" stroke-width="1.2"/>
+<text x="379" y="67" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="400" fill="#22313d" text-anchor="middle">Project</text>
+<rect x="284" y="78" width="190" height="22" rx="5" ry="5" fill="#eaf5ee" stroke="none" stroke-width="1.2"/>
+<text x="379" y="93" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="400" fill="#22313d" text-anchor="middle">Environment</text>
+<rect x="284" y="104" width="190" height="22" rx="5" ry="5" fill="#eaf5ee" stroke="none" stroke-width="1.2"/>
+<text x="379" y="119" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="400" fill="#22313d" text-anchor="middle">Owner</text>
+<rect x="284" y="130" width="190" height="22" rx="5" ry="5" fill="#eaf5ee" stroke="none" stroke-width="1.2"/>
+<text x="379" y="145" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="400" fill="#22313d" text-anchor="middle">Chapter</text>
+<rect x="284" y="156" width="190" height="22" rx="5" ry="5" fill="#e6f3f3" stroke="none" stroke-width="1.2"/>
+<text x="379" y="171" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="400" fill="#22313d" text-anchor="middle">CostCenter</text>
+<text x="379" y="222" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="700" fill="#2e7d55" text-anchor="middle">合并：只增加或覆盖请求里的键</text>
+<text x="629" y="20" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="11.5" font-weight="800" fill="#1d3b53" text-anchor="middle">UntagResource</text>
+<text x="629" y="38" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.2" font-weight="400" fill="#5d6d7a" text-anchor="middle">请求：[Owner]</text>
+<rect x="534" y="52" width="190" height="22" rx="5" ry="5" fill="#eaf5ee" stroke="none" stroke-width="1.2"/>
+<text x="629" y="67" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="400" fill="#22313d" text-anchor="middle">Project</text>
+<rect x="534" y="78" width="190" height="22" rx="5" ry="5" fill="#eaf5ee" stroke="none" stroke-width="1.2"/>
+<text x="629" y="93" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="400" fill="#22313d" text-anchor="middle">Environment</text>
+<rect x="534" y="104" width="190" height="22" rx="5" ry="5" fill="#eaf5ee" stroke="none" stroke-width="1.2"/>
+<text x="629" y="119" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="400" fill="#22313d" text-anchor="middle">Chapter</text>
+<text x="629" y="145" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.6" font-weight="700" fill="#c0504d" text-anchor="middle">Owner 不见了</text>
+<text x="629" y="222" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="700" fill="#e0954a" text-anchor="middle">按键删除：可用 aws:TagKeys 拦住</text>
+</svg>

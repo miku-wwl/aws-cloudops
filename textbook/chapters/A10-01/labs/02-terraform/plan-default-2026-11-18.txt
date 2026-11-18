@@ -1,0 +1,14 @@
+data.aws_availability_zones.az: Reading...
+data.aws_availability_zones.az: Read complete after 1s [id=us-east-1]
+
+Changes to Outputs:
+  + estimated_usd_per_hour = 0
+  + verify                 = "enable_paid_lab = false：没有创建任何资源"
+
+You can apply this plan to save these new output values to the Terraform
+state, without changing any real infrastructure.
+
+─────────────────────────────────────────────────────────────────────────────
+
+Note: You didn't use the -out option to save this plan, so Terraform can't
+guarantee to take exactly these actions if you run "terraform apply" now.

@@ -1,0 +1,103 @@
+{
+ "_comment": "第 14 讲实验 14-1：观察与假设。value 为 true 表示观察到了。",
+ "observations": [
+  {
+   "id": "O1",
+   "text": "同一来源的新连接 TCP 超时（不是 connection refused）",
+   "value": true
+  },
+  {
+   "id": "O2",
+   "text": "实例 running，状态检查 2/2 通过",
+   "value": true
+  },
+  {
+   "id": "O3",
+   "text": "实例本机 curl localhost:80 返回 200（经 Session Manager）",
+   "value": true
+  },
+  {
+   "id": "O4",
+   "text": "客户端出口 IP 仍与规则里的 /32 一致",
+   "value": true
+  },
+  {
+   "id": "O5",
+   "text": "CloudTrail：10:05 RevokeSecurityGroupIngress 成功，目标正是该 SG",
+   "value": true
+  },
+  {
+   "id": "O6",
+   "text": "当前 SG 入站规则里没有 TCP 80 /32",
+   "value": true
+  },
+  {
+   "id": "O7",
+   "text": "同一时间窗内路由表、NACL 有变更事件",
+   "value": false
+  },
+  {
+   "id": "O8",
+   "text": "只恢复这一条规则后，新连接返回 200",
+   "value": true
+  }
+ ],
+ "hypotheses": [
+  {
+   "id": "H1",
+   "title": "SG 的 TCP 80 入站规则被删除",
+   "predicts": {
+    "O1": "+",
+    "O3": "+",
+    "O4": "0",
+    "O5": "+",
+    "O6": "+",
+    "O7": "0",
+    "O8": "+"
+   }
+  },
+  {
+   "id": "H2",
+   "title": "Nginx 停止或崩溃",
+   "predicts": {
+    "O1": "-",
+    "O3": "-",
+    "O8": "-"
+   }
+  },
+  {
+   "id": "H3",
+   "title": "客户端出口 IP 变了，不再匹配 /32",
+   "predicts": {
+    "O4": "-",
+    "O8": "-"
+   }
+  },
+  {
+   "id": "H4",
+   "title": "NACL 被改成拒绝",
+   "predicts": {
+    "O1": "+",
+    "O7": "+",
+    "O8": "-"
+   }
+  },
+  {
+   "id": "H5",
+   "title": "实例被停止或宕机",
+   "predicts": {
+    "O2": "-",
+    "O3": "-"
+   }
+  },
+  {
+   "id": "H6",
+   "title": "路由表默认路由被改",
+   "predicts": {
+    "O1": "+",
+    "O7": "+",
+    "O8": "-"
+   }
+  }
+ ]
+}

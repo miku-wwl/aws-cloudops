@@ -1,0 +1,4 @@
+# Q2 错误集中在哪里？先筛 5xx，再按三个维度分组计数
+filter status >= 500
+| stats count(*) as errors by phase, release, route
+| sort errors desc

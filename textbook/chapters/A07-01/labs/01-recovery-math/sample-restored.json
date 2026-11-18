@@ -1,0 +1,60 @@
+{
+ "Items": [
+  {
+   "pk": {
+    "S": "TENANT#demo"
+   },
+   "sk": {
+    "S": "ORDER#003"
+   },
+   "amount": {
+    "N": "80"
+   },
+   "status": {
+    "S": "PENDING"
+   }
+  },
+  {
+   "pk": {
+    "S": "TENANT#demo"
+   },
+   "sk": {
+    "S": "ORDER#001"
+   },
+   "amount": {
+    "N": "100.0"
+   },
+   "status": {
+    "S": "PAID"
+   }
+  },
+  {
+   "pk": {
+    "S": "TENANT#demo"
+   },
+   "sk": {
+    "S": "ORDER#004"
+   },
+   "amount": {
+    "N": "50"
+   },
+   "status": {
+    "S": "PAID"
+   }
+  },
+  {
+   "pk": {
+    "S": "TENANT#demo"
+   },
+   "sk": {
+    "S": "ORDER#002"
+   },
+   "amount": {
+    "N": "120"
+   },
+   "status": {
+    "S": "PAID"
+   }
+  }
+ ]
+}

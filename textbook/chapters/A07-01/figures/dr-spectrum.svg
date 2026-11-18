@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 240" width="760" height="240" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif">
+
+<text x="380" y="20" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="10" font-weight="400" fill="#5d6d7a" text-anchor="middle">成本与复杂度 →</text>
+<rect x="14" y="34" width="172" height="86" rx="8" ry="8" fill="#f2f5f7" stroke="#9fb3c1" stroke-width="1.4"/>
+<text x="100.0" y="67.181" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="11" font-weight="700" fill="#41525f" text-anchor="middle">备份与恢复</text>
+<text x="100.0" y="84.095" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.2" font-weight="400" fill="#5d6d7a" text-anchor="middle">异地恢复点</text>
+<text x="100.0" y="97.15899999999999" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.2" font-weight="400" fill="#5d6d7a" text-anchor="middle">故障后再部署应用</text>
+<text x="100" y="140" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="600" fill="#1d3b53" text-anchor="middle">RPO/RTO：小时级</text>
+<rect x="200" y="34" width="172" height="86" rx="8" ry="8" fill="#e6f3f3" stroke="#1a8a8f" stroke-width="1.4"/>
+<text x="286.0" y="67.181" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="11" font-weight="700" fill="#12676b" text-anchor="middle">Pilot Light</text>
+<text x="286.0" y="84.095" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.2" font-weight="400" fill="#22313d" text-anchor="middle">数据持续复制</text>
+<text x="286.0" y="97.15899999999999" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.2" font-weight="400" fill="#22313d" text-anchor="middle">核心组件常驻、按需扩容</text>
+<text x="286" y="140" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="600" fill="#1d3b53" text-anchor="middle">RPO 分钟级 / RTO 数十分钟</text>
+<rect x="386" y="34" width="172" height="86" rx="8" ry="8" fill="#fdf1e3" stroke="#e0954a" stroke-width="1.4"/>
+<text x="472.0" y="67.181" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="11" font-weight="700" fill="#9a5a1c" text-anchor="middle">Warm Standby</text>
+<text x="472.0" y="84.095" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.2" font-weight="400" fill="#22313d" text-anchor="middle">缩小规模的完整副本</text>
+<text x="472.0" y="97.15899999999999" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.2" font-weight="400" fill="#22313d" text-anchor="middle">一直在运行</text>
+<text x="472" y="140" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="600" fill="#1d3b53" text-anchor="middle">RPO 秒～分 / RTO 分钟级</text>
+<rect x="572" y="34" width="172" height="86" rx="8" ry="8" fill="#fbeceb" stroke="#c0504d" stroke-width="1.4"/>
+<text x="658.0" y="67.181" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="11" font-weight="700" fill="#8e2f2c" text-anchor="middle">多站点 Active/Active</text>
+<text x="658.0" y="84.095" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.2" font-weight="400" fill="#22313d" text-anchor="middle">多个区域同时服务</text>
+<text x="658.0" y="97.15899999999999" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.2" font-weight="400" fill="#22313d" text-anchor="middle">需要处理写冲突</text>
+<text x="658" y="140" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="600" fill="#1d3b53" text-anchor="middle">RPO/RTO 接近零</text>
+<rect x="14" y="160" width="732" height="70" rx="5" ry="5" fill="#fdf1e3" stroke="#e0954a" stroke-width="1" stroke-dasharray="4 3"/>
+<text x="22" y="175.4" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="700" fill="#9a5a1c" text-anchor="start">异地副本 ≠ 可运行的备用业务</text>
+<text x="22" y="189.03" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="400" fill="#22313d" text-anchor="start">只把恢复点复制到另一个区域，还缺：目标区域的网络、IAM、KMS 密钥（跨区恢复要多区域密钥）、Secrets 等机密、</text>
+<text x="22" y="202.66" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="400" fill="#22313d" text-anchor="start">镜像、服务配额，以及数据库连接、证书、DNS / 负载均衡切换、监控与回切流程。</text>
+<text x="22" y="216.29" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="400" fill="#22313d" text-anchor="start">图中的量级只是常见范围：真实的 RPO / RTO 只能由演练测量得出。</text>
+</svg>

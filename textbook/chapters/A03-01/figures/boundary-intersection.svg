@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 260" width="760" height="260" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif">
+
+<circle cx="230" cy="128" r="92" fill="#e6f3f3" stroke="#1a8a8f" stroke-width="1.6"/>
+<circle cx="340" cy="128" r="92" fill="#f1edf8" stroke="#6f55a8" stroke-width="1.6"/>
+<text x="180" y="128" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="11" font-weight="700" fill="#12676b" text-anchor="middle">身份策略</text>
+<text x="180" y="146" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="400" fill="#22313d" text-anchor="middle">s3:* on a06-lab/*</text>
+<text x="392" y="128" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="11" font-weight="700" fill="#4f3a86" text-anchor="middle">权限边界</text>
+<text x="392" y="146" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="400" fill="#22313d" text-anchor="middle">GetObject on logs/*</text>
+<text x="285" y="120" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="10.6" font-weight="800" fill="#1d3b53" text-anchor="middle">有效</text>
+<text x="285" y="138" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="10.6" font-weight="800" fill="#1d3b53" text-anchor="middle">权限</text>
+<rect x="470" y="30" width="276" height="92" rx="8" ry="8" fill="#eaf5ee" stroke="#2e7d55" stroke-width="1.4"/>
+<text x="608.0" y="65.613" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="11" font-weight="700" fill="#1f5c3d" text-anchor="middle">读 logs/health.txt</text>
+<text x="608.0" y="83.095" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.6" font-weight="400" fill="#22313d" text-anchor="middle">两者都允许 → allowed</text>
+<text x="608.0" y="96.727" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.6" font-weight="400" fill="#22313d" text-anchor="middle">（AWS 模拟器实测：allowed）</text>
+<rect x="470" y="140" width="276" height="92" rx="8" ry="8" fill="#fbeceb" stroke="#c0504d" stroke-width="1.4"/>
+<text x="608.0" y="175.613" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="11" font-weight="700" fill="#8e2f2c" text-anchor="middle">读 reports/summary.csv</text>
+<text x="608.0" y="193.095" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.6" font-weight="400" fill="#22313d" text-anchor="middle">身份策略允许，边界不允许</text>
+<text x="608.0" y="206.727" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.6" font-weight="400" fill="#22313d" text-anchor="middle">→ implicitDeny（实测一致）</text>
+<text x="285" y="246" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="10" font-weight="400" fill="#5d6d7a" text-anchor="middle">边界、SCP、会话策略都是“上限”：只能收窄，不能授予</text>
+</svg>

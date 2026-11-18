@@ -1,0 +1,94 @@
+{
+  "SecurityGroups": [
+    {
+      "GroupId": "sg-bad",
+      "GroupName": "legacy-admin",
+      "IpPermissions": [
+        {
+          "IpProtocol": "tcp",
+          "IpRanges": [
+            {
+              "CidrIp": "0.0.0.0/0"
+            }
+          ],
+          "Ipv6Ranges": [],
+          "UserIdGroupPairs": [],
+          "PrefixListIds": [],
+          "FromPort": 22,
+          "ToPort": 22
+        },
+        {
+          "IpProtocol": "tcp",
+          "IpRanges": [
+            {
+              "CidrIp": "0.0.0.0/0"
+            }
+          ],
+          "Ipv6Ranges": [],
+          "UserIdGroupPairs": [],
+          "PrefixListIds": [],
+          "FromPort": 3000,
+          "ToPort": 9000
+        },
+        {
+          "IpProtocol": "tcp",
+          "IpRanges": [],
+          "Ipv6Ranges": [],
+          "UserIdGroupPairs": [
+            {
+              "GroupId": "sg-deleted"
+            }
+          ],
+          "PrefixListIds": [],
+          "FromPort": 8080,
+          "ToPort": 8080
+        }
+      ],
+      "IpPermissionsEgress": [
+        {
+          "IpProtocol": "-1",
+          "IpRanges": [
+            {
+              "CidrIp": "0.0.0.0/0"
+            }
+          ],
+          "Ipv6Ranges": [],
+          "UserIdGroupPairs": [],
+          "PrefixListIds": []
+        }
+      ]
+    },
+    {
+      "GroupId": "sg-open",
+      "GroupName": "wide-open",
+      "IpPermissions": [
+        {
+          "IpProtocol": "tcp",
+          "IpRanges": [
+            {
+              "CidrIp": "0.0.0.0/0"
+            }
+          ],
+          "Ipv6Ranges": [],
+          "UserIdGroupPairs": [],
+          "PrefixListIds": [],
+          "FromPort": 0,
+          "ToPort": 65535
+        }
+      ],
+      "IpPermissionsEgress": [
+        {
+          "IpProtocol": "-1",
+          "IpRanges": [
+            {
+              "CidrIp": "0.0.0.0/0"
+            }
+          ],
+          "Ipv6Ranges": [],
+          "UserIdGroupPairs": [],
+          "PrefixListIds": []
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "_comment": "第 19 讲例题 19-1：10:00–10:40 的实验，销毁后保留 5 GiB 快照与 0.2 GiB 日志 7 天。qty 只用于显示。",
+  "items": [
+    { "name": "EC2 t4g.nano",     "price": "ec2_t4g_nano_hour",     "hours": 0.6667, "qty": "40 分钟",          "phase": "销毁前" },
+    { "name": "公网 IPv4",        "price": "public_ipv4_hour",      "hours": 0.6667, "qty": "40 分钟",          "phase": "销毁前" },
+    { "name": "EBS gp3 8 GiB",    "price": "ebs_gp3_gb_month",      "gb": 8, "hours": 0.6667, "qty": "8 GiB × 40 分钟", "phase": "销毁前" },
+    { "name": "日志写入",         "price": "logs_ingest_gb",        "gb": 0.2, "qty": "0.2 GiB",          "phase": "销毁前" },
+    { "name": "EBS 快照",         "price": "ebs_snapshot_gb_month", "gb": 5, "hours": 168, "qty": "5 GiB × 7 天",     "phase": "销毁后" },
+    { "name": "日志存储",         "price": "logs_storage_gb_month", "gb": 0.2, "hours": 168, "qty": "0.2 GiB × 7 天",   "phase": "销毁后" }
+  ]
+}

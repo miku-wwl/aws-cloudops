@@ -1,0 +1,125 @@
+{
+  "SecurityGroups": [
+    {
+      "GroupId": "sg-web",
+      "GroupName": "web",
+      "IpPermissions": [
+        {
+          "IpProtocol": "tcp",
+          "IpRanges": [],
+          "Ipv6Ranges": [],
+          "UserIdGroupPairs": [],
+          "PrefixListIds": [
+            {
+              "PrefixListId": "pl-office"
+            }
+          ],
+          "FromPort": 443,
+          "ToPort": 443
+        }
+      ],
+      "IpPermissionsEgress": [
+        {
+          "IpProtocol": "tcp",
+          "IpRanges": [],
+          "Ipv6Ranges": [],
+          "UserIdGroupPairs": [
+            {
+              "GroupId": "sg-app"
+            }
+          ],
+          "PrefixListIds": [],
+          "FromPort": 8080,
+          "ToPort": 8080
+        }
+      ]
+    },
+    {
+      "GroupId": "sg-app",
+      "GroupName": "app",
+      "IpPermissions": [
+        {
+          "IpProtocol": "tcp",
+          "IpRanges": [],
+          "Ipv6Ranges": [],
+          "UserIdGroupPairs": [
+            {
+              "GroupId": "sg-web"
+            }
+          ],
+          "PrefixListIds": [],
+          "FromPort": 8080,
+          "ToPort": 8080
+        }
+      ],
+      "IpPermissionsEgress": [
+        {
+          "IpProtocol": "tcp",
+          "IpRanges": [],
+          "Ipv6Ranges": [],
+          "UserIdGroupPairs": [
+            {
+              "GroupId": "sg-db"
+            }
+          ],
+          "PrefixListIds": [],
+          "FromPort": 5432,
+          "ToPort": 5432
+        },
+        {
+          "IpProtocol": "tcp",
+          "IpRanges": [
+            {
+              "CidrIp": "0.0.0.0/0"
+            }
+          ],
+          "Ipv6Ranges": [],
+          "UserIdGroupPairs": [],
+          "PrefixListIds": [],
+          "FromPort": 443,
+          "ToPort": 443
+        }
+      ]
+    },
+    {
+      "GroupId": "sg-extra",
+      "GroupName": "ops-extra",
+      "IpPermissions": [
+        {
+          "IpProtocol": "tcp",
+          "IpRanges": [
+            {
+              "CidrIp": "10.20.0.0/16"
+            }
+          ],
+          "Ipv6Ranges": [],
+          "UserIdGroupPairs": [],
+          "PrefixListIds": [],
+          "FromPort": 9100,
+          "ToPort": 9100
+        }
+      ],
+      "IpPermissionsEgress": []
+    },
+    {
+      "GroupId": "sg-db",
+      "GroupName": "db",
+      "IpPermissions": [
+        {
+          "IpProtocol": "tcp",
+          "IpRanges": [],
+          "Ipv6Ranges": [],
+          "UserIdGroupPairs": [
+            {
+              "GroupId": "sg-app"
+            }
+          ],
+          "PrefixListIds": [],
+          "FromPort": 5432,
+          "ToPort": 5432
+        }
+      ],
+      "IpPermissionsEgress": []
+    }
+  ]
+}

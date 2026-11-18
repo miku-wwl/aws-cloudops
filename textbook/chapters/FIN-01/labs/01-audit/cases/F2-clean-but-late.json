@@ -1,0 +1,62 @@
+{
+  "title": "全部是销毁前的用量，只是晚入账",
+  "destroy_utc": "2026-11-18T10:40:00Z",
+  "coverage": {
+    "regions": [
+      "us-east-1"
+    ],
+    "services": [
+      "AmazonEC2",
+      "AmazonVPC",
+      "AmazonCloudWatch"
+    ]
+  },
+  "inventory": [],
+  "lines": [
+    {
+      "service": "AmazonEC2",
+      "usage_type": "BoxUsage:t4g.nano",
+      "line_item_resource_id": "i-0lab0000000000001",
+      "product_region": "us-east-1",
+      "line_item_usage_start_date": "2026-11-18T10:00:00Z",
+      "line_item_usage_end_date": "2026-11-18T10:40:00Z",
+      "observed": "2026-11-19T06:00:00Z",
+      "line_item_line_item_type": "Usage",
+      "cost": 0.0028
+    },
+    {
+      "service": "AmazonVPC",
+      "usage_type": "PublicIPv4:InUseAddress",
+      "line_item_resource_id": "eipalloc-lab01",
+      "product_region": "us-east-1",
+      "line_item_usage_start_date": "2026-11-18T10:00:00Z",
+      "line_item_usage_end_date": "2026-11-18T10:40:00Z",
+      "observed": "2026-11-19T06:00:00Z",
+      "line_item_line_item_type": "Usage",
+      "cost": 0.0033
+    },
+    {
+      "service": "AmazonEC2",
+      "usage_type": "EBS:VolumeUsage.gp3",
+      "line_item_resource_id": "vol-0lab000000000000",
+      "product_region": "us-east-1",
+      "line_item_usage_start_date": "2026-11-18T10:00:00Z",
+      "line_item_usage_end_date": "2026-11-18T10:40:00Z",
+      "observed": "2026-11-19T06:00:00Z",
+      "line_item_line_item_type": "Usage",
+      "cost": 0.0006
+    },
+    {
+      "service": "AmazonCloudWatch",
+      "usage_type": "DataProcessing-Bytes",
+      "line_item_resource_id": "/finops/lab/demo",
+      "product_region": "us-east-1",
+      "line_item_usage_start_date": "2026-11-18T10:00:00Z",
+      "line_item_usage_end_date": "2026-11-18T10:40:00Z",
+      "observed": "2026-11-19T06:00:00Z",
+      "line_item_line_item_type": "Usage",
+      "cost": 0.1
+    }
+  ],
+  "id": "F2"
+}

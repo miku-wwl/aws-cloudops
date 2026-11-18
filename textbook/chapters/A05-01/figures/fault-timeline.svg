@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 250" width="760" height="250" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif">
+
+<rect x="162" y="14" width="140" height="34" rx="8" ry="8" fill="#eaf5ee" stroke="#2e7d55" stroke-width="1.4"/>
+<text x="232.0" y="34.245000000000005" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="11" font-weight="700" fill="#1f5c3d" text-anchor="middle">① 基线</text>
+<rect x="310" y="14" width="140" height="34" rx="8" ry="8" fill="#fdf1e3" stroke="#e0954a" stroke-width="1.4"/>
+<text x="380.0" y="34.245000000000005" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="11" font-weight="700" fill="#9a5a1c" text-anchor="middle">② 删除出站 443</text>
+<rect x="458" y="14" width="140" height="34" rx="8" ry="8" fill="#fbeceb" stroke="#c0504d" stroke-width="1.4"/>
+<text x="528.0" y="34.245000000000005" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="11" font-weight="700" fill="#8e2f2c" text-anchor="middle">③ 重启实例</text>
+<rect x="606" y="14" width="140" height="34" rx="8" ry="8" fill="#eaf5ee" stroke="#2e7d55" stroke-width="1.4"/>
+<text x="676.0" y="34.245000000000005" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="11" font-weight="700" fill="#1f5c3d" text-anchor="middle">④ 恢复出站 443</text>
+<text x="14" y="88" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.6" font-weight="700" fill="#1d3b53" text-anchor="start">PingStatus</text>
+<rect x="162" y="68" width="140" height="32" rx="6" ry="6" fill="#eaf5ee" stroke="none" stroke-width="1.2"/>
+<text x="232" y="89" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="600" fill="#2e7d55" text-anchor="middle">Online</text>
+<rect x="310" y="68" width="140" height="32" rx="6" ry="6" fill="#fdf1e3" stroke="none" stroke-width="1.2"/>
+<text x="380" y="89" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="600" fill="#e0954a" text-anchor="middle">Online（旧连接未断）</text>
+<rect x="458" y="68" width="140" height="32" rx="6" ry="6" fill="#fbeceb" stroke="none" stroke-width="1.2"/>
+<text x="528" y="89" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="600" fill="#c0504d" text-anchor="middle">ConnectionLost</text>
+<rect x="606" y="68" width="140" height="32" rx="6" ry="6" fill="#eaf5ee" stroke="none" stroke-width="1.2"/>
+<text x="676" y="89" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="600" fill="#2e7d55" text-anchor="middle">Online</text>
+<text x="14" y="134" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.6" font-weight="700" fill="#1d3b53" text-anchor="start">diag.sh · Run Command</text>
+<rect x="162" y="114" width="140" height="32" rx="6" ry="6" fill="#eaf5ee" stroke="none" stroke-width="1.2"/>
+<text x="232" y="135" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="600" fill="#2e7d55" text-anchor="middle">Success</text>
+<rect x="310" y="114" width="140" height="32" rx="6" ry="6" fill="#fdf1e3" stroke="none" stroke-width="1.2"/>
+<text x="380" y="135" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="600" fill="#e0954a" text-anchor="middle">仍可能 Success</text>
+<rect x="458" y="114" width="140" height="32" rx="6" ry="6" fill="#fbeceb" stroke="none" stroke-width="1.2"/>
+<text x="528" y="135" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="600" fill="#c0504d" text-anchor="middle">送不到 / 超时</text>
+<rect x="606" y="114" width="140" height="32" rx="6" ry="6" fill="#eaf5ee" stroke="none" stroke-width="1.2"/>
+<text x="676" y="135" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="600" fill="#2e7d55" text-anchor="middle">Success（同一探针）</text>
+<text x="14" y="180" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.6" font-weight="700" fill="#1d3b53" text-anchor="start">inventory.sh · Runbook</text>
+<rect x="162" y="160" width="140" height="32" rx="6" ry="6" fill="#eaf5ee" stroke="none" stroke-width="1.2"/>
+<text x="232" y="181" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="600" fill="#2e7d55" text-anchor="middle">Success</text>
+<rect x="310" y="160" width="140" height="32" rx="6" ry="6" fill="#eaf5ee" stroke="none" stroke-width="1.2"/>
+<text x="380" y="181" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="600" fill="#2e7d55" text-anchor="middle">Success</text>
+<rect x="458" y="160" width="140" height="32" rx="6" ry="6" fill="#eaf5ee" stroke="none" stroke-width="1.2"/>
+<text x="528" y="181" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="600" fill="#2e7d55" text-anchor="middle">Success（控制面）</text>
+<rect x="606" y="160" width="140" height="32" rx="6" ry="6" fill="#eaf5ee" stroke="none" stroke-width="1.2"/>
+<text x="676" y="181" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="600" fill="#2e7d55" text-anchor="middle">Success</text>
+<text x="380" y="222" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.6" font-weight="600" fill="#1d3b53" text-anchor="middle">安全组有状态：删除规则不会切断已跟踪的长连接，所以要重启（或等连接自然断开）才能看到故障</text>
+<text x="380" y="241" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="400" fill="#5d6d7a" text-anchor="middle">每次只改一个变量；恢复后用同一个探针复测，才能把结论归因到“出站 443”</text>
+</svg>

@@ -1,0 +1,13 @@
+# 文本文件在仓库中统一为 LF；检出时的换行遵循各自的 git 设置
+* text=auto
+
+# Shell 脚本在任何平台检出都保持 LF，否则 bash 会因 \r 报错；PowerShell 脚本保持 CRLF
+*.sh   text eol=lf
+*.ps1  text eol=crlf
+
+# 二进制文件：不做换行转换，也不做文本 diff
+*.pdf  binary
+*.zip  binary
+*.png  binary
+*.jpg  binary
+*.jpeg binary

@@ -1,0 +1,31 @@
+region          resource                   count
+us-east-1       ec2-instances(not-term)    0
+us-east-1       ebs-volumes                0
+us-east-1       ebs-snapshots(self)        0
+us-east-1       elastic-ip                 0
+us-east-1       nat-gateways               0
+us-east-1       interface-endpoints        0
+us-east-1       log-groups                 0
+us-east-1         never-expire             0
+us-east-1       backup-points(Default)     0
+us-west-2       ec2-instances(not-term)    0
+us-west-2       ebs-volumes                0
+us-west-2       ebs-snapshots(self)        0
+us-west-2       elastic-ip                 0
+us-west-2       nat-gateways               0
+us-west-2       interface-endpoints        0
+us-west-2       log-groups                 1
+us-west-2         never-expire             1
+us-west-2       backup-points(Default)     0 (no Default vault)
+ap-southeast-2  ec2-instances(not-term)    0
+ap-southeast-2  ebs-volumes                0
+ap-southeast-2  ebs-snapshots(self)        0
+ap-southeast-2  elastic-ip                 0
+ap-southeast-2  nat-gateways               0
+ap-southeast-2  interface-endpoints        0
+ap-southeast-2  log-groups                 0
+ap-southeast-2    never-expire             0
+ap-southeast-2  backup-points(Default)     0 (no Default vault)
+global          s3-buckets                 0
+coverage: regions=[us-east-1 us-west-2 ap-southeast-2] services=EC2,EBS,EIP,NAT,VPCE,Logs,Backup,S3
+failed queries: 0 

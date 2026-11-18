@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 300" width="760" height="300" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif">
+<defs><marker id="marrow1d3b53" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0.8 L9.2 5 L0 9.2 z" fill="#1d3b53"/></marker><marker id="marrow5d6d7a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0.8 L9.2 5 L0 9.2 z" fill="#5d6d7a"/></marker></defs>
+<rect x="14" y="14" width="360" height="272" rx="6" ry="6" fill="#f2f8ee" stroke="#4f9a3c" stroke-width="1.4"/>
+<path d="M14 20 a6 6 0 0 1 6 -6 h115.0 v19.5 h-121.0 z" fill="#4f9a3c"/>
+<text x="22" y="28.0" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="10.5" font-weight="700" fill="#ffffff" text-anchor="start">公网路径（本章实验）</text>
+<rect x="30" y="52" width="150" height="64" rx="8" ry="8" fill="#fdf1e3" stroke="#e0954a" stroke-width="1.4"/>
+<text x="105.0" y="74.18100000000001" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="11" font-weight="700" fill="#9a5a1c" text-anchor="middle">EC2 节点</text>
+<text x="105.0" y="91.09500000000001" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.2" font-weight="400" fill="#22313d" text-anchor="middle">公网 IPv4</text>
+<text x="105.0" y="104.159" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.2" font-weight="400" fill="#22313d" text-anchor="middle">SG 出站 TCP 443</text>
+<rect x="210" y="52" width="146" height="64" rx="8" ry="8" fill="#ffffff" stroke="#b8c7d2" stroke-width="1.4"/>
+<text x="283.0" y="80.71300000000001" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="11" font-weight="700" fill="#17384f" text-anchor="middle">路由表</text>
+<text x="283.0" y="97.62700000000001" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.2" font-weight="400" fill="#22313d" text-anchor="middle">0.0.0.0/0 → IGW</text>
+<path d="M180 84 L210 84" fill="none" stroke="#1d3b53" stroke-width="1.6" marker-end="url(#marrow1d3b53)" stroke-linejoin="round"/>
+<rect x="210" y="140" width="146" height="56" rx="8" ry="8" fill="#f2f5f7" stroke="#9fb3c1" stroke-width="1.4"/>
+<text x="283.0" y="171.0975" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="10.5" font-weight="700" fill="#41525f" text-anchor="middle">Internet Gateway</text>
+<path d="M283 116 L283 140" fill="none" stroke="#1d3b53" stroke-width="1.6" marker-end="url(#marrow1d3b53)" stroke-linejoin="round"/>
+<rect x="30" y="140" width="150" height="56" rx="8" ry="8" fill="#e9eff5" stroke="#1d3b53" stroke-width="1.4"/>
+<text x="105.0" y="164.7075" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="10.5" font-weight="700" fill="#17384f" text-anchor="middle">公网端点</text>
+<text x="105.0" y="181.16250000000002" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9" font-weight="400" fill="#22313d" text-anchor="middle">ssm.*.amazonaws.com …</text>
+<path d="M210 168 L180 168" fill="none" stroke="#1d3b53" stroke-width="1.6" marker-end="url(#marrow1d3b53)" stroke-linejoin="round"/>
+<rect x="30" y="212" width="326" height="62" rx="5" ry="5" fill="#fdf1e3" stroke="#e0954a" stroke-width="1" stroke-dasharray="4 3"/>
+<text x="38" y="227.4" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="400" fill="#22313d" text-anchor="start">费用：公网 IPv4 0.005 美元/小时</text>
+<text x="38" y="241.03" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="400" fill="#22313d" text-anchor="start">风险：0.0.0.0/0:443 也能去任何 HTTPS 网站</text>
+<rect x="386" y="14" width="360" height="272" rx="6" ry="6" fill="#eef7f7" stroke="#1a8a8f" stroke-width="1.4"/>
+<path d="M386 20 a6 6 0 0 1 6 -6 h115.0 v19.5 h-121.0 z" fill="#1a8a8f"/>
+<text x="394" y="28.0" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="10.5" font-weight="700" fill="#ffffff" text-anchor="start">私网路径（生产推荐）</text>
+<rect x="402" y="52" width="150" height="64" rx="8" ry="8" fill="#fdf1e3" stroke="#e0954a" stroke-width="1.4"/>
+<text x="477.0" y="74.18100000000001" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="11" font-weight="700" fill="#9a5a1c" text-anchor="middle">EC2 节点</text>
+<text x="477.0" y="91.09500000000001" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.2" font-weight="400" fill="#22313d" text-anchor="middle">无公网 IP</text>
+<text x="477.0" y="104.159" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.2" font-weight="400" fill="#22313d" text-anchor="middle">SG 出站 443 → 端点 SG</text>
+<rect x="582" y="46" width="148" height="112" rx="8" ry="8" fill="#e6f3f3" stroke="#1a8a8f" stroke-width="1.4"/>
+<text x="656.0" y="79.685" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="11" font-weight="700" fill="#12676b" text-anchor="middle">接口端点</text>
+<text x="656.0" y="96.315" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9" font-weight="400" fill="#22313d" text-anchor="middle">ssm</text>
+<text x="656.0" y="109.095" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9" font-weight="400" fill="#22313d" text-anchor="middle">ssmmessages</text>
+<text x="656.0" y="121.875" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9" font-weight="400" fill="#22313d" text-anchor="middle">ec2messages（旧 Agent）</text>
+<text x="656.0" y="134.655" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9" font-weight="400" fill="#22313d" text-anchor="middle">s3 网关端点（Agent 更新）</text>
+<path d="M552 84 L582 84" fill="none" stroke="#1d3b53" stroke-width="1.6" marker-end="url(#marrow1d3b53)" stroke-linejoin="round"/>
+<rect x="543.684" y="67.64" width="46.632000000000005" height="11.440000000000001" rx="3" ry="3" fill="#ffffff" stroke="none" stroke-width="1.2" opacity="0.92"/>
+<text x="567.0" y="76.0" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="8.8" font-weight="500" fill="#1d3b53" text-anchor="middle">私有 DNS</text>
+<rect x="402" y="140" width="150" height="56" rx="8" ry="8" fill="#ffffff" stroke="#b8c7d2" stroke-width="1.4"/>
+<text x="477.0" y="164.7075" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="10.5" font-weight="700" fill="#17384f" text-anchor="middle">端点安全组</text>
+<text x="477.0" y="181.16250000000002" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9" font-weight="400" fill="#22313d" text-anchor="middle">入站 443 ← 节点 SG</text>
+<path d="M477 140 L477 116" fill="none" stroke="#5d6d7a" stroke-width="1.2" stroke-dasharray="5 4" marker-end="url(#marrow5d6d7a)" stroke-linejoin="round"/>
+<rect x="402" y="212" width="328" height="62" rx="5" ry="5" fill="#e6f3f3" stroke="#1a8a8f" stroke-width="1" stroke-dasharray="4 3"/>
+<text x="410" y="227.4" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="400" fill="#22313d" text-anchor="start">费用：每个接口端点每个 AZ 0.01 美元/小时 + 流量</text>
+<text x="410" y="241.03" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="400" fill="#22313d" text-anchor="start">私有 DNS 关掉 → Agent 解析到公网地址 → 不可达</text>
+</svg>

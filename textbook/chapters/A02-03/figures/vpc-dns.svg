@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 290" width="760" height="290" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif">
+<defs><marker id="marrow1d3b53" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0.8 L9.2 5 L0 9.2 z" fill="#1d3b53"/></marker><marker id="marrowe0954a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0.8 L9.2 5 L0 9.2 z" fill="#e0954a"/></marker></defs>
+<rect x="14" y="14" width="470" height="262" rx="6" ry="6" fill="#fbf9ff" stroke="#7b5cc4" stroke-width="1.4"/>
+<path d="M14 20 a6 6 0 0 1 6 -6 h102.19 v19.5 h-108.19 z" fill="#7b5cc4"/>
+<text x="22" y="28.0" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="10.5" font-weight="700" fill="#ffffff" text-anchor="start">VPC 10.42.0.0/16</text>
+<rect x="34" y="60" width="140" height="60" rx="8" ry="8" fill="#ffffff" stroke="#b8c7d2" stroke-width="1.4"/>
+<text x="104.0" y="86.571" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="11" font-weight="700" fill="#17384f" text-anchor="middle">Lambda / 实例</text>
+<text x="104.0" y="103.769" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="400" fill="#22313d" text-anchor="middle">发起 DNS 查询</text>
+<rect x="230" y="52" width="236" height="76" rx="8" ry="8" fill="#e9eff5" stroke="#1d3b53" stroke-width="1.4"/>
+<text x="348.0" y="73.79650000000001" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="11.5" font-weight="700" fill="#17384f" text-anchor="middle">Route 53 Resolver</text>
+<text x="348.0" y="90.88550000000001" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.2" font-weight="400" fill="#22313d" text-anchor="middle">地址：VPC 网段 +2（10.42.0.2）</text>
+<text x="348.0" y="103.9495" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.2" font-weight="400" fill="#22313d" text-anchor="middle">或 169.254.169.253</text>
+<text x="348.0" y="117.0135" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.2" font-weight="400" fill="#22313d" text-anchor="middle">需要 enableDnsSupport = true</text>
+<path d="M174 90 L230 90" fill="none" stroke="#1d3b53" stroke-width="1.6" marker-end="url(#marrow1d3b53)" stroke-linejoin="round"/>
+<rect x="170.308" y="75.26" width="63.384" height="11.959999999999999" rx="3" ry="3" fill="#ffffff" stroke="none" stroke-width="1.2" opacity="0.92"/>
+<text x="202.0" y="84.0" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.2" font-weight="500" fill="#1d3b53" text-anchor="middle">UDP/TCP 53</text>
+<rect x="34" y="150" width="432" height="112" rx="8" ry="8" fill="#e6f3f3" stroke="#1a8a8f" stroke-width="1.4"/>
+<text x="44" y="182.549" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="11" font-weight="700" fill="#12676b" text-anchor="start">按顺序查找</text>
+<text x="44" y="199.747" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="400" fill="#22313d" text-anchor="start">1. 与本 VPC 关联的私有托管区（含终端节点私有 DNS 的“隐藏私有托管区”）</text>
+<text x="44" y="213.09500000000003" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="400" fill="#22313d" text-anchor="start">2. VPC 内部名称（ip-10-42-1-15.ec2.internal 等）</text>
+<text x="44" y="226.44300000000004" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="400" fill="#22313d" text-anchor="start">3. Resolver 规则（转发到本地 DNS，第 17 讲）</text>
+<text x="44" y="239.79100000000005" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.4" font-weight="400" fill="#22313d" text-anchor="start">4. 公共 DNS（递归解析互联网域名）</text>
+<rect x="510" y="30" width="236" height="104" rx="8" ry="8" fill="#fdf1e3" stroke="#e0954a" stroke-width="1.4"/>
+<text x="628.0" y="58.999" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="10.6" font-weight="700" fill="#9a5a1c" text-anchor="middle">开启私有 DNS 的接口终端节点</text>
+<text x="628.0" y="75.773" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.2" font-weight="400" fill="#22313d" text-anchor="middle">ssm.us-east-1.amazonaws.com</text>
+<text x="628.0" y="88.83699999999999" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.2" font-weight="400" fill="#22313d" text-anchor="middle">→ 10.42.1.x（终端节点网卡）</text>
+<text x="628.0" y="101.90099999999998" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.2" font-weight="400" fill="#22313d" text-anchor="middle">VPC 外解析：仍是公网地址</text>
+<text x="628.0" y="114.96499999999997" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.2" font-weight="400" fill="#22313d" text-anchor="middle">（同名，不同答案：分割视界）</text>
+<rect x="510" y="152" width="236" height="110" rx="8" ry="8" fill="#f1edf8" stroke="#6f55a8" stroke-width="1.4"/>
+<text x="628.0" y="183.99900000000002" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="10.6" font-weight="700" fill="#4f3a86" text-anchor="middle">两个 VPC 属性</text>
+<text x="628.0" y="200.77300000000002" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.2" font-weight="400" fill="#22313d" text-anchor="middle">enableDnsSupport：Resolver 是否工作</text>
+<text x="628.0" y="213.83700000000002" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.2" font-weight="400" fill="#22313d" text-anchor="middle">enableDnsHostnames：是否分配</text>
+<text x="628.0" y="226.901" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.2" font-weight="400" fill="#22313d" text-anchor="middle">公共 DNS 主机名</text>
+<text x="628.0" y="239.965" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="9.2" font-weight="400" fill="#22313d" text-anchor="middle">私有 DNS 要求两者都为 true</text>
+<path d="M466 108 L510 90" fill="none" stroke="#e0954a" stroke-width="1.3" marker-end="url(#marrowe0954a)" stroke-linejoin="round"/>
+</svg>

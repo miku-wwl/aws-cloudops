@@ -1,0 +1,85 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "RunOnLabNodesOnly",
+      "Effect": "Allow",
+      "Action": "ssm:SendCommand",
+      "Resource": "arn:aws:ec2:us-east-1:111122223333:instance/*",
+      "Condition": {
+        "StringEquals": {
+          "ssm:resourceTag/Env": "lab"
+        }
+      }
+    },
+    {
+      "Sid": "ApprovedDocumentsOnly",
+      "Effect": "Allow",
+      "Action": "ssm:SendCommand",
+      "Resource": "arn:aws:ssm:us-east-1:111122223333:document/a10-*"
+    },
+    {
+      "Sid": "NoArbitraryShell",
+      "Effect": "Deny",
+      "Action": "ssm:SendCommand",
+      "Resource": [
+        "arn:aws:ssm:us-east-1::document/AWS-RunShellScript",
+        "arn:aws:ssm:us-east-1::document/AWS-RunPowerShellScript"
+      ]
+    },
+    {
+      "Sid": "SessionsOnLabNodesOnly",
+      "Effect": "Allow",
+      "Action": "ssm:StartSession",
+      "Resource": "arn:aws:ec2:us-east-1:111122223333:instance/*",
+      "Condition": {
+        "StringEquals": {
+          "ssm:resourceTag/Env": "lab"
+        }
+      }
+    },
+    {
+      "Sid": "DefaultSessionDocument",
+      "Effect": "Allow",
+      "Action": "ssm:StartSession",
+      "Resource": "arn:aws:ssm:us-east-1:111122223333:document/SSM-SessionManagerRunShell"
+    },
+    {
+      "Sid": "OwnSessionsOnly",
+      "Effect": "Allow",
+      "Action": [
+        "ssm:TerminateSession",
+        "ssm:ResumeSession"
+      ],
+      "Resource": "arn:aws:ssm:*:*:session/${aws:userid}-*"
+    },
+    {
+      "Sid": "ReadResults",
+      "Effect": "Allow",
+      "Action": [
+        "ssm:GetCommandInvocation",
+        "ssm:ListCommandInvocations",
+        "ssm:DescribeInstanceInformation",
+        "ssm:GetAutomationExecution"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Sid": "StartInventoryRunbook",
+      "Effect": "Allow",
+      "Action": "ssm:StartAutomationExecution",
+      "Resource": "arn:aws:ssm:us-east-1:111122223333:automation-definition/a10-*:*"
+    },
+    {
+      "Sid": "PassRunbookRoleToSsmOnly",
+      "Effect": "Allow",
+      "Action": "iam:PassRole",
+      "Resource": "arn:aws:iam::111122223333:role/a10-*-automation",
+      "Condition": {
+        "StringEquals": {
+          "iam:PassedToService": "ssm.amazonaws.com"
+        }
+      }
+    }
+  ]
+}
