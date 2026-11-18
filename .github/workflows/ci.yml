@@ -1,0 +1,63 @@
+# 轻量级 CI：只做离线检查，不连接 AWS、不使用任何凭证或 Secrets、不创建云资源。
+#   python    两个 ZIP 与 dist/pdf、源稿逐字节一致；22 个实验目录的 unittest
+#   terraform 全部 .tf 的 fmt -check；18 个实验的 terraform test（全部 mock_provider）；另 5 个根模块 validate
+# 本地等价命令：python textbook/tools/package.py --verify && bash textbook/tools/test_all.sh
+name: CI
+
+on:
+  push:
+    branches: [main]
+    tags: ["v*"]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  python:
+    name: Python 测试与 ZIP 校验
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.13"
+      - name: 安装测试依赖（第 07 讲信封加密实验用 cryptography）
+        run: python -m pip install --disable-pip-version-check --no-input cryptography
+      - name: 两个 ZIP 与 dist/pdf、源稿逐字节一致
+        run: python textbook/tools/package.py --verify
+      - name: Python unittest
+        run: bash textbook/tools/test_all.sh --python
+
+  terraform:
+    name: Terraform 离线测试（mock provider）
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    env:
+      TF_IN_AUTOMATION: "1"
+      TF_INPUT: "0"
+      TF_PLUGIN_CACHE_DIR: ${{ github.workspace }}/.tf-plugin-cache
+      # 实验不提交锁文件：允许各实验共用同一份 provider 缓存，避免重复下载
+      TF_PLUGIN_CACHE_MAY_BREAK_DEPENDENCY_LOCK_FILE: "true"
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: hashicorp/setup-terraform@v4
+        with:
+          terraform_version: 1.15.5
+          terraform_wrapper: false
+      - name: 准备 provider 缓存目录
+        run: mkdir -p "$TF_PLUGIN_CACHE_DIR"
+      - name: terraform fmt -check（全部 .tf / .tftest.hcl）
+        run: terraform fmt -check -recursive -diff textbook/chapters
+      - name: init / validate / test（不需要 AWS 凭证）
+        run: bash textbook/tools/test_all.sh --terraform

@@ -38,7 +38,7 @@ python tools/build.py A00-01 --no-figs  # 跳过重新生成图
 python tools/pages.py dist/pdf/<file>.pdf chapters/A00-01/build/pages 66   # 逐页审阅图
 python tools/package.py                 # 重新打包两个 ZIP 并校验一致性
 python tools/package.py --verify        # 只校验
-bash tools/test_all.sh                  # 全部离线测试
+bash tools/test_all.sh                  # 全部离线测试（--python / --terraform 只跑一部分）
 ```
 
 `chapters/*/build/` 是构建中间产物，`labs/**/.terraform/` 是 provider 缓存，都不入库（见仓库根目录 `.gitignore`）。
@@ -71,11 +71,16 @@ bash tools/test_all.sh                  # 全部离线测试
 （`*.local.*` 已被 `.gitignore` 忽略）。`tools/package.py` 打包前会用本机的 `tools/sensitive.local.txt`
 （每行一个正则，同样不入库）扫描全部源稿，命中即停止。
 
-## 实验与验证（2026-11-18）
+## 实验与验证（V1.0，2026-11-18）
 
-- 每讲 `labs/README.md` 列出实验、是否改动 AWS、费用与验证状态。
-- 全部 Python 实验共 119 个单元测试，`cd chapters/<id>/labs/<lab> && python -m unittest` 可复现。
-- Terraform 实验都带 `tests/*.tftest.hcl`（mock provider，不连 AWS），默认变量下 plan 为零资源；
-  需要真实资源的实验都有显式开关（如 `enable_paid_lab`），并在 README 中写明费用与清理步骤。
+- 每讲 `labs/README.md` 列出实验、是否改动 AWS、费用与验证状态；全部 Terraform 实验的离线测试、只读 plan
+  与 apply 创建条件汇总在仓库根目录 README 的“实验与验证级别”。
+- 全部 Python 实验共 119 个单元测试（22 个目录），`cd chapters/<id>/labs/<lab> && python -m unittest` 可复现
+  （第 07 讲 `02-envelope` 需要 `pip install cryptography`）。
+- 18 个 Terraform 实验带 `tests/*.tftest.hcl`（全部 mock provider，不连 AWS），共 95 个 run；另有 5 个根模块
+  没有 tests，只做 `fmt -check` 与 `validate`。
+- 只读 plan **不是零资源**：多数实验的默认 plan 就会列出 apply 时要创建的资源（例如 3-2 默认 12 to add）；
+  只有 17-2、19-4 默认 0 个资源，打开 `enable_paid_lab` / `enable` 后才创建，18-2 不含任何 AWS 资源。
 - 书中所有“本书实测输出”都来自只读 API、免费的计算型 API（策略模拟器、Access Analyzer、
-  TestEventPattern、Price List）、本地运行或只读 `terraform plan`；没有在账户中 apply 任何实验。
+  TestEventPattern、Price List）、本地运行或只读 `terraform plan`；V1.0 没有对 AWS 执行任何 apply。
+- `.github/workflows/ci.yml` 在每次推送时离线运行 `tools/package.py --verify` 与 `tools/test_all.sh`，不使用任何凭证。

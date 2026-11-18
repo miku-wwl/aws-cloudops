@@ -1,7 +1,8 @@
-# 文本文件在仓库中统一为 LF；检出时的换行遵循各自的 git 设置
-* text=auto
+# 文本文件在仓库与工作区中一律使用 LF（不随各平台的 core.autocrlf 变化），
+# 这样任何平台检出的文件都与 textbook/dist 中源稿 ZIP 的内容逐字节一致（CI 会校验）。
+* text=auto eol=lf
 
-# Shell 脚本在任何平台检出都保持 LF，否则 bash 会因 \r 报错；PowerShell 脚本保持 CRLF
+# Shell 脚本必须是 LF，否则 bash 会因 \r 报错；PowerShell 脚本保持 CRLF
 *.sh   text eol=lf
 *.ps1  text eol=crlf
 

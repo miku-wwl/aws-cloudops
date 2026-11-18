@@ -5,8 +5,9 @@
     python tools/package.py --verify   # 只校验现有 ZIP 与 dist/pdf、源稿是否一致
 
 1) <PDF ZIP>：dist/pdf 下的 19 个 PDF（原样，不重新压缩内容）
-2) <源稿 ZIP>：textbook/ 下全部可编辑源稿与实验工程；排除规则与仓库根目录 .gitignore 一致
-   （构建中间产物、Terraform 缓存与锁文件、状态文件、字节码、*.local.* 本机文件、dist/）。
+2) <源稿 ZIP>：textbook/ 下全部可编辑源稿与实验工程。文件清单取自 git（已跟踪 + 未被 .gitignore 忽略的新文件），
+   因而与仓库内容一致；再额外排除 dist/ 与下列兜底规则（构建中间产物、Terraform 缓存与锁文件、状态文件、
+   字节码、*.local.* 本机文件）。不在 git 仓库中运行时退回为遍历目录 + 兜底规则。
 
 敏感信息检查：若存在 tools/sensitive.local.txt（每行一个正则，本机专用、不入库），
 会扫描所有将被打包的文本文件，命中即失败退出。
@@ -16,6 +17,7 @@ from __future__ import annotations
 import argparse
 import hashlib
 import re
+import subprocess
 import sys
 import zipfile
 from pathlib import Path
@@ -43,8 +45,18 @@ def included(p: Path) -> bool:
     return True
 
 
+def candidates() -> list[Path]:
+    """git 认为应入库的文件（已跟踪 + 未被忽略的新文件）；不在 git 仓库中时退回遍历目录。"""
+    try:
+        out = subprocess.run(["git", "ls-files", "-z", "--cached", "--others", "--exclude-standard"],
+                             cwd=ROOT, capture_output=True, check=True).stdout
+        return [ROOT / n for n in out.decode("utf-8").split("\0") if n]
+    except (OSError, subprocess.CalledProcessError):
+        return list(ROOT.rglob("*"))
+
+
 def source_files() -> list[Path]:
-    return sorted(p for p in ROOT.rglob("*") if p.is_file() and included(p))
+    return sorted({p for p in candidates() if p.is_file() and included(p)})
 
 
 def deny_patterns() -> re.Pattern | None:
