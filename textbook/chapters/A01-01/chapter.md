@@ -444,7 +444,7 @@ V1.0 中上面第 3、4 步只是“应当观察到什么”的预期。V1.1 已
 00:08:53  burn-fast-short   ALARM -> OK
 00:23:39  slo-page 仍为 ALARM（burn-slow-short / burn-slow-long 仍为 ALARM）
 00:24:26  terraform destroy                Destroy complete! Resources: 10 destroyed
-00:27:18  残留复核：函数 0、同名告警 0、日志组 0、IAM 角色 NoSuchEntity、状态 0 个资源
+00:27:18  残留复核：函数 0、同名告警 0、日志组 0、IAM 角色 NoSuchEntity
 ```
 
 **读实测记录，有三点值得记住：**

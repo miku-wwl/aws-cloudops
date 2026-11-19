@@ -24,7 +24,7 @@ residual() {
   echo "  告警：$(aws cloudwatch describe-alarms --alarm-name-prefix "$FN-" --alarm-types MetricAlarm CompositeAlarm --query 'length(MetricAlarms)+length(CompositeAlarms)' --output text | tr -d '\r') 个"
   echo "  日志组：$(aws logs describe-log-groups --log-group-name-prefix /aws/lambda/$FN --query 'length(logGroups)' --output text | tr -d '\r') 个"
   echo "  IAM 角色：$(aws iam get-role --role-name $FN-role 2>&1 | grep -oE 'NoSuchEntity|"RoleName"' | head -1)"
-  echo "  状态中的资源：$(TF state list 2>/dev/null | wc -l) 个"
+  echo "  状态中的资源：$(terraform -chdir="$LAB" state list | wc -l) 个（terraform state list）"
 }
 cleanup() { log "== D 销毁（trap，无论前面成功与否都执行）"; TF destroy -auto-approve 2>&1 | grep -E 'Destroy complete|Error' ; residual; }
 

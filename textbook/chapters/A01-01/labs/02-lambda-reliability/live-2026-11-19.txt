@@ -112,3 +112,6 @@ exit=0
   [burn-slow-short] 2026-11-19T00:01:51.170000+00:00	Alarm updated from OK to ALARM
   [burn-slow-long] 2026-11-18T23:58:42.856000+00:00	Alarm updated from INSUFFICIENT_DATA to OK
   [burn-slow-long] 2026-11-19T00:01:42.864000+00:00	Alarm updated from OK to ALARM
+
+[勘误 2026-11-19，V1.1 第 03 讲时发现] 上文“状态中的资源：0 个”一行无效：脚本给 `terraform state list` 附加了它不接受的 -input 参数，
+命令报错被丢弃，wc 计为 0。本轮销毁以 `Destroy complete! Resources: 10 destroyed` 与 AWS 侧逐项复核为准；live-run.sh 已修正。
