@@ -418,8 +418,53 @@ Plan: 10 to add, 0 to change, 0 to destroy.
 ::::
 
 ::: warn
-上面第 3、4 步写的是“应当观察到什么”，是供你对照的预期，不是本书的实测记录——本书全程未在实验账户中创建资源。告警的变化时间取决于指标发布延迟与评估周期，不会是“注入即告警”。
+V1.0 中上面第 3、4 步只是“应当观察到什么”的预期。V1.1 已在实验账户中真实跑完一轮，记录见下一节；其中第 4 步“复合告警随之恢复为 OK”与实测不符，原因见下文第 2 点。
 :::
+
+## V1.1 实测：一轮真实的“注入 → 告警 → 恢复 → 销毁”
+
+::: note
+证据级别：**LIVE APPLY → LIVE VERIFIED → RECOVERED → DESTROYED**。2026-11-18 23:56 至 11-19 00:27（UTC）在 us-east-1
+由 IAM 用户（非 root）执行，资源存续约 28 分钟，费用估算 < 0.01 美元。原始日志（账户号已替换）：`labs/02-lambda-reliability/live-2026-11-19.txt`。
+:::
+
+```{.console title="实验 2-2 / 2-3 关键输出（本书实测，节选；时间为 UTC）"}
+23:56:50  terraform apply                  Apply complete! Resources: 10 added
+23:57:23  probe 200 次（FAIL_RATE=0）      成功 200，函数错误 0   调用方 SLI 100.000%
+00:00:03  apply -var fail_rate=0.2         ~ "FAIL_RATE" = "0" -> "0.2"   （1 changed）
+00:00:40  probe 200 次（FAIL_RATE=0.2）    成功 161，函数错误 39  调用方 SLI 80.500%
+00:01:42  burn-slow-long    OK -> ALARM
+00:01:51  burn-slow-short   OK -> ALARM    slo-page（复合）OK -> ALARM
+00:01:53  burn-fast-short   OK -> ALARM
+00:01:55  errors-any        OK -> ALARM
+00:02:17  burn-fast-long    OK -> ALARM
+00:04:02  apply（恢复默认 0）              ~ "FAIL_RATE" = "0.2" -> "0"
+00:04:39  probe 200 次                     成功 200，函数错误 0
+00:04:55  errors-any        ALARM -> OK
+00:08:53  burn-fast-short   ALARM -> OK
+00:23:39  slo-page 仍为 ALARM（burn-slow-short / burn-slow-long 仍为 ALARM）
+00:24:26  terraform destroy                Destroy complete! Resources: 10 destroyed
+00:27:18  残留复核：函数 0、同名告警 0、日志组 0、IAM 角色 NoSuchEntity、状态 0 个资源
+```
+
+**读实测记录，有三点值得记住：**
+
+1. **告警比“注入即告警”慢，但比想象的快。** 第一条注入错误写入日志是 00:00:43，最早的告警在 00:01:42 变为 ALARM，约 1 分钟。
+   1 小时窗口的 burn-fast-long 也只用了约 1.5 分钟：它比较的是窗口内的错误比值，而故障期的实测错误率约 20%（39/200），
+   远超 1.44% 的阈值，不需要等满 1 小时。
+2. **修好之后，复合告警仍在呼叫。** 修复后约 1 分钟 errors-any 复位，00:08:53 burn-fast-short 复位，于是“快速”那一对的 AND 为假；
+   但“慢速”那一对（6 小时与 30 分钟窗口）仍然包含故障期的错误，复合告警的 OR 仍为真。
+   到 00:23:39 销毁前，slo-page 一直是 ALARM。按 30 分钟短窗口推算，它最早要到故障后约 30 分钟才会复位；为控制时间与费用，本轮没有等到。
+   值班手册因此应写明：**修复是否见效，先看短窗口告警是否复位，不要等复合告警。**
+3. **销毁要复核，不要只看 Destroy complete。** 本轮逐项确认函数、告警、日志组、IAM 角色都已不存在；
+   CloudWatch 中 AWS/Lambda 指标数据无法删除，但不收费，15 个月后自动过期。
+
+| 实验 | V1.1 证据级别 |
+|---|---|
+| 2-1 SLO 计算器 | MOCK TEST（unittest 8/8） |
+| 2-2 Terraform 负载 | MOCK TEST（terraform test 6/6）→ READ-ONLY PLAN（10 to add）→ LIVE APPLY（10 added）→ DESTROYED（10 destroyed，残留 0） |
+| 2-3 注入与恢复 | LIVE VERIFIED（39/200 失败，6 条告警全部 ALARM）→ RECOVERED（200/200 成功，errors-any 与 burn-fast-short 复位） |
+| 2-4 FIS | 未执行：需要 FIS Lambda 扩展与按动作分钟计费的实验，V1.1 保留为可选步骤 |
 
 ## 进阶：用 AWS FIS 做受控的故障实验
 

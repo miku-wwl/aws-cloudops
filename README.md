@@ -8,6 +8,7 @@
 以及已脱敏的真实控制台截图。内容按 2026 年 11 月的 AWS 官方文档与控制台核对。
 
 V1.0 是教材出版版，内容已冻结；在真实 AWS 账户中 apply 的实验留给 V1.1。
+V1.1 进行中（状态与费用台账见 [V1.1_PROGRESS.md](V1.1_PROGRESS.md)）：第 02 讲已完成真实 apply → 注入故障 → 恢复 → destroy。
 
 ## 下载
 
@@ -163,7 +164,7 @@ bash tools/test_all.sh                   # 全部离线测试（--python / --ter
 | Terraform `fmt -check` / `validate`（5 个没有 tests 的根模块） | 5 / 5 通过 |
 | GitHub Actions CI | 每次推送离线运行上面三项与 ZIP 校验；不连接 AWS、不使用任何凭证 |
 | 只读 Plan | 18 个根模块对实验账户做过只读 plan（见上表）；1-3、1-4、2-4 因前提资源不存在、1-5 只做了 validate，共 4 个未执行；18-2 不需要 |
-| 实际 Apply | **没有对 AWS 执行任何 apply，没有创建资源**（唯一的真实 apply 是 15-1 在本机运行的 `terraform_data`） |
+| 实际 Apply | V1.0：**没有对 AWS 执行任何 apply，没有创建资源**（唯一的真实 apply 是 15-1 在本机运行的 `terraform_data`）；V1.1：第 02 讲 2-2 / 2-3 已真实 apply 并销毁（10 added → 10 destroyed，残留 0），其余见 V1.1_PROGRESS.md |
 | PDF 与源稿是否同步 | 19 个 PDF 均晚于各自的源稿、机制图、截图与构建工具 |
 | ZIP 一致性 | PDF 合集与 `dist/pdf/`、源稿 ZIP 与 `textbook/` 源稿逐字节一致 |
 | 截图 | 正文引用 53 张，全部存在且已脱敏；另有 3 张备用截图未在正文使用 |

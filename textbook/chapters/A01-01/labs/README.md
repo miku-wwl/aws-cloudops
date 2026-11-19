@@ -3,8 +3,8 @@
 | 实验 | 目录 | 会不会改动 AWS | 费用 | 验证状态（2026-11-17） |
 |---|---|---|---|---|
 | 2-1 SLO 计算器 | `01-slo-calculator/` | 否 | 0 | `python -m unittest`：8 个测试通过 |
-| 2-2 可注入故障的负载 | `02-lambda-reliability/` | **是**（10 个资源） | Lambda 在免费额度内；告警约 2 美元/月按小时折算 | `fmt`/`validate` 通过；`terraform test` 6/6；对真实账户 `plan`：10 to add；未 apply |
-| 2-3 故障注入与探针 | `02-lambda-reliability/probe.py` | 只调用函数 | 免费额度内 | `--simulate` 离线模式已运行 |
+| 2-2 可注入故障的负载 | `02-lambda-reliability/` | **是**（10 个资源） | Lambda 在免费额度内；告警约 2 美元/月按小时折算 | `fmt`/`validate` 通过；`terraform test` 6/6；对真实账户 `plan`：10 to add；**V1.1（2026-11-19）LIVE APPLY 10 added → DESTROYED 10 destroyed，残留 0**（`02-lambda-reliability/live-2026-11-19.txt`） |
+| 2-3 故障注入与探针 | `02-lambda-reliability/probe.py` | 只调用函数 | 免费额度内 | `--simulate` 离线模式已运行；**V1.1 真实模式 LIVE VERIFIED：注入 fail_rate=0.2 后 39/200 失败、6 条告警 ALARM；RECOVERED：200/200 成功** |
 | 2-4 FIS 实验模板 | `03-fis-experiment/` | **是** | 约 2 个 FIS 动作分钟 | `fmt`/`validate` 通过；未 apply |
 
 ## 运行顺序

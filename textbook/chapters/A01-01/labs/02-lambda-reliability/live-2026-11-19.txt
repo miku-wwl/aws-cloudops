@@ -1,0 +1,114 @@
+
+[2026-11-18T23:56:16Z] == 0 预检：同名资源必须不存在（不触碰非实验资源）
+  同名函数 0 个，同名告警 0 个
+- Installed hashicorp/archive v2.8.1 (signed by HashiCorp)
+- Installed hashicorp/aws v6.73.0 (signed by HashiCorp)
+
+[2026-11-18T23:56:50Z] == A1 LIVE APPLY（fail_rate=0）
+              + metric_name = "Errors"
+              + metric_name = "Errors"
+              + metric_name = "Errors"
+              + metric_name = "Errors"
+  # aws_cloudwatch_metric_alarm.errors_any will be created
+  + resource "aws_cloudwatch_metric_alarm" "errors_any" {
+      + alarm_name                            = "ticket-query-errors-any"
+      + metric_name                           = "Errors"
+          + error_ratio_threshold = 0.0144
+          + error_ratio_threshold = 0.0144
+          + error_ratio_threshold = 0.006
+          + error_ratio_threshold = 0.006
+aws_cloudwatch_metric_alarm.errors_any: Creating...
+aws_cloudwatch_metric_alarm.errors_any: Creation complete after 2s [id=ticket-query-errors-any]
+Apply complete! Resources: 10 added, 0 changed, 0 destroyed.
+    "error_ratio_threshold" = 0.0144
+    "error_ratio_threshold" = 0.0144
+    "error_ratio_threshold" = 0.006
+    "error_ratio_threshold" = 0.006
+
+
+[2026-11-18T23:57:23Z] == A2 正常流量 200 次
+请求总数 200：成功 200，函数错误 0，限流 0，其他 0
+函数层 (Invocations-Errors)/Invocations = 200/200 = 100.000%
+调用方 SLI = 成功 / 全部请求 = 200/200 = 100.000%  （SLO 99.9%：达标）
+  ticket-query-errors-any -> OK（等待 0 s）
+ticket-query-burn-fast-long	OK	ticket-query-burn-fast-short	OK	ticket-query-burn-slow-long	OK	ticket-query-burn-slow-short	OK	ticket-query-errors-any	OK	ticket-query-slo-page	OK
+
+[2026-11-19T00:00:03Z] == B1 注入可逆故障：fail_rate=0.2（只改函数环境变量）
+              ~ "FAIL_RATE" = "0" -> "0.2"
+Apply complete! Resources: 0 added, 1 changed, 0 destroyed.
+  环境变量：0.2
+
+[2026-11-19T00:00:40Z] == B2 故障流量 200 次
+请求总数 200：成功 161，函数错误 39，限流 0，其他 0
+函数层 (Invocations-Errors)/Invocations = 161/200 = 80.500%
+调用方 SLI = 成功 / 全部请求 = 161/200 = 80.500%  （SLO 99.9%：未达标）
+  ticket-query-errors-any -> ALARM（等待 0 s）
+  ticket-query-burn-fast-short -> ALARM（等待 0 s）
+  ticket-query-slo-page -> ALARM（等待 0 s）
+ticket-query-burn-fast-long	ALARM	ticket-query-burn-fast-short	ALARM	ticket-query-burn-slow-long	ALARM	ticket-query-burn-slow-short	ALARM	ticket-query-errors-any	ALARM	ticket-query-slo-page	ALARM
+
+[2026-11-19T00:03:38Z] == B3 诊断证据
+  Invocations 2026-11-18T23:53:00+00:00	51.0
+  Invocations 2026-11-18T23:58:00+00:00	338.0
+  Errors 2026-11-18T23:53:00+00:00	0.0
+  Errors 2026-11-18T23:58:00+00:00	38.0
+  日志中的异常（前 2 条）：
+    {"timestamp": "2026-11-19T00:00:43Z", "level": "ERROR", "errorMessage": "injected failure (FAIL_RATE=0.2)", "errorType": "RuntimeError", "requestId": "eab9cd8f-
+    {"timestamp": "2026-11-19T00:00:44Z", "level": "ERROR", "errorMessage": "injected failure (FAIL_RATE=0.2)", "errorType": "RuntimeError", "requestId": "9f92ccb3-
+    None
+
+[2026-11-19T00:04:02Z] == C1 修复：fail_rate=0
+              ~ "FAIL_RATE" = "0.2" -> "0"
+Apply complete! Resources: 0 added, 1 changed, 0 destroyed.
+  环境变量：0
+
+[2026-11-19T00:04:39Z] == C2 恢复后流量 200 次
+请求总数 200：成功 200，函数错误 0，限流 0，其他 0
+函数层 (Invocations-Errors)/Invocations = 200/200 = 100.000%
+调用方 SLI = 成功 / 全部请求 = 200/200 = 100.000%  （SLO 99.9%：达标）
+  ticket-query-errors-any -> OK（等待 0 s）
+  ticket-query-burn-fast-short -> OK（等待 80 s）
+  ticket-query-slo-page 在 600 s 内没有变为 OK（当前 ALARM）
+ticket-query-burn-fast-long	ALARM	ticket-query-burn-fast-short	OK	ticket-query-burn-slow-long	ALARM	ticket-query-burn-slow-short	ALARM	ticket-query-errors-any	OK	ticket-query-slo-page	ALARM
+
+[2026-11-19T00:23:39Z] == C3 告警状态历史（StateUpdate）
+  [errors-any] 2026-11-18T23:57:55.358000+00:00	Alarm updated from INSUFFICIENT_DATA to OK
+  [errors-any] 2026-11-19T00:01:55.355000+00:00	Alarm updated from OK to ALARM
+  [errors-any] 2026-11-19T00:04:55.355000+00:00	Alarm updated from ALARM to OK
+  [burn-fast-short] 2026-11-18T23:58:53.279000+00:00	Alarm updated from INSUFFICIENT_DATA to OK
+  [burn-fast-short] 2026-11-19T00:01:53.278000+00:00	Alarm updated from OK to ALARM
+  [burn-fast-short] 2026-11-19T00:08:53.278000+00:00	Alarm updated from ALARM to OK
+  [burn-fast-long] 2026-11-18T23:58:17.699000+00:00	Alarm updated from INSUFFICIENT_DATA to OK
+  [burn-fast-long] 2026-11-19T00:02:17.698000+00:00	Alarm updated from OK to ALARM
+  Invocations 2026-11-19T00:04:00+00:00	200.0
+  Errors 2026-11-19T00:04:00+00:00	0.0
+
+[2026-11-19T00:24:26Z] == D 销毁（trap，无论前面成功与否都执行）
+              - metric_name = "Errors" -> null
+              - metric_name = "Errors" -> null
+              - metric_name = "Errors" -> null
+              - metric_name = "Errors" -> null
+      - metric_name                           = "Errors" -> null
+Destroy complete! Resources: 10 destroyed.
+
+[2026-11-19T00:24:52Z] == 残留检查（destroy 之后）
+  Lambda 函数：ResourceNotFoundException
+
+Bad value for --query length(MetricAlarms)+length(CompositeAlarms): Bad jmespath expression: Unknown token +:
+length(MetricAlarms)+length(CompositeAlarms)
+                    ^
+  告警： 个
+  日志组：0 个
+  IAM 角色：NoSuchEntity
+  状态中的资源：0 个
+exit=0
+
+[2026-11-19T00:27:18Z] == 补充复核（destroy 之后，单独执行）
+  同名指标告警：0 个；同名复合告警：0 个
+  Lambda 函数总数（本区域）：0
+  [slo-page] 2026-11-18T23:57:21.880000+00:00	Alarm updated from INSUFFICIENT_DATA to OK
+  [slo-page] 2026-11-19T00:01:51.170000+00:00	Alarm updated from OK to ALARM
+  [burn-slow-short] 2026-11-18T23:57:51.172000+00:00	Alarm updated from INSUFFICIENT_DATA to OK
+  [burn-slow-short] 2026-11-19T00:01:51.170000+00:00	Alarm updated from OK to ALARM
+  [burn-slow-long] 2026-11-18T23:58:42.856000+00:00	Alarm updated from INSUFFICIENT_DATA to OK
+  [burn-slow-long] 2026-11-19T00:01:42.864000+00:00	Alarm updated from OK to ALARM
